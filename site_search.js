@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Site Content Index
     const siteIndex = [
-        { title: "Home", url: "homepage.html", keywords: "home, main, welcome, start" },
+        { title: "Home", url: "index.html", keywords: "home, main, welcome, start" },
         { title: "About Us", url: "about.html", keywords: "about, history, mission, vision, principal, leadership" },
         { title: "Academics", url: "academics.html", keywords: "curriculum, subjects, math, science, art, learning, grades" },
         { title: "Admissions", url: "admission.html", keywords: "enroll, apply, join, fees, admission, process" },
