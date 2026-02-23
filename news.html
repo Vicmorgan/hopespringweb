@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>School News &amp; Events</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;family=Noto+Sans:wght@100..900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebd2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221d10",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-[#181611] dark:text-[#f8f7f6]">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <div
+                class="w-full flex justify-center border-b border-[#f4f3f0] dark:border-white/10 bg-white dark:bg-background-dark sticky top-0 z-50">
+                <div class="w-full max-w-[1280px] px-6 lg:px-10 py-3 flex items-center justify-between">
+                    <div class="flex items-center gap-8">
+                        <div class="flex items-center gap-3">
+                            <img src="logo.png" alt="Hopespring Foundation Logo" class="h-10 w-auto">
+
+                        </div>
+                        <nav class="hidden lg:flex items-center gap-9">
+                            <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                                href="homepage.html">Home</a>
+                            <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                                href="about.html">About</a>
+                            <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                                href="academics.html">Academics</a>
+                            <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                                href="admission.html">Enrollment</a>
+                            <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                                href="parents.html">Parents</a>
+                            <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                                href="gallery.html">Gallery</a>
+                        </nav>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="relative hidden md:flex items-center group">
+                            <div class="bg-[#f4f3f0] dark:bg-white/10 rounded-xl flex items-center px-4 py-2">
+                                <span
+                                    class="material-symbols-outlined text-[#897f61] dark:text-white/50 text-xl">search</span>
+                                <input type="text"
+                                    class="site-search-input bg-transparent border-none focus:ring-0 text-sm w-32 placeholder:text-[#897f61] dark:placeholder:text-white/50 focus:w-48 transition-all duration-300"
+                                    placeholder="Search site..." />
+                            </div>
+                            <div
+                                class="search-results absolute top-full right-0 mt-2 w-64 bg-white dark:bg-[#221d10] rounded-xl shadow-xl border border-[#e6e3db] dark:border-[#3a3424] hidden z-50 overflow-hidden">
+                            </div>
+                        </div>
+                        <a href="contact.html"
+                            class="bg-primary text-[#181611] px-5 py-2 rounded-xl text-sm font-bold hover:opacity-90 transition-opacity">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <main class="flex-1">
+                <!-- Vibrant Header Section -->
+                <div class="bg-white dark:bg-background-dark pt-12 pb-8 overflow-hidden relative">
+                    <!-- Decorative Accents -->
+                    <div
+                        class="absolute top-0 right-0 w-[30%] h-full bg-primary/5 rounded-l-[100px] -z-10 translate-x-20">
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-32 h-32 bg-secondary/10 rounded-full blur-3xl -z-10"></div>
+
+                    <div class="max-w-[1200px] mx-auto px-6">
+                        <div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
+                            <div class="space-y-4">
+                                <div
+                                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary font-bold text-xs uppercase tracking-wider">
+                                    <span class="material-symbols-outlined text-sm">notifications_active</span>
+                                    Latest Updates
+                                </div>
+                                <h1
+                                    class="text-4xl md:text-6xl font-black tracking-tight text-[#181611] dark:text-white">
+                                    The <span class="text-primary italic">Hopespring</span> Buzz
+                                </h1>
+                                <p class="text-[#897f61] dark:text-gray-400 text-lg max-w-xl">
+                                    Stay connected with our vibrant community. From academic triumphs to campus
+                                    celebrations,
+                                    find it all here.
+                                </p>
+                            </div>
+
+                            <!-- Announcement Banner (Improved) -->
+                            <div
+                                class="w-full md:max-w-md bg-white dark:bg-[#2d2719] border-l-4 border-primary p-6 rounded-2xl shadow-xl shadow-primary/5 group hover:-translate-y-1 transition-transform border border-[#e6e3db] dark:border-transparent">
+                                <div class="flex items-center gap-3 text-primary mb-2">
+                                    <span class="material-symbols-outlined font-black">campaign</span>
+                                    <span class="font-black text-sm uppercase tracking-widest">Flash Update</span>
+                                </div>
+                                <p class="text-sm font-medium text-[#181611] dark:text-white/80 leading-relaxed">
+                                    Early dismissal this Friday at 1:00 PM for Teacher Workday. After-school care open
+                                    until
+                                    4:00 PM.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Category Filters -->
+                        <div class="flex items-center gap-2 overflow-x-auto pb-4 scrollbar-hide">
+                            <button
+                                class="px-6 py-2.5 rounded-full bg-primary text-[#181611] font-bold text-sm shadow-lg shadow-primary/20 whitespace-nowrap">All
+                                Stories</button>
+                            <button
+                                class="px-6 py-2.5 rounded-full bg-[#f4f3f0] dark:bg-white/5 text-[#897f61] dark:text-white/60 font-bold text-sm hover:bg-primary/20 hover:text-primary transition-colors whitespace-nowrap">Academic</button>
+                            <button
+                                class="px-6 py-2.5 rounded-full bg-[#f4f3f0] dark:bg-white/5 text-[#897f61] dark:text-white/60 font-bold text-sm hover:bg-primary/20 hover:text-primary transition-colors whitespace-nowrap">Sports</button>
+                            <button
+                                class="px-6 py-2.5 rounded-full bg-[#f4f3f0] dark:bg-white/5 text-[#897f61] dark:text-white/60 font-bold text-sm hover:bg-primary/20 hover:text-primary transition-colors whitespace-nowrap">Arts
+                                & Music</button>
+                            <button
+                                class="px-6 py-2.5 rounded-full bg-[#f4f3f0] dark:bg-white/5 text-[#897f61] dark:text-white/60 font-bold text-sm hover:bg-primary/20 hover:text-primary transition-colors whitespace-nowrap">Community</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 flex flex-col gap-6">
+                        <h2 class="text-[#181611] dark:text-white text-2xl font-bold leading-tight">Latest News</h2>
+                        <div
+                            class="bg-white dark:bg-[#2d2615] rounded-xl overflow-hidden border border-[#e6e3db] dark:border-[#3d3521] shadow-sm flex flex-col md:flex-row">
+                            <div class="w-full md:w-48 h-48 bg-cover bg-center"
+                                data-alt="Children working on a colorful science experiment in class"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAIRxSeltuhYr5Akm2doRAmTHEXlxmEtBINMG4kusLsnyxchzczR-kU9EAsOfnER6HjbDlO1YWLvd0xiDxsb2phliyN1-jSLnUu3Olmf8bU6Om7lPzdOLczk1V_wYROX0LBDc0TfIS2EAF9JWVnaUCn9w7Y0LOcLcybAY7JOcSw_LueuLeBo5WWQ1r21KYUu3vpsMmp1wBDX4iRCQpmvI403Fubccn3o_4Qsh2Zzk84AalRhQt10K7aLSkjriyzr8r1F5Bf_MqdQPQ')">
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span
+                                        class="px-2 py-0.5 bg-primary/20 text-[#181611] dark:text-primary text-[10px] font-bold uppercase rounded">Academic</span>
+                                    <span class="text-[#897f61] dark:text-[#c4ba9c] text-xs">October 24, 2023</span>
+                                </div>
+                                <h3 class="text-[#181611] dark:text-white text-xl font-bold mb-2">Science Fair
+                                    Winners Announced</h3>
+                                <p class="text-[#897f61] dark:text-[#c4ba9c] text-sm line-clamp-2 mb-4">
+                                    Congratulations to all our participants! The level of innovation this year was
+                                    truly outstanding. Click to see the list of winners and gallery.</p>
+                                <div class="mt-auto">
+                                    <button
+                                        class="text-primary text-sm font-bold flex items-center gap-1 hover:underline">
+                                        Read Article <span
+                                            class="material-symbols-outlined text-base">chevron_right</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-[#2d2615] rounded-xl overflow-hidden border border-[#e6e3db] dark:border-[#3d3521] shadow-sm flex flex-col md:flex-row">
+                            <div class="w-full md:w-48 h-48 bg-cover bg-center"
+                                data-alt="Close up of new modern playground equipment in bright colors"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCG49kL8G-b56YiQ2iklaYUx1YNVCfWa_fnuwYjCPMtLLRdy9G2lwKRZfyABdDtFXftciajP4049mhAXwYN_c37_jia4ToChhkRipD8KFqXmd0rfVMp-R0R8RIFrB23eAtZpeYaHiHoBGLn9vIVO45vVEnRbMh6zoVitxl2EPb0DhxCX_nvArlKhpkMR9SJ-HMyfs8KA18GPDehjBSOU4hmv6yT2vDHbZyv6FvTxC6TzcM4fwrF_HLIK4vHIN-JSjMmUYFHgP_RfRU')">
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span
+                                        class="px-2 py-0.5 bg-primary/20 text-[#181611] dark:text-primary text-[10px] font-bold uppercase rounded">Facilities</span>
+                                    <span class="text-[#897f61] dark:text-[#c4ba9c] text-xs">October 20, 2023</span>
+                                </div>
+                                <h3 class="text-[#181611] dark:text-white text-xl font-bold mb-2">New Playground
+                                    Equipment Update</h3>
+                                <p class="text-[#897f61] dark:text-[#c4ba9c] text-sm line-clamp-2 mb-4">The new
+                                    inclusive playground sets have arrived and installation begins this Monday.
+                                    Check out the blueprint designs!</p>
+                                <div class="mt-auto">
+                                    <button
+                                        class="text-primary text-sm font-bold flex items-center gap-1 hover:underline">
+                                        Read Article <span
+                                            class="material-symbols-outlined text-base">chevron_right</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-[#2d2615] rounded-xl overflow-hidden border border-[#e6e3db] dark:border-[#3d3521] shadow-sm flex flex-col md:flex-row">
+                            <div class="w-full md:w-48 h-48 bg-cover bg-center"
+                                data-alt="A friendly school principal smiling in an office setting"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCLyIGGPcKG-aC7mwvfq_v131UWhuBe1NnA90R_ndYVK2QCrYsuqAsqr_JJ3io9X8Bsh3omNkl_D8A918XV0UmsNUMOKNZshAeoUSqsDF1UcppYJeAwVUl0ySmwBBZ7rc9z0pL5U3wWT8t3Z2_Mg7jq37IFi-1h5oAmFTmOOwSEnuw7jgiOKIcrEX_a331JPgi8iMKFrqnRATZ25Yt02L81n-yOFPTEEN5dK_qmAhP6cFPed3xOaz--Vz7B7t-Jztj0_MjY3DI48Fc')">
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span
+                                        class="px-2 py-0.5 bg-primary/20 text-[#181611] dark:text-primary text-[10px] font-bold uppercase rounded">General</span>
+                                    <span class="text-[#897f61] dark:text-[#c4ba9c] text-xs">October 15, 2023</span>
+                                </div>
+                                <h3 class="text-[#181611] dark:text-white text-xl font-bold mb-2">Principal's
+                                    Monthly Letter</h3>
+                                <p class="text-[#897f61] dark:text-[#c4ba9c] text-sm line-clamp-2 mb-4">A message to
+                                    our families about the upcoming Fall term focus on community and social
+                                    emotional learning.</p>
+                                <div class="mt-auto">
+                                    <button
+                                        class="text-primary text-sm font-bold flex items-center gap-1 hover:underline">
+                                        Read Article <span
+                                            class="material-symbols-outlined text-base">chevron_right</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="w-full py-4 rounded-xl border-2 border-dashed border-[#e6e3db] dark:border-[#3d3521] text-[#897f61] dark:text-[#c4ba9c] font-bold hover:bg-white dark:hover:bg-[#2d2615] transition-colors">
+                            Load More News
+                        </button>
+                    </div>
+                    <div class="flex flex-col gap-8">
+                        <div
+                            class="bg-white dark:bg-[#2d2615] rounded-xl p-5 border border-[#e6e3db] dark:border-[#3d3521] shadow-sm">
+                            <div class="flex items-center justify-between mb-4">
+                                <h2 class="text-lg font-bold">October 2023</h2>
+                                <div class="flex gap-2">
+                                    <button
+                                        class="p-1 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded-md transition-colors"><span
+                                            class="material-symbols-outlined">chevron_left</span></button>
+                                    <button
+                                        class="p-1 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded-md transition-colors"><span
+                                            class="material-symbols-outlined">chevron_right</span></button>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-7 gap-1 text-center text-xs mb-2 text-[#897f61] font-bold">
+                                <div>Su</div>
+                                <div>Mo</div>
+                                <div>Tu</div>
+                                <div>We</div>
+                                <div>Th</div>
+                                <div>Fr</div>
+                                <div>Sa</div>
+                            </div>
+                            <div class="grid grid-cols-7 gap-1 text-center text-sm">
+                                <div class="py-2 text-[#d1ccc0]">24</div>
+                                <div class="py-2 text-[#d1ccc0]">25</div>
+                                <div class="py-2 text-[#d1ccc0]">26</div>
+                                <div class="py-2 text-[#d1ccc0]">27</div>
+                                <div class="py-2 text-[#d1ccc0]">28</div>
+                                <div class="py-2 text-[#d1ccc0]">29</div>
+                                <div class="py-2 text-[#d1ccc0]">30</div>
+                                <div
+                                    class="py-2 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded cursor-pointer transition-colors">
+                                    1</div>
+                                <div
+                                    class="py-2 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded cursor-pointer transition-colors">
+                                    2</div>
+                                <div
+                                    class="py-2 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded cursor-pointer transition-colors">
+                                    3</div>
+                                <div
+                                    class="py-2 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded cursor-pointer transition-colors">
+                                    4</div>
+                                <div
+                                    class="py-2 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded cursor-pointer transition-colors relative">
+                                    5<span
+                                        class="absolute bottom-1 left-1/2 -translate-x-1/2 size-1 bg-primary rounded-full"></span>
+                                </div>
+                                <div
+                                    class="py-2 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded cursor-pointer transition-colors">
+                                    6</div>
+                                <div
+                                    class="py-2 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded cursor-pointer transition-colors">
+                                    7</div>
+                                <div
+                                    class="py-2 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded cursor-pointer transition-colors">
+                                    8</div>
+                                <div
+                                    class="py-2 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded cursor-pointer transition-colors">
+                                    9</div>
+                                <div
+                                    class="py-2 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded cursor-pointer transition-colors">
+                                    10</div>
+                                <div
+                                    class="py-2 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded cursor-pointer transition-colors">
+                                    11</div>
+                                <div class="py-2 bg-primary text-white font-bold rounded cursor-pointer">12</div>
+                                <div
+                                    class="py-2 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded cursor-pointer transition-colors">
+                                    13</div>
+                                <div
+                                    class="py-2 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded cursor-pointer transition-colors">
+                                    14</div>
+                                <div
+                                    class="py-2 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded cursor-pointer transition-colors">
+                                    15</div>
+                                <div
+                                    class="py-2 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded cursor-pointer transition-colors">
+                                    16</div>
+                                <div
+                                    class="py-2 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded cursor-pointer transition-colors">
+                                    17</div>
+                                <div
+                                    class="py-2 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded cursor-pointer transition-colors relative">
+                                    18<span
+                                        class="absolute bottom-1 left-1/2 -translate-x-1/2 size-1 bg-primary rounded-full"></span>
+                                </div>
+                                <div
+                                    class="py-2 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded cursor-pointer transition-colors">
+                                    19</div>
+                                <div
+                                    class="py-2 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded cursor-pointer transition-colors relative">
+                                    20<span
+                                        class="absolute bottom-1 left-1/2 -translate-x-1/2 size-1 bg-primary rounded-full"></span>
+                                </div>
+                                <div
+                                    class="py-2 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded cursor-pointer transition-colors">
+                                    21</div>
+                                <div
+                                    class="py-2 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded cursor-pointer transition-colors relative">
+                                    22<span
+                                        class="absolute bottom-1 left-1/2 -translate-x-1/2 size-1 bg-primary rounded-full"></span>
+                                </div>
+                                <div
+                                    class="py-2 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded cursor-pointer transition-colors">
+                                    23</div>
+                                <div
+                                    class="py-2 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded cursor-pointer transition-colors">
+                                    24</div>
+                                <div
+                                    class="py-2 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded cursor-pointer transition-colors">
+                                    25</div>
+                                <div
+                                    class="py-2 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded cursor-pointer transition-colors">
+                                    26</div>
+                                <div
+                                    class="py-2 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded cursor-pointer transition-colors">
+                                    27</div>
+                                <div
+                                    class="py-2 hover:bg-[#f4f3f0] dark:hover:bg-[#3d3521] rounded cursor-pointer transition-colors">
+                                    28</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <h3
+                                class="text-[#181611] dark:text-white text-lg font-bold leading-tight flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">event_upcoming</span>
+                                Coming Up
+                            </h3>
+                            <div class="flex flex-col gap-3">
+                                <div
+                                    class="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-[#2d2615] border border-[#e6e3db] dark:border-[#3d3521]">
+                                    <div
+                                        class="flex flex-col items-center justify-center min-w-[50px] py-1 bg-[#f4f3f0] dark:bg-[#3d3521] rounded-lg">
+                                        <span
+                                            class="text-[10px] uppercase font-bold text-[#897f61] dark:text-[#c4ba9c]">Oct</span>
+                                        <span class="text-xl font-black leading-none">12</span>
+                                    </div>
+                                    <div class="flex flex-col flex-1">
+                                        <p class="text-sm font-bold text-[#181611] dark:text-white">PTA General
+                                            Meeting</p>
+                                        <p class="text-xs text-[#897f61] dark:text-[#c4ba9c]">6:30 PM • School
+                                            Library</p>
+                                        <a class="text-[10px] font-bold text-primary mt-1 hover:underline" href="#">Add
+                                            to Calendar</a>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-[#2d2615] border border-[#e6e3db] dark:border-[#3d3521]">
+                                    <div
+                                        class="flex flex-col items-center justify-center min-w-[50px] py-1 bg-[#f4f3f0] dark:bg-[#3d3521] rounded-lg">
+                                        <span
+                                            class="text-[10px] uppercase font-bold text-[#897f61] dark:text-[#c4ba9c]">Oct</span>
+                                        <span class="text-xl font-black leading-none">20</span>
+                                    </div>
+                                    <div class="flex flex-col flex-1">
+                                        <p class="text-sm font-bold text-[#181611] dark:text-white">Fall Festival
+                                        </p>
+                                        <p class="text-xs text-[#897f61] dark:text-[#c4ba9c]">3:00 PM • School
+                                            Playground</p>
+                                        <a class="text-[10px] font-bold text-primary mt-1 hover:underline" href="#">Add
+                                            to Calendar</a>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-[#2d2615] border border-[#e6e3db] dark:border-[#3d3521]">
+                                    <div
+                                        class="flex flex-col items-center justify-center min-w-[50px] py-1 bg-[#f4f3f0] dark:bg-[#3d3521] rounded-lg">
+                                        <span
+                                            class="text-[10px] uppercase font-bold text-[#897f61] dark:text-[#c4ba9c]">Oct</span>
+                                        <span class="text-xl font-black leading-none">22</span>
+                                    </div>
+                                    <div class="flex flex-col flex-1">
+                                        <p class="text-sm font-bold text-[#181611] dark:text-white">Picture Day</p>
+                                        <p class="text-xs text-[#897f61] dark:text-[#c4ba9c]">All Day •
+                                            Multi-purpose Room</p>
+                                        <a class="text-[10px] font-bold text-primary mt-1 hover:underline"
+                                            href="calendar.html">Add to Calendar</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="calendar.html"
+                                class="text-sm font-bold text-[#181611] dark:text-white flex items-center justify-center gap-2 py-3 rounded-xl bg-[#f4f3f0] dark:bg-[#3d3521] hover:bg-primary transition-colors">
+                                Full Calendar <span class="material-symbols-outlined text-base">calendar_month</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </main>
+        <footer
+            class="bg-white dark:bg-[#110e08] px-4 md:px-20 lg:px-40 py-16 border-t border-[#f4f3f0] dark:border-[#3a3528]">
+            <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-3 text-[#181611] dark:text-white mb-6">
+                        <div class="size-6 text-primary">
+                            <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-lg font-bold">Hopespring Foundation</h2>
+                    </div>
+                    <p class="text-sm text-[#897f61] dark:text-white/60 mb-4">2 Ngara Igo Street, Mgbuoba,<br />Port
+                        Harcourt 500272, Rivers
+                    </p>
+                    <div class="flex gap-4">
+                        <span
+                            class="material-symbols-outlined text-[#897f61] hover:text-primary cursor-pointer transition-colors">social_leaderboard</span>
+                        <span
+                            class="material-symbols-outlined text-[#897f61] hover:text-primary cursor-pointer transition-colors">public</span>
+                        <span
+                            class="material-symbols-outlined text-[#897f61] hover:text-primary cursor-pointer transition-colors">mail</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Explore</h4>
+                    <ul class="text-sm text-[#897f61] dark:text-white/60 space-y-3">
+                        <li><a class="hover:text-primary transition-colors" href="academics.html">Curriculum</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="support_services.html">Support
+                                Services</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="calendar.html">School Calendar</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="parents.html">Parent Resources</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Admissions</h4>
+                    <ul class="text-sm text-[#897f61] dark:text-white/60 space-y-3">
+                        <li><a class="hover:text-primary transition-colors" href="admission.html">How to Apply</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="book_tour.html">Book a Tour</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="virtual_tour.html">Virtual
+                                Tour</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Contact Us</h4>
+                    <p class="text-sm text-[#897f61] dark:text-white/60 mb-2">Mon - Fri: 8:00 AM - 3:30 PM</p>
+                    <p class="text-sm text-[#897f61] dark:text-white/60">Email: office@hopespring-fs.com</p>
+                    <p class="text-sm text-[#897f61] dark:text-white/60 mt-4">Phone: 07048808844</p>
+                </div>
+            </div>
+            <div
+                class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-[#f4f3f0] dark:border-[#3a3528] text-center text-xs text-[#897f61] dark:text-white/40">
+                © 2024 Hopespring Foundation School. All rights reserved.
+            </div>
+        </footer>
+
+    </div>
+    </div>
+    <script src="site_search.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Start Your Application | Hope Spring Foundation</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebd2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221d10",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-[#181611] dark:text-white transition-colors duration-200">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <header
+            class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-solid border-[#e6e3db] dark:border-[#3a3424] px-4 md:px-10 lg:px-40 py-3">
+            <div class="flex items-center justify-between whitespace-nowrap">
+                <div class="flex items-center gap-8">
+                    <div class="flex items-center gap-4 text-[#181611] dark:text-primary">
+                        <img src="logo.png" alt="Hopespring Foundation Logo" class="h-10 w-auto">
+
+                    </div>
+                    <nav class="hidden lg:flex items-center gap-9">
+                        <a class="text-[#181611] dark:text-[#e6e3db] text-sm font-medium hover:text-primary transition-colors"
+                            href="homepage.html">Home</a>
+                        <a class="text-[#181611] dark:text-[#e6e3db] text-sm font-medium hover:text-primary transition-colors"
+                            href="academics.html">Academics</a>
+                        <a class="text-primary text-sm font-bold" href="admission.html">Admissions</a>
+                        <a class="text-[#181611] dark:text-[#e6e3db] text-sm font-medium hover:text-primary transition-colors"
+                            href="activities.html">Campus Life</a>
+                        <a class="text-[#181611] dark:text-[#e6e3db] text-sm font-medium hover:text-primary transition-colors"
+                            href="contact.html">Contact</a>
+                    </nav>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="relative hidden md:flex items-center group">
+                        <div class="bg-[#f4f3f0] dark:bg-white/10 rounded-xl flex items-center px-4 py-2">
+                            <span
+                                class="material-symbols-outlined text-[#897f61] dark:text-white/50 text-xl">search</span>
+                            <input type="text"
+                                class="site-search-input bg-transparent border-none focus:ring-0 text-sm w-32 placeholder:text-[#897f61] dark:placeholder:text-white/50 focus:w-48 transition-all duration-300"
+                                placeholder="Search site..." />
+                        </div>
+                        <div
+                            class="search-results absolute top-full right-0 mt-2 w-64 bg-white dark:bg-[#221d10] rounded-xl shadow-xl border border-[#e6e3db] dark:border-[#3a3424] hidden z-50 overflow-hidden">
+                        </div>
+                    </div>
+                    <a href="parents.html"
+                        class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-xl h-10 px-4 bg-primary text-[#181611] text-sm font-bold tracking-[0.015em] hover:bg-opacity-90 transition-all">
+                        <span>Parent Portal</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1">
+            <!-- Vibrant Header Section -->
+            <div class="bg-white dark:bg-background-dark pt-16 pb-12 overflow-hidden relative">
+                <!-- Decorative Accents -->
+                <div class="absolute top-0 right-0 w-[30%] h-full bg-primary/5 rounded-l-[100px] -z-10 translate-x-20">
+                </div>
+                <div class="absolute bottom-0 left-0 w-32 h-32 bg-secondary/10 rounded-full blur-3xl -z-10"></div>
+
+                <div class="max-w-[1200px] mx-auto px-6 text-center">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary font-bold text-xs uppercase tracking-wider mb-4">
+                        <span class="material-symbols-outlined text-sm">edit_note</span>
+                        Begin Your Journey
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-black tracking-tight text-[#181611] dark:text-white mb-6">
+                        Start Your <span class="text-primary italic">Application</span>
+                    </h1>
+                    <p class="text-[#897f61] dark:text-gray-400 text-lg max-w-2xl mx-auto">
+                        We're excited to learn more about your child and your family. Please complete this inquiry form
+                        to
+                        start the enrollment process.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Form Section -->
+            <div class="max-w-[900px] mx-auto px-6 pb-24">
+                <div
+                    class="bg-white dark:bg-[#2c2618] rounded-[40px] p-8 md:p-16 shadow-2xl shadow-primary/5 border border-[#e6e3db] dark:border-white/5 relative overflow-hidden">
+                    <!-- Inner Accent -->
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16"></div>
+
+                    <form class="space-y-10 relative z-10">
+                        <div class="space-y-8">
+                            <h3 class="text-xl font-black flex items-center gap-3">
+                                <span
+                                    class="w-8 h-8 rounded-full bg-primary text-[#181611] flex items-center justify-center text-xs">01</span>
+                                Guardian Information
+                            </h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="text-sm font-bold text-[#181611] dark:text-white/80 ml-1">Full
+                                        Name</label>
+                                    <input type="text" placeholder="John Doe"
+                                        class="w-full bg-[#f8f7f6] dark:bg-[#221d10] border-none rounded-2xl px-6 py-4 text-sm focus:ring-2 focus:ring-primary transition-all" />
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="text-sm font-bold text-[#181611] dark:text-white/80 ml-1">Email
+                                        Address</label>
+                                    <input type="email" placeholder="john@example.com"
+                                        class="w-full bg-[#f8f7f6] dark:bg-[#221d10] border-none rounded-2xl px-6 py-4 text-sm focus:ring-2 focus:ring-primary transition-all" />
+                                </div>
+                                <div class="space-y-2 md:col-span-2">
+                                    <label class="text-sm font-bold text-[#181611] dark:text-white/80 ml-1">Phone
+                                        Number</label>
+                                    <input type="tel" placeholder="+234 ..."
+                                        class="w-full bg-[#f8f7f6] dark:bg-[#221d10] border-none rounded-2xl px-6 py-4 text-sm focus:ring-2 focus:ring-primary transition-all" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-8">
+                            <h3 class="text-xl font-black flex items-center gap-3">
+                                <span
+                                    class="w-8 h-8 rounded-full bg-primary text-[#181611] flex items-center justify-center text-xs">02</span>
+                                Student Details
+                            </h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="text-sm font-bold text-[#181611] dark:text-white/80 ml-1">Student's
+                                        Full
+                                        Name</label>
+                                    <input type="text" placeholder="Jane Doe"
+                                        class="w-full bg-[#f8f7f6] dark:bg-[#221d10] border-none rounded-2xl px-6 py-4 text-sm focus:ring-2 focus:ring-primary transition-all" />
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="text-sm font-bold text-[#181611] dark:text-white/80 ml-1">Applying for
+                                        Grade</label>
+                                    <select
+                                        class="w-full bg-[#f8f7f6] dark:bg-[#221d10] border-none rounded-2xl px-6 py-4 text-sm focus:ring-2 focus:ring-primary transition-all appearance-none">
+                                        <option>Select Grade</option>
+                                        <option>Kindergarten</option>
+                                        <option>Elementary (1-5)</option>
+                                        <option>Middle School (6-8)</option>
+                                    </select>
+                                </div>
+                                <div class="space-y-2 md:col-span-2">
+                                    <label class="text-sm font-bold text-[#181611] dark:text-white/80 ml-1">Additional
+                                        Notes</label>
+                                    <textarea rows="4" placeholder="Tell us about your child's interests or needs..."
+                                        class="w-full bg-[#f8f7f6] dark:bg-[#221d10] border-none rounded-2xl px-6 py-4 text-sm focus:ring-2 focus:ring-primary transition-all"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button
+                            class="w-full py-5 bg-primary text-[#181611] font-black text-lg rounded-2xl shadow-xl shadow-primary/20 hover:-translate-y-1 transition-all active:scale-95">
+                            Submit Inquiry
+                        </button>
+
+                        <p class="text-center text-xs text-[#897f61] dark:text-white/40">
+                            By submitting, you agree to our <a href="#" class="underline">Privacy Policy</a> and will be
+                            contacted by our admissions team.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer
+            class="bg-white dark:bg-background-dark border-t border-[#e6e3db] dark:border-[#3a3424] py-12 px-10 lg:px-40 mt-10">
+            <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between gap-10">
+                <div class="flex flex-col gap-4 max-w-sm">
+                    <div class="flex items-center gap-2 text-primary">
+                        <span class="material-symbols-outlined text-3xl">school</span>
+                        <h2 class="text-xl font-bold text-[#181611] dark:text-white">Hope Spring</h2>
+                    </div>
+                    <p class="text-sm text-[#897f61] dark:text-[#b5af9a]">
+                        Empowering students to achieve their full potential in a safe, caring, and stimulating
+                        environment.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-10">
+                    <div class="flex flex-col gap-3">
+                        <h4 class="font-bold dark:text-white">Admissions</h4>
+                        <a class="text-sm text-[#897f61] hover:text-primary transition-colors" href="#">How to Apply</a>
+                        <a class="text-sm text-[#897f61] hover:text-primary transition-colors" href="#">Fee
+                            Structure</a>
+                        <a class="text-sm text-[#897f61] hover:text-primary transition-colors"
+                            href="book_tour.html">Visit Campus</a>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <h4 class="font-bold dark:text-white">School Info</h4>
+                        <a class="text-sm text-[#897f61] hover:text-primary transition-colors" href="#">Our Story</a>
+                        <a class="text-sm text-[#897f61] hover:text-primary transition-colors" href="#">Curriculum</a>
+                        <a class="text-sm text-[#897f61] hover:text-primary transition-colors" href="#">Faculty</a>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <h4 class="font-bold dark:text-white">Contact</h4>
+                        <p class="text-sm text-[#897f61]">2 Ngara Igo Street, Mgbuoba, Port Harcourt 500272</p>
+                        <p class="text-sm text-[#897f61]">07048808844</p>
+                        <div class="flex gap-4 mt-2">
+                            <span
+                                class="material-symbols-outlined text-primary cursor-pointer">social_leaderboard</span>
+                            <span class="material-symbols-outlined text-primary cursor-pointer">photo_camera</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="max-w-[1200px] mx-auto border-t border-[#e6e3db] dark:border-[#3a3424] mt-10 pt-6 text-center text-xs text-[#897f61]">
+                © 2024 Hope Spring Foundation. All rights reserved.
+            </div>
+        </footer>
+    </div>
+    <script src="site_search.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Academics &amp; Curriculum | Hope Spring Foundation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebd2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221d10",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-[#181611] dark:text-white transition-colors duration-200">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <div
+                class="px-4 md:px-20 lg:px-40 flex justify-center py-2 bg-white dark:bg-background-dark border-b border-solid border-[#f4f3f0] dark:border-[#3a3528] sticky top-0 z-50">
+                <div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+                    <header class="flex items-center justify-between whitespace-nowrap px-4 py-3">
+                        <div class="flex items-center gap-4 text-[#181611] dark:text-white">
+                            <img src="logo.png" alt="Hopespring Foundation Logo" class="h-10 w-auto">
+                        </div>
+                        <div class="flex flex-1 justify-end gap-4 md:gap-8">
+                            <div class="hidden md:flex items-center gap-9">
+                                <a class="text-[#181611] dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                                    href="homepage.html">Home</a>
+                                <a class="text-[#181611] dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                                    href="about.html">About</a>
+                                <a class="text-primary text-sm font-bold leading-normal"
+                                    href="academics.html">Academics</a>
+                                <a class="text-[#181611] dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                                    href="parents.html">Parents</a>
+                                <a class="text-[#181611] dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                                    href="admission.html">Admissions</a>
+                                <a class="text-[#181611] dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                                    href="gallery.html">Gallery</a>
+                            </div>
+                            <div class="relative hidden md:flex items-center group">
+                                <div class="bg-[#f4f3f0] dark:bg-white/10 rounded-xl flex items-center px-4 py-2">
+                                    <span
+                                        class="material-symbols-outlined text-[#897f61] dark:text-white/50 text-xl">search</span>
+                                    <input type="text"
+                                        class="site-search-input bg-transparent border-none focus:ring-0 text-sm w-32 placeholder:text-[#897f61] dark:placeholder:text-white/50 focus:w-48 transition-all duration-300"
+                                        placeholder="Search site..." />
+                                </div>
+                                <div
+                                    class="search-results absolute top-full right-0 mt-2 w-64 bg-white dark:bg-[#221d10] rounded-xl shadow-xl border border-[#e6e3db] dark:border-[#3a3424] hidden z-50 overflow-hidden">
+                                </div>
+                            </div>
+                            <a href="contact.html"
+                                class="flex min-w-[100px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-primary text-[#181611] text-sm font-bold leading-normal tracking-[0.015em] shadow-sm hover:brightness-105 transition-all">
+                                <span class="truncate">Contact Us</span>
+                            </a>
+                        </div>
+                    </header>
+                </div>
+            </div>
+
+            <main class="flex flex-1 flex-col items-center">
+                <div class="layout-content-container flex flex-col w-full max-w-[1200px] px-6 py-8">
+                    <!-- Enhanced Hero Section -->
+                    <div
+                        class="relative min-h-[500px] flex items-center pt-24 pb-20 overflow-hidden bg-white dark:bg-background-dark">
+                        <!-- Background Accent -->
+                        <div
+                            class="absolute top-0 right-0 w-[45%] h-full bg-primary/5 rounded-l-[100px] -z-10 translate-x-20">
+                        </div>
+
+                        <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                            <div class="space-y-8">
+                                <div
+                                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-sm text-left">
+                                    <span class="material-symbols-outlined text-lg">auto_awesome</span>
+                                    <span>Future-Ready Curriculum</span>
+                                </div>
+                                <h1
+                                    class="text-5xl md:text-7xl font-black leading-tight tracking-tight text-[#181611] dark:text-white text-left">
+                                    Academics & <span class="text-primary italic">Innovation</span>
+                                </h1>
+                                <p
+                                    class="text-lg md:text-xl text-[#897f61] dark:text-gray-300 leading-relaxed max-w-xl text-left">
+                                    Nurturing young minds through curiosity, creativity, and a lifelong love for
+                                    learning in a supportive environment where every child blossoms.
+                                </p>
+                                <div class="flex flex-wrap gap-4 pt-4">
+                                    <a href="curriculum.html"
+                                        class="bg-primary text-[#181611] px-8 py-4 rounded-2xl font-bold text-lg hover:scale-105 transition-transform shadow-lg shadow-primary/20">
+                                        Browse Grade Levels
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="relative">
+                                <!-- Floating Image Container -->
+                                <div
+                                    class="relative z-10 rounded-[40px] overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-700 border-[12px] border-white dark:border-[#2a2416]">
+                                    <img src="gifted.png" alt="Students engaged in learning"
+                                        class="w-full h-[450px] object-cover">
+                                </div>
+                                <!-- Decorative elements -->
+                                <div
+                                    class="absolute -top-6 -right-6 w-24 h-24 bg-primary/20 rounded-full blur-2xl animate-pulse">
+                                </div>
+                                <div
+                                    class="absolute -bottom-10 -left-10 w-40 h-40 bg-secondary/20 rounded-full blur-3xl animate-pulse delay-700">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12">
+                        <div
+                            class="flex flex-col md:flex-row items-center gap-6 p-8 rounded-xl border border-[#e6e3db] dark:border-[#3d3621] bg-white dark:bg-[#2a2416] shadow-sm">
+                            <div class="flex-1 space-y-2">
+                                <h3 class="text-2xl font-bold text-[#181611] dark:text-white">Our Teaching Philosophy
+                                </h3>
+                                <p class="text-[#897f61] dark:text-gray-300 text-lg leading-relaxed">
+                                    We believe in "The Hopespring Way" — an inquiry-based learning approach that puts
+                                    students at the center of their educational journey. Our holistic curriculum ensures
+                                    every child thrives academically, socially, and emotionally.
+                                </p>
+                            </div>
+                            <div class="flex shrink-0">
+                                <button
+                                    class="bg-primary/20 text-[#181611] dark:text-primary px-6 py-3 rounded-xl font-bold border border-primary/40 hover:bg-primary/30 transition-colors">
+                                    Learn More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-16">
+                        <div class="flex justify-between items-end mb-8 px-2">
+                            <div>
+                                <h2 class="text-3xl font-bold">Grade Level Curriculum</h2>
+                                <p class="text-[#897f61] mt-1">Select a grade to see core learning objectives.</p>
+                            </div>
+                            <div class="hidden md:flex gap-2">
+                                <button
+                                    class="p-2 rounded-full bg-white dark:bg-[#3d3621] border border-[#e6e3db] dark:border-none hover:bg-primary/10 transition-colors">
+                                    <span class="material-symbols-outlined">chevron_left</span>
+                                </button>
+                                <button
+                                    class="p-2 rounded-full bg-white dark:bg-[#3d3621] border border-[#e6e3db] dark:border-none hover:bg-primary/10 transition-colors text-primary">
+                                    <span class="material-symbols-outlined">chevron_right</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4" id="grade-grid">
+                            <div onclick="selectGrade('k')" id="grade-k"
+                                class="grade-card group cursor-pointer bg-white dark:bg-[#2a2416] p-6 rounded-xl border-b-4 border-[#eebd2b]/30 hover:border-primary shadow-sm hover:shadow-md transition-all text-center">
+                                <div class="text-4xl font-black text-primary mb-2">K</div>
+                                <div class="font-bold">Kindergarten</div>
+                                <div class="text-xs text-[#897f61] mt-1">Foundation</div>
+                            </div>
+                            <div onclick="selectGrade('1')" id="grade-1"
+                                class="grade-card group cursor-pointer bg-white dark:bg-[#2a2416] p-6 rounded-xl border-b-4 border-[#eebd2b]/30 hover:border-primary shadow-sm hover:shadow-md transition-all text-center">
+                                <div class="text-4xl font-black text-[#181611] dark:text-white mb-2">1</div>
+                                <div class="font-bold">First Grade</div>
+                                <div class="text-xs text-[#897f61] mt-1">Discovery</div>
+                            </div>
+                            <div onclick="selectGrade('2')" id="grade-2"
+                                class="grade-card group cursor-pointer bg-white dark:bg-[#2a2416] p-6 rounded-xl border-b-4 border-[#eebd2b]/30 hover:border-primary shadow-sm hover:shadow-md transition-all text-center">
+                                <div class="text-4xl font-black text-[#181611] dark:text-white mb-2">2</div>
+                                <div class="font-bold">Second Grade</div>
+                                <div class="text-xs text-[#897f61] mt-1">Exploration</div>
+                            </div>
+                            <div onclick="selectGrade('3')" id="grade-3"
+                                class="grade-card group cursor-pointer bg-white dark:bg-[#2a2416] p-6 rounded-xl border-b-4 border-[#eebd2b]/30 hover:border-primary shadow-sm hover:shadow-md transition-all text-center">
+                                <div class="text-4xl font-black text-[#181611] dark:text-white mb-2">3</div>
+                                <div class="font-bold">Third Grade</div>
+                                <div class="text-xs text-[#897f61] mt-1">Expansion</div>
+                            </div>
+                            <div onclick="selectGrade('4')" id="grade-4"
+                                class="grade-card group cursor-pointer bg-white dark:bg-[#2a2416] p-6 rounded-xl border-b-4 border-[#eebd2b]/30 hover:border-primary shadow-sm hover:shadow-md transition-all text-center">
+                                <div class="text-4xl font-black text-[#181611] dark:text-white mb-2">4</div>
+                                <div class="font-bold">Fourth Grade</div>
+                                <div class="text-xs text-[#897f61] mt-1">Analysis</div>
+                            </div>
+                            <div onclick="selectGrade('5')" id="grade-5"
+                                class="grade-card group cursor-pointer bg-white dark:bg-[#2a2416] p-6 rounded-xl border-b-4 border-[#eebd2b]/30 hover:border-primary shadow-sm hover:shadow-md transition-all text-center">
+                                <div class="text-4xl font-black text-[#181611] dark:text-white mb-2">5</div>
+                                <div class="font-bold">Fifth Grade</div>
+                                <div class="text-xs text-[#897f61] mt-1">Leadership</div>
+                            </div>
+                        </div>
+
+                        <!-- Grade Details Container -->
+                        <div id="grade-details"
+                            class="mt-8 p-8 rounded-2xl bg-[#f4f3f0] dark:bg-[#1a160d] border border-[#e6e3db] dark:border-[#3a3528] hidden animate-fade-in">
+                            <div class="flex flex-col md:flex-row gap-8 items-start">
+                                <div class="flex-1">
+                                    <h3 id="detail-title" class="text-2xl font-bold mb-4 flex items-center gap-3">
+                                        <span
+                                            class="bg-primary text-[#181611] w-10 h-10 rounded-lg flex items-center justify-center text-xl font-black"
+                                            id="detail-grade-icon">K</span>
+                                        <span id="detail-grade-name">Kindergarten</span>
+                                    </h3>
+                                    <p id="detail-description" class="text-[#5b5443] dark:text-[#b5af9a] text-lg mb-6">
+                                    </p>
+
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                                        <div
+                                            class="bg-white dark:bg-[#2a2416] p-4 rounded-xl border border-dashed border-[#e6e3db] dark:border-[#3a3528]">
+                                            <h4 class="font-bold text-sm text-primary uppercase tracking-wider mb-2">
+                                                Focus</h4>
+                                            <p id="detail-focus" class="text-sm"></p>
+                                        </div>
+                                        <div
+                                            class="bg-white dark:bg-[#2a2416] p-4 rounded-xl border border-dashed border-[#e6e3db] dark:border-[#3a3528]">
+                                            <h4 class="font-bold text-sm text-primary uppercase tracking-wider mb-2">Key
+                                                Project</h4>
+                                            <p id="detail-project" class="text-sm"></p>
+                                        </div>
+                                    </div>
+
+                                    <a id="detail-link" href="#"
+                                        class="inline-flex items-center gap-2 font-bold text-primary hover:underline">
+                                        View Full Curriculum
+                                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-24">
+                        <div class="text-center mb-20 space-y-4">
+                            <h2 class="text-4xl md:text-5xl font-black tracking-tight">Core Pillars of <span
+                                    class="text-primary italic">Learning</span></h2>
+                            <p class="text-[#897f61] dark:text-gray-400 max-w-2xl mx-auto">We balance rigorous standards
+                                with creative exploration to build well-rounded students.</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <!-- Pillar 1 -->
+                            <div
+                                class="group relative bg-white dark:bg-[#2d2719] rounded-[48px] overflow-hidden border border-[#e6e3db] dark:border-transparent hover:shadow-2xl transition-all duration-500">
+                                <div class="h-56 overflow-hidden relative">
+                                    <img src="gifted.png" alt="STEM"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-white dark:from-[#2d2719] to-transparent opacity-60">
+                                    </div>
+                                    <div
+                                        class="absolute bottom-6 left-8 bg-primary text-[#181611] p-4 rounded-2xl shadow-xl">
+                                        <span class="material-symbols-outlined text-3xl font-black">science</span>
+                                    </div>
+                                </div>
+                                <div class="p-10 space-y-4">
+                                    <h4 class="text-2xl font-black">STEM & Innovation</h4>
+                                    <p class="text-[#897f61] dark:text-gray-400 leading-relaxed text-sm">
+                                        Coding, robotics, and hands-on laboratory experiments designed to build
+                                        problem-solving skills for a digital future.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Pillar 2 -->
+                            <div
+                                class="group relative bg-white dark:bg-[#2d2719] rounded-[48px] overflow-hidden border border-[#e6e3db] dark:border-transparent hover:shadow-2xl transition-all duration-500 md:translate-y-8">
+                                <div class="h-56 overflow-hidden relative">
+                                    <img src="inclusive.png" alt="Arts"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-white dark:from-[#2d2719] to-transparent opacity-60">
+                                    </div>
+                                    <div
+                                        class="absolute bottom-6 left-8 bg-secondary text-green-800 p-4 rounded-2xl shadow-xl">
+                                        <span class="material-symbols-outlined text-3xl font-black">palette</span>
+                                    </div>
+                                </div>
+                                <div class="p-10 space-y-4">
+                                    <h4 class="text-2xl font-black">Creative Arts</h4>
+                                    <p class="text-[#897f61] dark:text-gray-400 leading-relaxed text-sm">
+                                        Visual arts, music, and theater programs that encourage self-expression and
+                                        creative thinking across all disciplines.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Pillar 3 -->
+                            <div
+                                class="group relative bg-white dark:bg-[#2d2719] rounded-[48px] overflow-hidden border border-[#e6e3db] dark:border-transparent hover:shadow-2xl transition-all duration-500">
+                                <div class="h-56 overflow-hidden relative">
+                                    <img src="esl.png" alt="Literacy"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-white dark:from-[#2d2719] to-transparent opacity-60">
+                                    </div>
+                                    <div
+                                        class="absolute bottom-6 left-8 bg-accent-blue text-blue-800 p-4 rounded-2xl shadow-xl">
+                                        <span class="material-symbols-outlined text-3xl font-black">auto_stories</span>
+                                    </div>
+                                </div>
+                                <div class="p-10 space-y-4">
+                                    <h4 class="text-2xl font-black">Literacy & Language</h4>
+                                    <p class="text-[#897f61] dark:text-gray-400 leading-relaxed text-sm">
+                                        Comprehensive reading and writing workshops that foster a deep appreciation for
+                                        storytelling and communication.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-32 mb-16">
+                        <div class="relative rounded-[60px] overflow-hidden group py-20 px-12 md:px-24">
+                            <img src="support_hero.png" alt="Specialized Learning"
+                                class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-primary/90 backdrop-blur-sm mix-blend-multiply"></div>
+
+                            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                                <div class="space-y-8 text-center lg:text-left">
+                                    <h2
+                                        class="text-4xl md:text-6xl font-black tracking-tight text-[#181611] leading-tight">
+                                        Specialized <br /> <span class="bg-white/30 px-4 rounded-2xl">Learning &
+                                            Support</span></h2>
+                                    <p class="text-[#181611] text-xl font-medium max-w-xl">
+                                        Every child learns differently. We provide a range of tailored programs to
+                                        ensure that every student has the tools and support they need to succeed.
+                                    </p>
+                                    <a href="support_services.html"
+                                        class="inline-block bg-[#181611] text-white px-10 py-5 rounded-[24px] font-black text-xl hover:translate-y-[-4px] transition-all shadow-2xl">
+                                        Explore All Services
+                                    </a>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div
+                                        class="bg-white/20 backdrop-blur-md p-6 rounded-3xl border border-white/30 space-y-2">
+                                        <span
+                                            class="material-symbols-outlined text-3xl font-black text-[#181611]">stars</span>
+                                        <h5 class="font-black text-[#181611]">Gifted & Talented</h5>
+                                        <p class="text-sm text-[#181611]/80 font-medium">Advanced pathways for high
+                                            achievers.</p>
+                                    </div>
+                                    <div
+                                        class="bg-white/20 backdrop-blur-md p-6 rounded-3xl border border-white/30 space-y-2">
+                                        <span
+                                            class="material-symbols-outlined text-3xl font-black text-[#181611]">translate</span>
+                                        <h5 class="font-black text-[#181611]">ESL Support</h5>
+                                        <p class="text-sm text-[#181611]/80 font-medium">Multilingual student
+                                            empowerment.</p>
+                                    </div>
+                                    <div
+                                        class="bg-white/20 backdrop-blur-md p-6 rounded-3xl border border-white/30 space-y-2 md:col-span-2">
+                                        <span
+                                            class="material-symbols-outlined text-3xl font-black text-[#181611]">diversity_3</span>
+                                        <h5 class="font-black text-[#181611]">Inclusive Education</h5>
+                                        <p class="text-sm text-[#181611]/80 font-medium">IEPs and dedicated specialists
+                                            for every unique need.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+            <footer
+                class="bg-white dark:bg-[#110e08] px-4 md:px-20 lg:px-40 py-16 border-t border-[#f4f3f0] dark:border-[#3a3528]">
+                <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+                    <div class="col-span-1 md:col-span-1">
+                        <div class="flex items-center gap-3 text-[#181611] dark:text-white mb-6">
+                            <div class="size-6 text-primary">
+                                <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
+                                        fill="currentColor"></path>
+                                </svg>
+                            </div>
+                            <h2 class="text-lg font-bold">Hopespring Foundation</h2>
+                        </div>
+                        <p class="text-sm text-[#897f61] dark:text-white/60 mb-4">2 Ngara Igo Street, Mgbuoba,<br />Port
+                            Harcourt 500272, Rivers
+                        </p>
+                        <div class="flex gap-4">
+                            <span
+                                class="material-symbols-outlined text-[#897f61] hover:text-primary cursor-pointer transition-colors">social_leaderboard</span>
+                            <span
+                                class="material-symbols-outlined text-[#897f61] hover:text-primary cursor-pointer transition-colors">public</span>
+                            <span
+                                class="material-symbols-outlined text-[#897f61] hover:text-primary cursor-pointer transition-colors">mail</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-6">Explore</h4>
+                        <ul class="text-sm text-[#897f61] dark:text-white/60 space-y-3">
+                            <li><a class="hover:text-primary transition-colors" href="academics.html">Curriculum</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="support_services.html">Support
+                                    Services</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="calendar.html">School Calendar</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="parents.html">Parent Resources</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-6">Admissions</h4>
+                        <ul class="text-sm text-[#897f61] dark:text-white/60 space-y-3">
+                            <li><a class="hover:text-primary transition-colors" href="admission.html">How to Apply</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="book_tour.html">Book a Tour</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="virtual_tour.html">Virtual
+                                    Tour</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-6">Contact Us</h4>
+                        <p class="text-sm text-[#897f61] dark:text-white/60 mb-2">Mon - Fri: 8:00 AM - 3:30 PM</p>
+                        <p class="text-sm text-[#897f61] dark:text-white/60">Email: office@hopespring-fs.com</p>
+                        <p class="text-sm text-[#897f61] dark:text-white/60 mt-4">Phone: 07048808844</p>
+                    </div>
+                </div>
+                <div
+                    class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-[#f4f3f0] dark:border-[#3a3528] text-center text-xs text-[#897f61] dark:text-white/40">
+                    © 2024 Hopespring Foundation School. All rights reserved.
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <script src="site_search.js"></script>
+    <script>
+        const gradeData = {
+            'k': {
+                name: 'Kindergarten',
+                icon: 'K',
+                description: 'Our Kindergarten program focuses on social-emotional growth and the building blocks of literacy and numeracy.',
+                focus: 'Social Skills & Literacy Basics',
+                project: 'Community Garden',
+                link: 'curriculum.html#kindergarten'
+            },
+            '1': {
+                name: 'First Grade',
+                icon: '1',
+                description: 'First Grade is a year of rapid growth in reading fluency, mathematical reasoning, and scientific inquiry.',
+                focus: 'Reading Fluency & Addition/Subtraction',
+                project: 'Weather Station',
+                link: 'curriculum.html#first-grade'
+            },
+            '2': {
+                name: 'Second Grade',
+                icon: '2',
+                description: 'Second graders transition from learning to read to reading to learn, tackling complex problems and history.',
+                focus: 'Reading Comprehension & Place Value',
+                project: 'Family Tree History',
+                link: 'curriculum.html#second-grade'
+            },
+            '3': {
+                name: 'Third Grade',
+                icon: '3',
+                description: 'Third grade marks a shift towards independence, mastering multiplication and understanding complex systems.',
+                focus: 'Multiplication & Ecosystems',
+                project: 'Classroom Economy Market Day',
+                link: 'curriculum.html#third-grade'
+            },
+            '4': {
+                name: 'Fourth Grade',
+                icon: '4',
+                description: 'Fourth graders become critical thinkers, analyzing texts deeply and conducting scientific experiments.',
+                focus: 'Text Analysis & Fractions',
+                project: 'Invention Convention',
+                link: 'curriculum.html#fourth-grade'
+            },
+            '5': {
+                name: 'Fifth Grade',
+                icon: '5',
+                description: 'As leaders of the school, fifth graders refine their skills and prepare for middle school through complex projects.',
+                focus: 'Essay Writing & Decimals',
+                project: 'Mock Trial & Science Fair',
+                link: 'curriculum.html#fifth-grade'
+            }
+        };
+
+        function selectGrade(grade) {
+            // Remove active class from all cards
+            document.querySelectorAll('.grade-card').forEach(card => {
+                card.classList.remove('border-primary', 'bg-primary/5');
+                card.classList.add('border-[#eebd2b]/30');
+            });
+
+            // Add active class to selected card
+            const selectedCard = document.getElementById(`grade-${grade}`);
+            if (selectedCard) {
+                selectedCard.classList.remove('border-[#eebd2b]/30');
+                selectedCard.classList.add('border-primary', 'bg-primary/5');
+            }
+
+            // Update Details
+            const data = gradeData[grade];
+            document.getElementById('detail-grade-icon').textContent = data.icon;
+            document.getElementById('detail-grade-name').textContent = data.name;
+            document.getElementById('detail-description').textContent = data.description;
+            document.getElementById('detail-focus').textContent = data.focus;
+            document.getElementById('detail-project').textContent = data.project;
+            document.getElementById('detail-link').href = data.link;
+
+            // Show details
+            const detailsElement = document.getElementById('grade-details');
+            detailsElement.classList.remove('hidden');
+        }
+    </script>
+</body>
+
+</html>

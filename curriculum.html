@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Curriculum Details | Hope Spring Foundation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebd2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221d10",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-[#181611] dark:text-white transition-colors duration-200">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <div
+                class="w-full flex justify-center border-b border-[#f4f3f0] dark:border-white/10 bg-white dark:bg-background-dark sticky top-0 z-50">
+                <div class="w-full max-w-[1280px] px-6 lg:px-10 py-3 flex items-center justify-between">
+                    <div class="flex items-center gap-8">
+                        <div class="flex items-center gap-3">
+                            <img src="logo.png" alt="Hopespring Foundation Logo" class="h-10 w-auto">
+
+                        </div>
+                        <nav class="hidden lg:flex items-center gap-9">
+                            <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                                href="homepage.html">Home</a>
+                            <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                                href="about.html">About</a>
+                            <a class="text-primary text-sm font-bold" href="academics.html">Academics</a>
+                            <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                                href="admission.html">Enrollment</a>
+                            <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                                href="parents.html">Parents</a>
+                        </nav>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="relative hidden md:flex items-center group">
+                            <div class="bg-[#f4f3f0] dark:bg-white/10 rounded-xl flex items-center px-4 py-2">
+                                <span
+                                    class="material-symbols-outlined text-[#897f61] dark:text-white/50 text-xl">search</span>
+                                <input type="text"
+                                    class="site-search-input bg-transparent border-none focus:ring-0 text-sm w-32 placeholder:text-[#897f61] dark:placeholder:text-white/50 focus:w-48 transition-all duration-300"
+                                    placeholder="Search site..." />
+                            </div>
+                            <div
+                                class="search-results absolute top-full right-0 mt-2 w-64 bg-white dark:bg-[#221d10] rounded-xl shadow-xl border border-[#e6e3db] dark:border-[#3a3424] hidden z-50 overflow-hidden">
+                            </div>
+                        </div>
+                        <a href="contact.html"
+                            class="bg-primary text-[#181611] px-5 py-2 rounded-xl text-sm font-bold hover:opacity-90 transition-opacity">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <main class="flex flex-1 flex-col">
+                <section
+                    class="relative min-h-[450px] flex items-center pt-16 pb-20 overflow-hidden bg-white dark:bg-background-dark">
+                    <!-- Background Accents -->
+                    <div
+                        class="absolute top-0 right-0 w-[40%] h-full bg-primary/5 rounded-l-[100px] -z-10 translate-x-20">
+                    </div>
+
+                    <div class="max-w-[1280px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div class="space-y-8">
+                            <div
+                                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-sm">
+                                <span class="material-symbols-outlined text-lg">school</span>
+                                <span>Academic Excellence</span>
+                            </div>
+                            <h1
+                                class="text-5xl md:text-7xl font-black leading-tight tracking-tight text-[#181611] dark:text-white">
+                                Curriculum <span class="text-primary italic">Guide</span>
+                            </h1>
+                            <p class="text-lg md:text-xl text-[#897f61] dark:text-gray-300 leading-relaxed max-w-xl">
+                                Explore the specific learning objectives, core subjects, and special projects for each
+                                grade level at Hopespring.
+                            </p>
+                        </div>
+
+                        <div class="relative hidden lg:block">
+                            <div
+                                class="aspect-video bg-primary/10 rounded-[60px] border-[12px] border-white dark:border-[#2a2416] shadow-2xl overflow-hidden -rotate-3 hover:rotate-0 transition-transform duration-700">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhRNaV9wyJ1Qko29-Ng56_w4sshgFBzphYhtDOcRScrEMH33Io1AO8BLuteww7Wuwx4jZlWA4KgBtkWCqVIsceMXdKGm0EPZQhnlkOkMMpUiowWZuGMqW6xDFNW5zmpC3-50ZOFEpYinRz1qUB2wwrW-tXiAlUMvnTw_6kfSrh4QQ5k54rE7xUponPR6VoyT_1w5OoP-J_ESc9M7txLbLF5RP3CqUupd3EQC23_Gp_bKVdJ8oSL8UB7hkhR840_o-HQ-rY_dJG3_Y"
+                                    alt="Curriculum Highlight" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <div class="px-4 md:px-20 lg:px-40 py-12">
+                    <div class="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8">
+                        <!-- Sidebar Navigation -->
+                        <div class="lg:col-span-1">
+                            <div class="sticky top-24 space-y-2">
+                                <p class="font-bold text-sm uppercase text-[#897f61] mb-4 tracking-wider">Jump to Grade
+                                </p>
+                                <a href="#kindergarten"
+                                    class="block p-3 rounded-lg hover:bg-primary/10 hover:text-primary transition-colors font-medium border-l-4 border-transparent hover:border-primary">Kindergarten</a>
+                                <a href="#first-grade"
+                                    class="block p-3 rounded-lg hover:bg-primary/10 hover:text-primary transition-colors font-medium border-l-4 border-transparent hover:border-primary">First
+                                    Grade</a>
+                                <a href="#second-grade"
+                                    class="block p-3 rounded-lg hover:bg-primary/10 hover:text-primary transition-colors font-medium border-l-4 border-transparent hover:border-primary">Second
+                                    Grade</a>
+                                <a href="#third-grade"
+                                    class="block p-3 rounded-lg hover:bg-primary/10 hover:text-primary transition-colors font-medium border-l-4 border-transparent hover:border-primary">Third
+                                    Grade</a>
+                                <a href="#fourth-grade"
+                                    class="block p-3 rounded-lg hover:bg-primary/10 hover:text-primary transition-colors font-medium border-l-4 border-transparent hover:border-primary">Fourth
+                                    Grade</a>
+                                <a href="#fifth-grade"
+                                    class="block p-3 rounded-lg hover:bg-primary/10 hover:text-primary transition-colors font-medium border-l-4 border-transparent hover:border-primary">Fifth
+                                    Grade</a>
+                            </div>
+                        </div>
+
+                        <!-- Content Area -->
+                        <div class="lg:col-span-3 space-y-16">
+
+                            <!-- Kindergarten -->
+                            <section id="kindergarten" class="scroll-mt-24">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <div
+                                        class="bg-primary text-[#181611] font-black text-2xl h-12 w-12 rounded-xl flex items-center justify-center">
+                                        K</div>
+                                    <h2 class="text-3xl font-bold">Kindergarten: Foundation</h2>
+                                </div>
+                                <div
+                                    class="bg-white dark:bg-[#2a2416] p-8 rounded-2xl border border-[#e6e3db] dark:border-[#3a3528]">
+                                    <p class="text-lg text-[#5b5443] dark:text-[#b5af9a] mb-8">
+                                        Our Kindergarten program focuses on social-emotional growth and the building
+                                        blocks of literacy and numeracy. We create a nurturing environment where
+                                        children learn to ask questions and work together.
+                                    </p>
+                                    <div class="grid md:grid-cols-2 gap-8">
+                                        <div>
+                                            <h3 class="font-bold text-lg mb-4 flex items-center gap-2">
+                                                <span class="material-symbols-outlined text-primary">menu_book</span>
+                                                Core Subjects
+                                            </h3>
+                                            <ul class="space-y-3 text-sm">
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Reading:</strong> Letter recognition, phonics, and early
+                                                    sight words.
+                                                </li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Math:</strong> Counting to 100, basic shapes, interaction
+                                                    with patterns.
+                                                </li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Science:</strong> Observation of seasons, plants, and
+                                                    animals.
+                                                </li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Social Studies:</strong> Understanding community helpers and
+                                                    family structures.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold text-lg mb-4 flex items-center gap-2">
+                                                <span class="material-symbols-outlined text-primary">palette</span>
+                                                Special Projects
+                                            </h3>
+                                            <ul class="space-y-3 text-sm">
+                                                <li class="flex gap-3"><span class="text-primary">•</span> <strong>"All
+                                                        About Me" Book:</strong> Students create a portfolio about their
+                                                    families and interests.</li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Community Garden:</strong> Planting and caring for a class
+                                                    garden plot.
+                                                </li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span> <strong>100
+                                                        Days of School:</strong> A celebration of counting and
+                                                    milestones.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- First Grade -->
+                            <section id="first-grade" class="scroll-mt-24">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <div
+                                        class="bg-[#181611] dark:bg-white text-white dark:text-[#181611] font-black text-2xl h-12 w-12 rounded-xl flex items-center justify-center">
+                                        1</div>
+                                    <h2 class="text-3xl font-bold">First Grade: Discovery</h2>
+                                </div>
+                                <div
+                                    class="bg-white dark:bg-[#2a2416] p-8 rounded-2xl border border-[#e6e3db] dark:border-[#3a3528]">
+                                    <p class="text-lg text-[#5b5443] dark:text-[#b5af9a] mb-8">
+                                        First Grade is a year of rapid growth in reading fluency and mathematical
+                                        reasoning. Students begin to explore the wider world and their place within it
+                                        through inquiry-based projects.
+                                    </p>
+                                    <div class="grid md:grid-cols-2 gap-8">
+                                        <div>
+                                            <h3 class="font-bold text-lg mb-4 flex items-center gap-2">
+                                                <span class="material-symbols-outlined text-primary">menu_book</span>
+                                                Core Subjects
+                                            </h3>
+                                            <ul class="space-y-3 text-sm">
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Reading:</strong> Decoding complex words, reading
+                                                    comprehension, and storytelling.
+                                                </li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Math:</strong> Addition and subtraction within 20, place
+                                                    value basics.
+                                                </li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Science:</strong> Weather patterns, states of matter
+                                                    (solids, liquids).
+                                                </li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Social Studies:</strong> Maps, globes, and basic geography.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold text-lg mb-4 flex items-center gap-2">
+                                                <span class="material-symbols-outlined text-primary">science</span>
+                                                Special Projects
+                                            </h3>
+                                            <ul class="space-y-3 text-sm">
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Weather Station:</strong> Daily tracking and reporting of
+                                                    local weather.
+                                                </li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Animal Habitat Dioramas:</strong> Creating model habitats
+                                                    for chosen animals.
+                                                </li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Author's Tea:</strong> Sharing original stories with parents
+                                                    and peers.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Second Grade -->
+                            <section id="second-grade" class="scroll-mt-24">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <div
+                                        class="bg-[#181611] dark:bg-white text-white dark:text-[#181611] font-black text-2xl h-12 w-12 rounded-xl flex items-center justify-center">
+                                        2</div>
+                                    <h2 class="text-3xl font-bold">Second Grade: Exploration</h2>
+                                </div>
+                                <div
+                                    class="bg-white dark:bg-[#2a2416] p-8 rounded-2xl border border-[#e6e3db] dark:border-[#3a3528]">
+                                    <p class="text-lg text-[#5b5443] dark:text-[#b5af9a] mb-8">
+                                        Second graders transition from learning to read to reading to learn. They tackle
+                                        multi-step problems and engage in deeper scientific investigation and historical
+                                        exploration.
+                                    </p>
+                                    <div class="grid md:grid-cols-2 gap-8">
+                                        <div>
+                                            <h3 class="font-bold text-lg mb-4 flex items-center gap-2">
+                                                <span class="material-symbols-outlined text-primary">menu_book</span>
+                                                Core Subjects
+                                            </h3>
+                                            <ul class="space-y-3 text-sm">
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Reading:</strong> Chapter books, fluency, and main idea
+                                                    identification.
+                                                </li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Math:</strong> Addition/Subtraction within 100, introduction
+                                                    to money and time.
+                                                </li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Science:</strong> Life cycles, forces and motion.
+                                                </li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Social Studies:</strong> Ancestry, culture, and traditions
+                                                    around the world.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold text-lg mb-4 flex items-center gap-2">
+                                                <span class="material-symbols-outlined text-primary">public</span>
+                                                Special Projects
+                                            </h3>
+                                            <ul class="space-y-3 text-sm">
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Family Tree Project:</strong> exploring personal heritage
+                                                    and history.
+                                                </li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Simple Machines:</strong> Building functional levers,
+                                                    pulleys, and ramps.
+                                                </li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Cultural Fair:</strong> Presenting food, dress, and facts
+                                                    from a chosen country.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Third Grade -->
+                            <section id="third-grade" class="scroll-mt-24">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <div
+                                        class="bg-[#181611] dark:bg-white text-white dark:text-[#181611] font-black text-2xl h-12 w-12 rounded-xl flex items-center justify-center">
+                                        3</div>
+                                    <h2 class="text-3xl font-bold">Third Grade: Expansion</h2>
+                                </div>
+                                <div
+                                    class="bg-white dark:bg-[#2a2416] p-8 rounded-2xl border border-[#e6e3db] dark:border-[#3a3528]">
+                                    <p class="text-lg text-[#5b5443] dark:text-[#b5af9a] mb-8">
+                                        Third grade marks a shift towards independence. Students master multiplication,
+                                        dive into chapter book series, and begin to understand complex systems in
+                                        science and society.
+                                    </p>
+                                    <div class="grid md:grid-cols-2 gap-8">
+                                        <div>
+                                            <h3 class="font-bold text-lg mb-4 flex items-center gap-2">
+                                                <span class="material-symbols-outlined text-primary">menu_book</span>
+                                                Core Subjects
+                                            </h3>
+                                            <ul class="space-y-3 text-sm">
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Reading:</strong> Determining theme, point of view, and text
+                                                    evidence.
+                                                </li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Math:</strong> Multiplication and division, introduction to
+                                                    fractions.
+                                                </li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Science:</strong> Ecosystems, adaptations, and weather
+                                                    hazards.
+                                                </li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Social Studies:</strong> Local government, economics, and
+                                                    civics.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold text-lg mb-4 flex items-center gap-2">
+                                                <span
+                                                    class="material-symbols-outlined text-primary">rocket_launch</span>
+                                                Special Projects
+                                            </h3>
+                                            <ul class="space-y-3 text-sm">
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Market Day:</strong> Students create products and manage a
+                                                    mock classroom economy.
+                                                </li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span> <strong>Biome
+                                                        Research:</strong> Creating detailed reports and models of world
+                                                    biomes.</li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span> <strong>Local
+                                                        History Tour:</strong> Visiting landmarks and documenting local
+                                                    history.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Fourth Grade -->
+                            <section id="fourth-grade" class="scroll-mt-24">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <div
+                                        class="bg-[#181611] dark:bg-white text-white dark:text-[#181611] font-black text-2xl h-12 w-12 rounded-xl flex items-center justify-center">
+                                        4</div>
+                                    <h2 class="text-3xl font-bold">Fourth Grade: Analysis</h2>
+                                </div>
+                                <div
+                                    class="bg-white dark:bg-[#2a2416] p-8 rounded-2xl border border-[#e6e3db] dark:border-[#3a3528]">
+                                    <p class="text-lg text-[#5b5443] dark:text-[#b5af9a] mb-8">
+                                        Fourth graders become critical thinkers. They analyze texts deeply, solve
+                                        multi-step word problems, and conduct scientific experiments with variables and
+                                        hypotheses.
+                                    </p>
+                                    <div class="grid md:grid-cols-2 gap-8">
+                                        <div>
+                                            <h3 class="font-bold text-lg mb-4 flex items-center gap-2">
+                                                <span class="material-symbols-outlined text-primary">menu_book</span>
+                                                Core Subjects
+                                            </h3>
+                                            <ul class="space-y-3 text-sm">
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Reading:</strong> Comparing genres, analyzing text
+                                                    structure, and research skills.
+                                                </li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Math:</strong> Multi-digit arithmetic, fraction equivalence,
+                                                    and geometry.
+                                                </li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Science:</strong> Energy transfer, waves, and earth systems.
+                                                </li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Social Studies:</strong> State history, geography, and
+                                                    resources.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold text-lg mb-4 flex items-center gap-2">
+                                                <span class="material-symbols-outlined text-primary">lightbulb</span>
+                                                Special Projects
+                                            </h3>
+                                            <ul class="space-y-3 text-sm">
+                                                <li class="flex gap-3"><span class="text-primary">•</span> <strong>State
+                                                        Float Parade:</strong> Creating floats representing the history
+                                                    of a state.</li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Energy Audit:</strong> Analyzing school energy use and
+                                                    proposing savings.
+                                                </li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Invention Convention:</strong> Designing and prototyping a
+                                                    solution to a problem.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Fifth Grade -->
+                            <section id="fifth-grade" class="scroll-mt-24">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <div
+                                        class="bg-[#181611] dark:bg-white text-white dark:text-[#181611] font-black text-2xl h-12 w-12 rounded-xl flex items-center justify-center">
+                                        5</div>
+                                    <h2 class="text-3xl font-bold">Fifth Grade: Leadership</h2>
+                                </div>
+                                <div
+                                    class="bg-white dark:bg-[#2a2416] p-8 rounded-2xl border border-[#e6e3db] dark:border-[#3a3528]">
+                                    <p class="text-lg text-[#5b5443] dark:text-[#b5af9a] mb-8">
+                                        As the leaders of the elementary school, fifth graders refine their academic
+                                        skills and prepare for middle school. They engage in complex debates, long-term
+                                        projects, and leadership roles.
+                                    </p>
+                                    <div class="grid md:grid-cols-2 gap-8">
+                                        <div>
+                                            <h3 class="font-bold text-lg mb-4 flex items-center gap-2">
+                                                <span class="material-symbols-outlined text-primary">menu_book</span>
+                                                Core Subjects
+                                            </h3>
+                                            <ul class="space-y-3 text-sm">
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Reading:</strong> Novel studies, literary analysis, and
+                                                    persuasive writing.
+                                                </li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Math:</strong> Decimals, volume, and operations with larger
+                                                    fractions.
+                                                </li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Science:</strong> Structure of matter, ecosystems, and space
+                                                    systems.
+                                                </li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Social Studies:</strong> Early American history and
+                                                    constitutional foundations.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold text-lg mb-4 flex items-center gap-2">
+                                                <span class="material-symbols-outlined text-primary">diversity_2</span>
+                                                Special Projects
+                                            </h3>
+                                            <ul class="space-y-3 text-sm">
+                                                <li class="flex gap-3"><span class="text-primary">•</span> <strong>Mock
+                                                        Trial:</strong> Simulating a court case to understand the
+                                                    justice system.</li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Science Fair:</strong> Conducting and presenting an
+                                                    independent experiment.
+                                                </li>
+                                                <li class="flex gap-3"><span class="text-primary">•</span>
+                                                    <strong>Legacy Project:</strong> A class service project to leave a
+                                                    mark on the school.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Section -->
+                <div
+                    class="px-4 md:px-20 lg:px-40 flex justify-center py-20 bg-background-light dark:bg-background-dark border-t border-[#e6e3db] dark:border-[#3a3424]">
+                    <div
+                        class="layout-content-container flex flex-col max-w-[1200px] flex-1 bg-primary rounded-3xl p-8 md:p-16 text-center items-center shadow-lg relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-20 -mt-20 blur-3xl">
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full -ml-10 -mb-10 blur-2xl">
+                        </div>
+                        <div class="relative z-10">
+                            <h2 class="text-[#181611] text-3xl md:text-4xl font-black mb-6">Ready to Join Us?</h2>
+                            <p class="text-[#181611]/80 text-lg md:text-xl max-w-[600px] mx-auto mb-10 font-medium">
+                                Give your child the gift of a supportive, challenging, and inspiring education.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <a href="start_application.html"
+                                    class="bg-[#181611] text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-black transition-colors shadow-md inline-block">
+                                    Start Application
+                                </a>
+                                <a href="book_tour.html"
+                                    class="bg-white/20 text-[#181611] px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/30 transition-colors border border-black/10 inline-block">
+                                    Book a Tour
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer
+                class="bg-white dark:bg-[#110e08] px-4 md:px-20 lg:px-40 py-16 border-t border-[#f4f3f0] dark:border-[#3a3528]">
+                <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+                    <div class="col-span-1 md:col-span-1">
+                        <div class="flex items-center gap-3 text-[#181611] dark:text-white mb-6">
+                            <div class="size-6 text-primary">
+                                <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
+                                        fill="currentColor"></path>
+                                </svg>
+                            </div>
+                            <h2 class="text-lg font-bold">Hopespring Foundation</h2>
+                        </div>
+                        <p class="text-sm text-[#897f61] dark:text-white/60 mb-4">2 Ngara Igo Street, Mgbuoba,<br />Port
+                            Harcourt 500272, Rivers
+                        </p>
+                        <div class="flex gap-4">
+                            <span
+                                class="material-symbols-outlined text-[#897f61] hover:text-primary cursor-pointer transition-colors">social_leaderboard</span>
+                            <span
+                                class="material-symbols-outlined text-[#897f61] hover:text-primary cursor-pointer transition-colors">public</span>
+                            <span
+                                class="material-symbols-outlined text-[#897f61] hover:text-primary cursor-pointer transition-colors">mail</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-6">Explore</h4>
+                        <ul class="text-sm text-[#897f61] dark:text-white/60 space-y-3">
+                            <li><a class="hover:text-primary transition-colors" href="academics.html">Curriculum</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="support_services.html">Support
+                                    Services</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="calendar.html">School Calendar</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="parents.html">Parent Resources</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-6">Admissions</h4>
+                        <ul class="text-sm text-[#897f61] dark:text-white/60 space-y-3">
+                            <li><a class="hover:text-primary transition-colors" href="admission.html">How to Apply</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="book_tour.html">Book a Tour</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="virtual_tour.html">Virtual
+                                    Tour</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-6">Contact Us</h4>
+                        <p class="text-sm text-[#897f61] dark:text-white/60 mb-2">Mon - Fri: 8:00 AM - 3:30 PM</p>
+                        <p class="text-sm text-[#897f61] dark:text-white/60">Email: office@hopespring-fs.com</p>
+                        <p class="text-sm text-[#897f61] dark:text-white/60 mt-4">Phone: 07048808844</p>
+                    </div>
+                </div>
+                <div
+                    class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-[#f4f3f0] dark:border-[#3a3528] text-center text-xs text-[#897f61] dark:text-white/40">
+                    © 2024 Hopespring Foundation School. All rights reserved.
+                </div>
+            </footer>
+
+        </div>
+    </div>
+    <script src="site_search.js"></script>
+</body>
+
+</html>

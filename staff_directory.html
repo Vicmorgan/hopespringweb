@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Our Team - Staff Directory | Hopespring Foundation</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebd2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221d10",
+                        "secondary": "#a8d5ba",
+                        "accent-blue": "#add8e6",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+
+        .staff-card-img {
+            filter: grayscale(20%);
+            transition: all 0.5s ease;
+        }
+
+        .staff-card:hover .staff-card-img {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-[#181611] dark:text-white transition-colors duration-300">
+
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <div
+                class="px-4 md:px-20 lg:px-40 flex justify-center py-2 fixed top-0 left-0 w-full z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-solid border-[#f4f3f0] dark:border-[#3a3528]">
+                <div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+                    <header class="flex items-center justify-between whitespace-nowrap px-4 py-3">
+                        <div class="flex items-center gap-4 text-[#181611] dark:text-white">
+                            <img src="logo.png" alt="Hopespring Foundation Logo" class="h-10 w-auto">
+                        </div>
+                        <div class="flex flex-1 justify-end gap-4 md:gap-8">
+                            <div class="hidden md:flex items-center gap-9">
+                                <a class="text-[#181611] dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                                    href="homepage.html">Home</a>
+                                <a class="text-[#181611] dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                                    href="about.html">About</a>
+                                <a class="text-[#181611] dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                                    href="academics.html">Academics</a>
+                                <a class="text-[#181611] dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                                    href="parents.html">Parents</a>
+                                <a class="text-[#181611] dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                                    href="admission.html">Admissions</a>
+                                <a class="text-[#181611] dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                                    href="gallery.html">Gallery</a>
+                            </div>
+                            <div class="relative hidden md:flex items-center group">
+                                <div class="bg-[#f4f3f0] dark:bg-white/10 rounded-xl flex items-center px-4 py-2">
+                                    <span
+                                        class="material-symbols-outlined text-[#897f61] dark:text-white/50 text-xl">search</span>
+                                    <input type="text"
+                                        class="site-search-input bg-transparent border-none focus:ring-0 text-sm w-32 placeholder:text-[#897f61] dark:placeholder:text-white/50 focus:w-48 transition-all duration-300"
+                                        placeholder="Search site..." />
+                                </div>
+                            </div>
+                            <a href="start_application.html"
+                                class="flex min-w-[100px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-primary text-[#181611] text-sm font-bold leading-normal tracking-[0.015em] shadow-sm hover:brightness-105 transition-all">
+                                <span class="truncate">Enroll Now</span>
+                            </a>
+                        </div>
+                    </header>
+                </div>
+            </div>
+
+            <main class="flex flex-col flex-1">
+                <!-- Hero Section -->
+                <section
+                    class="relative min-h-[400px] flex items-center pt-32 pb-20 overflow-hidden bg-white dark:bg-background-dark">
+                    <div
+                        class="absolute top-0 left-0 w-[40%] h-full bg-primary/5 rounded-r-[100px] -z-10 -translate-x-20">
+                    </div>
+                    <div class="max-w-[1200px] mx-auto px-6 text-center">
+                        <div
+                            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-sm mb-6">
+                            <span class="material-symbols-outlined text-lg">groups</span>
+                            <span>Meet Our Team</span>
+                        </div>
+                        <h1 class="text-5xl md:text-7xl font-black tracking-tight mb-6">
+                            Our Dedicated <span class="text-primary italic">Educators</span>
+                        </h1>
+                        <p class="text-xl text-[#897f61] dark:text-gray-400 max-w-2xl mx-auto">
+                            Passion, expertise, and a heart for children. Meet the people who make Hopespring a world of
+                            discovery.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Directory Grid -->
+                <section class="max-w-[1200px] mx-auto px-6 py-24 space-y-24">
+
+                    <!-- Leadership Section -->
+                    <div class="space-y-12">
+                        <div class="border-l-4 border-primary pl-6">
+                            <h2 class="text-3xl font-black">School <span class="text-primary italic">Leadership</span>
+                            </h2>
+                            <p class="text-[#897f61] dark:text-gray-400">Guiding our vision and excellence.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            <!-- Staff 1 -->
+                            <div
+                                class="staff-card group bg-white dark:bg-[#2d2719] p-6 rounded-[32px] shadow-lg hover:shadow-2xl transition-all border border-[#f0eee9] dark:border-transparent">
+                                <div class="relative size-40 mx-auto mb-6 rounded-3xl overflow-hidden shadow-inner">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwg3qfJ8OUqxgW9t_op7sCozHu0I9qQo1oTplhTXJIqMY6-GKiP_Q4QOAZgKqsVhoZtnbPLsQGXgwtGUIrRUEDUUUw5EWQnCl_PnSle_TjrXELuc6f7ITD4FagrLtgBoMr3NaSeVUkg6kvRm7Ye1wL04JiI6lc6MbKbeO_cVnxMo61j_NnKxNsNTxz7HpJuDHsYjDxw-Z3qWqrO9eFxfjp1qA8plVbwkR7jU9Rvd62fdp_70RpFY4eDhnE8Baeqf9VADAt8clhkIY"
+                                        alt="Dr. Sarah Jenkins" class="staff-card-img w-full h-full object-cover">
+                                </div>
+                                <div class="text-center">
+                                    <h3 class="font-black text-xl mb-1">Dr. Sarah Jenkins</h3>
+                                    <p class="text-primary font-bold text-sm">School Principal</p>
+                                    <p class="text-xs text-[#897f61] dark:text-gray-400 mt-3 italic">"Leading with love
+                                        and learning."</p>
+                                </div>
+                            </div>
+
+                            <!-- Staff 2 -->
+                            <div
+                                class="staff-card group bg-white dark:bg-[#2d2719] p-6 rounded-[32px] shadow-lg hover:shadow-2xl transition-all border border-[#f0eee9] dark:border-transparent">
+                                <div class="relative size-40 mx-auto mb-6 rounded-3xl overflow-hidden shadow-inner">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuADcmCEov2jr_HiWKZMum6MZ0q9D38AoaHvJ6EO3YVRFvtd2MVmZSWYAx34c1Z4WN3fHmDAQfdvY-_NmWH4hHfjyuRibrMeDozeyVVdCUMP2-U-jBP8Ia-MVI-TEabIKIzUgSfenquZXDFywV99mFlnyeAqCxrgBLq5BpwN2bXTYgCyAlxlW3H_aYISy8Am2KWS-U2w971C5v0wSgo69vbZHd68s6crcfykzKVliET5TR0w0hJrzDBrd7nJlG07qOvbI6EQrpi6nkA"
+                                        alt="Mr. David Chen" class="staff-card-img w-full h-full object-cover">
+                                </div>
+                                <div class="text-center">
+                                    <h3 class="font-black text-xl mb-1">Mr. David Chen</h3>
+                                    <p class="text-primary font-bold text-sm">Vice-Principal</p>
+                                    <p class="text-xs text-[#897f61] dark:text-gray-400 mt-3 italic">"Excellence in
+                                        every detail."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Academic Staff Section -->
+                    <div class="space-y-12">
+                        <div class="border-l-4 border-secondary pl-6">
+                            <h2 class="text-3xl font-black">Academic <span class="text-secondary italic">Faculty</span>
+                            </h2>
+                            <p class="text-[#897f61] dark:text-gray-400">The heart of our classroom discovery.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            <!-- Staff 3 -->
+                            <div
+                                class="staff-card group bg-white dark:bg-[#2d2719] p-6 rounded-[32px] shadow-lg hover:shadow-2xl transition-all border border-[#f0eee9] dark:border-transparent">
+                                <div class="relative size-40 mx-auto mb-6 rounded-3xl overflow-hidden shadow-inner">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhRNaV9wyJ1Qko29-Ng56_w4sshgFBzphYhtDOcRScrEMH33Io1AO8BLuteww7Wuwx4jZlWA4KgBtkWCqVIsceMXdKGm0EPZQhnlkOkMMpUiowWZuGMqW6xDFNW5zmpC3-50ZOFEpYinRz1qUB2wwrW-tXiAlUMvnTw_6kfSrh4QQ5k54rE7xUponPR6VoyT_1w5OoP-J_ESc9M7txLbLF5RP3CqUupd3EQC23_Gp_bKVdJ8oSL8UB7hkhR840_o-HQ-rY_dJG3_Y"
+                                        alt="Ms. Linda Osei" class="staff-card-img w-full h-full object-cover">
+                                </div>
+                                <div class="text-center">
+                                    <h3 class="font-black text-xl mb-1">Ms. Linda Osei</h3>
+                                    <p class="text-primary font-bold text-sm">Head of Early Years</p>
+                                    <p class="text-xs text-[#897f61] dark:text-gray-400 mt-3 italic">"Nurturing the
+                                        first steps."</p>
+                                </div>
+                            </div>
+
+                            <!-- Staff 4 -->
+                            <div
+                                class="staff-card group bg-white dark:bg-[#2d2719] p-6 rounded-[32px] shadow-lg hover:shadow-2xl transition-all border border-[#f0eee9] dark:border-transparent">
+                                <div class="relative size-40 mx-auto mb-6 rounded-3xl overflow-hidden shadow-inner">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpmsoyNKF9b2xrA3x71y_gvgHZxiRHb1PUr5RVX9_UoxiGHT-5LE29lJOY9O79Km5tY4N2cVFCGiNzVG2rPRn5DuA9YIWvhLK4JeLJcHNJ_9561arNv_Y0vvlCRa5e9ma7qJ1VAaktOaL9Vpcf5RJdYiN3enjeuFu1tH03G0MaqZ4LaqLrJSttY9929ODu2bJlov5bu4GYSRhYyNvQksk80f8EF0t67TLpNJ7yFB-qhLK4TiVmJcDcHT28ZI1bBIsoyifZ_TcMowg"
+                                        alt="Mr. Simon Ade" class="staff-card-img w-full h-full object-cover">
+                                </div>
+                                <div class="text-center">
+                                    <h3 class="font-black text-xl mb-1">Mr. Simon Ade</h3>
+                                    <p class="text-primary font-bold text-sm">Lead Science Educator</p>
+                                    <p class="text-xs text-[#897f61] dark:text-gray-400 mt-3 italic">"Unlocking the
+                                        wonders of nature."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Support Staff Section -->
+                    <div class="space-y-12">
+                        <div class="border-l-4 border-accent-blue pl-6">
+                            <h2 class="text-3xl font-black">Support <span class="text-accent-blue italic">Team</span>
+                            </h2>
+                            <p class="text-[#897f61] dark:text-gray-400">The strength behind our daily operations.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            <!-- Staff 5 -->
+                            <div
+                                class="staff-card group bg-white dark:bg-[#2d2719] p-6 rounded-[32px] shadow-lg hover:shadow-2xl transition-all border border-[#f0eee9] dark:border-transparent">
+                                <div class="relative size-40 mx-auto mb-6 rounded-3xl overflow-hidden shadow-inner">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHsY1TdY_LEqDYlwDchPy0tTakUGn-wyQQDwVst47-sydS0GM1DP9tQ6AiH24OuaS4zCZnPgdhlrY4cyiRSPEdAv5JzS6ITVvTqj2qtkUpaUuklxF_mCKsgu3RFlo7tSOBFh7IxoALTpYVqSmqM9hbn5zZ5pd3gvjCUlcR3wmoEWEfkx-K4-EUpFigrxD6hFMk5llsh1-lIV6QoWV2K2wGuvkjmm6leBoSButHuM4ZeJKqzk6TOmRMigW_UjCxj-QkgcyzV8ZigXE"
+                                        alt="Mrs. Rose Peters" class="staff-card-img w-full h-full object-cover">
+                                </div>
+                                <div class="text-center">
+                                    <h3 class="font-black text-xl mb-1">Mrs. Rose Peters</h3>
+                                    <p class="text-primary font-bold text-sm">School Registrar</p>
+                                    <p class="text-xs text-[#897f61] dark:text-gray-400 mt-3 italic">"Welcome to the
+                                        family."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Final CTA -->
+                <div class="px-6 py-24 max-w-[1200px] mx-auto">
+                    <div class="relative rounded-[60px] overflow-hidden group">
+                        <img src="inclusive.png" alt="Happy school community"
+                            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-primary/90 backdrop-blur-sm mix-blend-multiply"></div>
+                        <div
+                            class="relative z-10 p-12 md:p-24 text-center md:text-left space-y-8 flex flex-col md:row items-center justify-between gap-12">
+                            <div class="space-y-4">
+                                <h2 class="text-[#181611] text-4xl md:text-5xl font-black tracking-tight leading-tight">
+                                    Join our <br /> <span class="bg-white/30 px-4 rounded-2xl">Mission?</span></h2>
+                                <p class="text-[#181611] text-lg font-medium max-w-md">
+                                    We're always looking for passionate educators to join our vibrant academic
+                                    community.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-6">
+                                <a href="contact.html"
+                                    class="bg-[#181611] text-white px-10 py-5 rounded-[24px] font-black text-xl hover:translate-y-[-4px] transition-all shadow-2xl">
+                                    Career Opportunities
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer
+                class="bg-white dark:bg-[#110e08] px-4 md:px-20 lg:px-40 py-16 border-t border-[#f4f3f0] dark:border-[#3a3528]">
+                <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+                    <div class="col-span-1 md:col-span-1">
+                        <div class="flex items-center gap-3 text-[#181611] dark:text-white mb-6">
+                            <div class="size-6 text-primary">
+                                <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
+                                        fill="currentColor"></path>
+                                </svg>
+                            </div>
+                            <h2 class="text-lg font-bold">Hopespring Foundation</h2>
+                        </div>
+                        <p class="text-sm text-[#897f61] dark:text-white/60 mb-4">2 Ngara Igo Street, Mgbuoba,<br />Port
+                            Harcourt 500272, Rivers</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-6">Explore</h4>
+                        <ul class="text-sm text-[#897f61] dark:text-white/60 space-y-3">
+                            <li><a class="hover:text-primary transition-colors" href="academics.html">Curriculum</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="gallery.html">Gallery</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="news.html">School News</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-6">Admissions</h4>
+                        <ul class="text-sm text-[#897f61] dark:text-white/60 space-y-3">
+                            <li><a class="hover:text-primary transition-colors" href="admission.html">How to Apply</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="book_tour.html">Book a Tour</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-[#f4f3f0] dark:border-[#3a3528] text-center text-xs text-[#897f61] dark:text-white/40">
+                    © 2024 Hopespring Foundation School. All rights reserved.
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="site_search.js"></script>
+</body>
+
+</html>

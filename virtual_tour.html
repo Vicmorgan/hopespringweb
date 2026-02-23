@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Virtual Tour | Hope Spring Foundation</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebd2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221d10",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-[#181611] dark:text-white transition-colors duration-200">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div
+            class="w-full flex justify-center border-b border-[#f4f3f0] dark:border-white/10 bg-white dark:bg-background-dark sticky top-0 z-50">
+            <div class="w-full max-w-[1280px] px-6 lg:px-10 py-3 flex items-center justify-between">
+                <div class="flex items-center gap-8">
+                    <div class="flex items-center gap-3">
+                        <img src="logo.png" alt="Hopespring Foundation Logo" class="h-10 w-auto">
+
+                    </div>
+                    <nav class="hidden lg:flex items-center gap-9">
+                        <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                            href="homepage.html">Home</a>
+                        <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                            href="about.html">About</a>
+                        <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                            href="academics.html">Academics</a>
+                        <a class="text-primary text-sm font-bold" href="admission.html">Enrollment</a>
+                        <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                            href="parents.html">Parents</a>
+                    </nav>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="relative hidden md:flex items-center group">
+                        <div class="bg-[#f4f3f0] dark:bg-white/10 rounded-xl flex items-center px-4 py-2">
+                            <span
+                                class="material-symbols-outlined text-[#897f61] dark:text-white/50 text-xl">search</span>
+                            <input type="text"
+                                class="site-search-input bg-transparent border-none focus:ring-0 text-sm w-32 placeholder:text-[#897f61] dark:placeholder:text-white/50 focus:w-48 transition-all duration-300"
+                                placeholder="Search site..." />
+                        </div>
+                        <div
+                            class="search-results absolute top-full right-0 mt-2 w-64 bg-white dark:bg-[#221d10] rounded-xl shadow-xl border border-[#e6e3db] dark:border-[#3a3424] hidden z-50 overflow-hidden">
+                        </div>
+                    </div>
+                    <a href="contact.html"
+                        class="bg-primary text-[#181611] px-5 py-2 rounded-xl text-sm font-bold hover:opacity-90 transition-opacity">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <main class="flex flex-1 flex-col">
+            <!-- Hero Section -->
+            <div class="relative min-h-[50vh] flex flex-col items-center justify-center text-center p-8 bg-cover bg-center"
+                style='background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuD5A5zXg7wK_PzXjRj8tL8mN9oP2qR4sT5uV6wW7xY8zZ9aB0cC1dE2fF3gH4iJ5kL6mN7oP8qR9sT0uV1wX2yZ3aB4cC5dE6fG7hI8jK9lL0mN1oP2qR3sT4uV5wX6yZ7aB8cC9dE0fG1hI2jK3lL4mN5oP6qR7sT8uV9wX0yZ1aB2HC3dE4fG5hI6jK7lL8mN9oP0qR1sT2uV3wX4yZ5aB6cC7dE8fG9hI0jK1lL2");'>
+                <div class="z-10 flex flex-col gap-6 max-w-[800px]">
+                    <h1 class="text-white text-4xl md:text-6xl font-black leading-tight tracking-[-0.033em]">
+                        Explore Hope Spring <br /><span class="text-primary">From Anywhere</span>
+                    </h1>
+                    <p class="text-white/90 text-lg md:text-xl max-w-2xl mx-auto">
+                        Take a guided virtual walk through our campus, classrooms, and facilities. See where your child
+                        will learn, play, and grow.
+                    </p>
+                </div>
+            </div>
+
+            <div class="px-4 md:px-20 lg:px-40 flex justify-center py-16 bg-white dark:bg-[#1a160d]">
+                <div class="layout-content-container flex flex-col max-w-[1000px] flex-1 gap-12">
+
+                    <!-- Video Placeholder -->
+                    <section class="flex flex-col gap-6 text-center items-center">
+                        <div
+                            class="relative w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl group cursor-pointer">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwg3qfJ8OUqxgW9t_op7sCozHu0I9qQo1oTplhTXJIqMY6-GKiP_Q4QOAZgKqsVhoZtnbPLsQGXgwtGUIrRUEDUUUw5EWQnCl_PnSle_TjrXELuc6f7ITD4FagrLtgBoMr3NaSeVUkg6kvRm7Ye1wL04JiI6lc6MbKbeO_cVnxMo61j_NnKxNsNTxz7HpJuDHsYjDxw-Z3qWqrO9eFxfjp1qA8plVbwkR7jU9Rvd62fdp_70RpFY4eDhnE8Baeqf9VADAt8clhkIY"
+                                alt="Video Thumbnail"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-60 transition-opacity">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div
+                                    class="w-20 h-20 bg-primary rounded-full flex items-center justify-center pl-2 group-hover:scale-110 transition-transform shadow-lg">
+                                    <span class="material-symbols-outlined text-[#181611] text-5xl">play_arrow</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h2 class="text-2xl font-bold text-[#181611] dark:text-white">Watch Our Campus Tour Highlights
+                        </h2>
+                    </section>
+
+                    <!-- Gallery Grid -->
+                    <section>
+                        <h2 class="text-[#181611] dark:text-white text-3xl font-bold mb-8 text-center">Campus Gallery
+                        </h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhRNaV9wyJ1Qko29-Ng56_w4sshgFBzphYhtDOcRScrEMH33Io1AO8BLuteww7Wuwx4jZlWA4KgBtkWCqVIsceMXdKGm0EPZQhnlkOkMMpUiowWZuGMqW6xDFNW5zmpC3-50ZOFEpYinRz1qUB2wwrW-tXiAlUMvnTw_6kfSrh4QQ5k54rE7xUponPR6VoyT_1w5OoP-J_ESc9M7txLbLF5RP3CqUupd3EQC23_Gp_bKVdJ8oSL8UB7hkhR840_o-HQ-rY_dJG3_Y"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    alt="Classroom">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                                    <h3 class="text-white text-xl font-bold">Modern Classrooms</h3>
+                                </div>
+                            </div>
+                            <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpmsoyNKF9b2xrA3x71y_gvgHZxiRHb1PUr5RVX9_UoxiGHT-5LE29lJOY9O79Km5tY4N2cVFCGiNzVG2rPRn5DuA9YIWvhLK4JeLJcHNJ_9561arNv_Y0vvlCRa5e9ma7qJ1VAaktOaL9Vpcf5RJdYiN3enjeuFu1tH03G0MaqZ4LaqLrJSttY9929ODu2bJlov5bu4GYSRhYyNvQksk80f8EF0t67TLpNJ7yFB-qhLK4TiVmJcDcHT28ZI1bBIsoyifZ_TcMowg"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    alt="Science Lab">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                                    <h3 class="text-white text-xl font-bold">Innovation Lab</h3>
+                                </div>
+                            </div>
+                            <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9PqrOJ5PITZq16Ca3nvX_04wM_ebzCBRhgQUDs6ej0e60d61BfWHXB53HNNnm_uKRMJ3TPkVoWKf015ws9dkJloNIwrHoEuLirENhySsOsnw3HBROGw8MglHDPhyV0Nz_n6IN2y1W32gh3D-k6n1DFWBCbJVEu6U5hWngW-lC-cHKKJ8euhCEvJU_ki-7Z1PLCr1uqotDm5ueiHw_yX7fwGesE-cPN0y_vN7cGoytw3NK9LpNAtzMQXPy85S04jQVynd6opeBC0I"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    alt="Library">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                                    <h3 class="text-white text-xl font-bold">Library & Media Center</h3>
+                                </div>
+                            </div>
+                            <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdzb5wWDXxbXr-vsn0Clis8KJw-Vcg5lEX03HHhjCbJpcUktVmwhYl1lblNJpAfnVcM6a04IS3wDUn7lDdzHmpOTKwGx0vkbW0ONZ5P5EieQTNV-79rGzFoZqijUxz7UbHemWw11z1CiUme7345r_xUjyAu4bOtAvffv75mr0nzQxrgwn6qDPrylgqt0H-5lzZtco6HZJ6CGecf4FTO1F2uTBsSxhq2vW3iB2AOX0MdRLjwfCHotSuwz03ofLH1ISzvCJUegcyA6Y"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    alt="Playground">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                                    <h3 class="text-white text-xl font-bold">Outdoor Play Spaces</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div
+                class="px-4 md:px-20 lg:px-40 flex justify-center py-20 bg-background-light dark:bg-background-dark border-t border-[#e6e3db] dark:border-[#3a3424]">
+                <div
+                    class="layout-content-container flex flex-col max-w-[1200px] flex-1 bg-primary rounded-3xl p-8 md:p-16 text-center items-center shadow-lg relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-20 -mt-20 blur-3xl"></div>
+                    <div class="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full -ml-10 -mb-10 blur-2xl">
+                    </div>
+                    <div class="relative z-10">
+                        <h2 class="text-[#181611] text-3xl md:text-4xl font-black mb-6">Want to see it in person?</h2>
+                        <p class="text-[#181611]/80 text-lg md:text-xl max-w-[600px] mx-auto mb-10 font-medium">
+                            Nothing beats walking the halls yourself. Schedule a guided tour today.
+                        </p>
+                        <a href="book_tour.html"
+                            class="bg-[#181611] text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-black transition-colors shadow-md inline-block">
+                            Book a Campus Tour
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer
+            class="bg-white dark:bg-[#110e08] px-4 md:px-20 lg:px-40 py-16 border-t border-[#f4f3f0] dark:border-[#3a3528]">
+            <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-3 text-[#181611] dark:text-white mb-6">
+                        <div class="size-6 text-primary">
+                            <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-lg font-bold">Hopespring Foundation</h2>
+                    </div>
+                    <p class="text-sm text-[#897f61] dark:text-white/60 mb-4">2 Ngara Igo Street, Mgbuoba,<br />Port
+                        Harcourt 500272, Rivers
+                    </p>
+                    <div class="flex gap-4">
+                        <span
+                            class="material-symbols-outlined text-[#897f61] hover:text-primary cursor-pointer transition-colors">social_leaderboard</span>
+                        <span
+                            class="material-symbols-outlined text-[#897f61] hover:text-primary cursor-pointer transition-colors">public</span>
+                        <span
+                            class="material-symbols-outlined text-[#897f61] hover:text-primary cursor-pointer transition-colors">mail</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Explore</h4>
+                    <ul class="text-sm text-[#897f61] dark:text-white/60 space-y-3">
+                        <li><a class="hover:text-primary transition-colors" href="academics.html">Curriculum</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="support_services.html">Support
+                                Services</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="calendar.html">School Calendar</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="parents.html">Parent Resources</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Admissions</h4>
+                    <ul class="text-sm text-[#897f61] dark:text-white/60 space-y-3">
+                        <li><a class="hover:text-primary transition-colors" href="admission.html">How to Apply</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="book_tour.html">Book a Tour</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="virtual_tour.html">Virtual
+                                Tour</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Contact Us</h4>
+                    <p class="text-sm text-[#897f61] dark:text-white/60 mb-2">Mon - Fri: 8:00 AM - 3:30 PM</p>
+                    <p class="text-sm text-[#897f61] dark:text-white/60">Email: office@hopespring-fs.com</p>
+                    <p class="text-sm text-[#897f61] dark:text-white/60 mt-4">Phone: 07048808844</p>
+                </div>
+            </div>
+            <div
+                class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-[#f4f3f0] dark:border-[#3a3528] text-center text-xs text-[#897f61] dark:text-white/40">
+                © 2024 Hopespring Foundation School. All rights reserved.
+            </div>
+        </footer>
+
+    </div>
+    <script src="site_search.js"></script>
+</body>
+
+</html>

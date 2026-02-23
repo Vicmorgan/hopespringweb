@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Life at Hopespring - Gallery</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebd2b",
+                        "secondary": "#4ade80",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221d10",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-[#181611] dark:text-[#f8f7f6]">
+    <div
+        class="w-full flex justify-center border-b border-[#f4f3f0] dark:border-white/10 bg-white dark:bg-background-dark sticky top-0 z-50">
+        <div class="w-full max-w-[1280px] px-6 lg:px-10 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-8">
+                <div class="flex items-center gap-3">
+                    <img src="logo.png" alt="Hopespring Foundation Logo" class="h-10 w-auto">
+                </div>
+                <nav class="hidden lg:flex items-center gap-9">
+                    <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                        href="homepage.html">Home</a>
+                    <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                        href="about.html">About</a>
+                    <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                        href="academics.html">Academics</a>
+                    <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                        href="admission.html">Enrollment</a>
+                    <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                        href="parents.html">Parents</a>
+                    <a class="text-primary text-sm font-bold" href="gallery.html">Gallery</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="relative hidden md:flex items-center group">
+                    <div class="bg-[#f4f3f0] dark:bg-white/10 rounded-xl flex items-center px-4 py-2">
+                        <span class="material-symbols-outlined text-[#897f61] dark:text-white/50 text-xl">search</span>
+                        <input type="text"
+                            class="site-search-input bg-transparent border-none focus:ring-0 text-sm w-32 placeholder:text-[#897f61] dark:placeholder:text-white/50 focus:w-48 transition-all duration-300"
+                            placeholder="Search site..." />
+                    </div>
+                </div>
+                <a href="contact.html"
+                    class="bg-primary text-[#181611] px-5 py-2 rounded-xl text-sm font-bold hover:opacity-90 transition-opacity">
+                    Report Absence
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <main class="min-h-screen">
+        <!-- Hero Section -->
+        <div class="relative bg-white dark:bg-background-dark pt-20 pb-16 overflow-hidden">
+            <div class="absolute top-0 left-0 w-[40%] h-full bg-primary/5 rounded-r-[100px] -z-10 -translate-x-20">
+            </div>
+            <div class="max-w-[1200px] mx-auto px-6 text-center">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-sm mb-6">
+                    <span class="material-symbols-outlined text-lg">photo_library</span>
+                    <span>Visual Journey</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black tracking-tight mb-6">
+                    Life at <span class="text-primary italic">Hopespring</span>
+                </h1>
+                <p class="text-xl text-[#897f61] dark:text-gray-400 max-w-2xl mx-auto mb-12">
+                    A window into the daily joy, discovery, and community that defines our school.
+                </p>
+
+                <!-- Filter Tabs Section -->
+                <div class="relative max-w-[1240px] mx-auto">
+                    <!-- Fade effects for scroll -->
+
+                    <div class="flex flex-wrap gap-3 filter-tabs px-6 justify-center py-6">
+                        <button data-filter="all"
+                            class="filter-btn active whitespace-nowrap px-8 py-3 rounded-2xl bg-primary text-[#181611] font-black text-sm shadow-xl shadow-primary/20">All
+                            Photos</button>
+                        <button data-filter="adopted-schools"
+                            class="filter-btn whitespace-nowrap px-8 py-3 rounded-2xl bg-white dark:bg-[#2d2719] border border-[#e6e3db] dark:border-[#3a3528] text-[#897f61] dark:text-white/70 font-bold text-sm hover:border-primary transition-all">HFS
+                            Visit Adopted Schools</button>
+                        <button data-filter="closing-day"
+                            class="filter-btn whitespace-nowrap px-8 py-3 rounded-2xl bg-white dark:bg-[#2d2719] border border-[#e6e3db] dark:border-[#3a3528] text-[#897f61] dark:text-white/70 font-bold text-sm hover:border-primary transition-all">Closing
+                            Day</button>
+                        <button data-filter="girl-child"
+                            class="filter-btn whitespace-nowrap px-8 py-3 rounded-2xl bg-white dark:bg-[#2d2719] border border-[#e6e3db] dark:border-[#3a3528] text-[#897f61] dark:text-white/70 font-bold text-sm hover:border-primary transition-all">Girl
+                            Child's Day</button>
+                        <button data-filter="teachers-day"
+                            class="filter-btn whitespace-nowrap px-8 py-3 rounded-2xl bg-white dark:bg-[#2d2719] border border-[#e6e3db] dark:border-[#3a3528] text-[#897f61] dark:text-white/70 font-bold text-sm hover:border-primary transition-all">Teachers'
+                            Day</button>
+                        <button data-filter="independence-day"
+                            class="filter-btn whitespace-nowrap px-8 py-3 rounded-2xl bg-white dark:bg-[#2d2719] border border-[#e6e3db] dark:border-[#3a3528] text-[#897f61] dark:text-white/70 font-bold text-sm hover:border-primary transition-all">Independence
+                            Day</button>
+                        <button data-filter="mathematics-comp"
+                            class="filter-btn whitespace-nowrap px-8 py-3 rounded-2xl bg-white dark:bg-[#2d2719] border border-[#e6e3db] dark:border-[#3a3528] text-[#897f61] dark:text-white/70 font-bold text-sm hover:border-primary transition-all">Math
+                            Competition</button>
+                        <button data-filter="pta-meeting"
+                            class="filter-btn whitespace-nowrap px-8 py-3 rounded-2xl bg-white dark:bg-[#2d2719] border border-[#e6e3db] dark:border-[#3a3528] text-[#897f61] dark:text-white/70 font-bold text-sm hover:border-primary transition-all">PTA
+                            Meeting</button>
+                        <button data-filter="interclulb-sport"
+                            class="filter-btn whitespace-nowrap px-8 py-3 rounded-2xl bg-white dark:bg-[#2d2719] border border-[#e6e3db] dark:border-[#3a3528] text-[#897f61] dark:text-white/70 font-bold text-sm hover:border-primary transition-all">Inter-Club
+                            Sport</button>
+                        <button data-filter="creative-writing"
+                            class="filter-btn whitespace-nowrap px-8 py-3 rounded-2xl bg-white dark:bg-[#2d2719] border border-[#e6e3db] dark:border-[#3a3528] text-[#897f61] dark:text-white/70 font-bold text-sm hover:border-primary transition-all">Creative
+                            Writing</button>
+                        <button data-filter="cultural-day"
+                            class="filter-btn whitespace-nowrap px-8 py-3 rounded-2xl bg-white dark:bg-[#2d2719] border border-[#e6e3db] dark:border-[#3a3528] text-[#897f61] dark:text-white/70 font-bold text-sm hover:border-primary transition-all">Cultural
+                            Day</button>
+                        <button data-filter="science-comp"
+                            class="filter-btn whitespace-nowrap px-8 py-3 rounded-2xl bg-white dark:bg-[#2d2719] border border-[#e6e3db] dark:border-[#3a3528] text-[#897f61] dark:text-white/70 font-bold text-sm hover:border-primary transition-all">Science
+                            Competition</button>
+                        <button data-filter="cooking-comp"
+                            class="filter-btn whitespace-nowrap px-8 py-3 rounded-2xl bg-white dark:bg-[#2d2719] border border-[#e6e3db] dark:border-[#3a3528] text-[#897f61] dark:text-white/70 font-bold text-sm hover:border-primary transition-all">Cooking
+                            Competition</button>
+                        <button data-filter="french-comp"
+                            class="filter-btn whitespace-nowrap px-8 py-3 rounded-2xl bg-white dark:bg-[#2d2719] border border-[#e6e3db] dark:border-[#3a3528] text-[#897f61] dark:text-white/70 font-bold text-sm hover:border-primary transition-all">French
+                            Competition</button>
+                        <button data-filter="valentines-day"
+                            class="filter-btn whitespace-nowrap px-8 py-3 rounded-2xl bg-white dark:bg-[#2d2719] border border-[#e6e3db] dark:border-[#3a3528] text-[#897f61] dark:text-white/70 font-bold text-sm hover:border-primary transition-all">Valentines
+                            Day</button>
+                        <button data-filter="gift-of-wings"
+                            class="filter-btn whitespace-nowrap px-8 py-3 rounded-2xl bg-white dark:bg-[#2d2719] border border-[#e6e3db] dark:border-[#3a3528] text-[#897f61] dark:text-white/70 font-bold text-sm hover:border-primary transition-all">Gift
+                            of Wings</button>
+                        <button data-filter="down-syndrome"
+                            class="filter-btn whitespace-nowrap px-8 py-3 rounded-2xl bg-white dark:bg-[#2d2719] border border-[#e6e3db] dark:border-[#3a3528] text-[#897f61] dark:text-white/70 font-bold text-sm hover:border-primary transition-all">Down
+                            Syndrome Day</button>
+                        <button data-filter="fathers-day"
+                            class="filter-btn whitespace-nowrap px-8 py-3 rounded-2xl bg-white dark:bg-[#2d2719] border border-[#e6e3db] dark:border-[#3a3528] text-[#897f61] dark:text-white/70 font-bold text-sm hover:border-primary transition-all">Father's
+                            Day Competition</button>
+                        <button data-filter="first-day"
+                            class="filter-btn whitespace-nowrap px-8 py-3 rounded-2xl bg-white dark:bg-[#2d2719] border border-[#e6e3db] dark:border-[#3a3528] text-[#897f61] dark:text-white/70 font-bold text-sm hover:border-primary transition-all">First
+                            Day in School</button>
+                        <button data-filter="funfair"
+                            class="filter-btn whitespace-nowrap px-8 py-3 rounded-2xl bg-white dark:bg-[#2d2719] border border-[#e6e3db] dark:border-[#3a3528] text-[#897f61] dark:text-white/70 font-bold text-sm hover:border-primary transition-all">Funfair</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="max-w-[1200px] mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- New Category Items (Placeholders) -->
+
+                <!-- Math Competition -->
+                <div
+                    class="gallery-item mathematics-comp group relative aspect-square rounded-[40px] overflow-hidden shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuCpmsoyNKF9b2xrA3x71y_gvgHZxiRHb1PUr5RVX9_UoxiGHT-5LE29lJOY9O79Km5tY4N2cVFCGiNzVG2rPRn5DuA9YIWvhLK4JeLJcHNJ_9561arNv_Y0vvlCRa5e9ma7qJ1VAaktOaL9Vpcf5RJdYiN3enjeuFu1tH03G0MaqZ4LaqLrJSttY9929ODu2bJlov5bu4GYSRhYyNvQksk80f8EF0t67TLpNJ7yFB-qhLK4TiVmJcDcHT28ZI1bBIsoyifZ_TcMowg"
+                        target="_blank" class="block w-full h-full">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpmsoyNKF9b2xrA3x71y_gvgHZxiRHb1PUr5RVX9_UoxiGHT-5LE29lJOY9O79Km5tY4N2cVFCGiNzVG2rPRn5DuA9YIWvhLK4JeLJcHNJ_9561arNv_Y0vvlCRa5e9ma7qJ1VAaktOaL9Vpcf5RJdYiN3enjeuFu1tH03G0MaqZ4LaqLrJSttY9929ODu2bJlov5bu4GYSRhYyNvQksk80f8EF0t67TLpNJ7yFB-qhLK4TiVmJcDcHT28ZI1bBIsoyifZ_TcMowg"
+                            alt="Math Competition"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </a>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2">Mathematics
+                            Competition</span>
+                        <h3 class="text-white text-2xl font-black">Regional Math Olympiad</h3>
+                    </div>
+                </div>
+
+                <!-- Cultural Day -->
+                <div
+                    class="gallery-item cultural-day group relative aspect-square rounded-[40px] overflow-hidden shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuAwg3qfJ8OUqxgW9t_op7sCozHu0I9qQo1oTplhTXJIqMY6-GKiP_Q4QOAZgKqsVhoZtnbPLsQGXgwtGUIrRUEDUUUw5EWQnCl_PnSle_TjrXELuc6f7ITD4FagrLtgBoMr3NaSeVUkg6kvRm7Ye1wL04JiI6lc6MbKbeO_cVnxMo61j_NnKxNsNTxz7HpJuDHsYjDxw-Z3qWqrO9eFxfjp1qA8plVbwkR7jU9Rvd62fdp_70RpFY4eDhnE8Baeqf9VADAt8clhkIY"
+                        target="_blank" class="block w-full h-full">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwg3qfJ8OUqxgW9t_op7sCozHu0I9qQo1oTplhTXJIqMY6-GKiP_Q4QOAZgKqsVhoZtnbPLsQGXgwtGUIrRUEDUUUw5EWQnCl_PnSle_TjrXELuc6f7ITD4FagrLtgBoMr3NaSeVUkg6kvRm7Ye1wL04JiI6lc6MbKbeO_cVnxMo61j_NnKxNsNTxz7HpJuDHsYjDxw-Z3qWqrO9eFxfjp1qA8plVbwkR7jU9Rvd62fdp_70RpFY4eDhnE8Baeqf9VADAt8clhkIY"
+                            alt="Cultural Day"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </a>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2">Cultural Day</span>
+                        <h3 class="text-white text-2xl font-black">Celebrating Heritage</h3>
+                    </div>
+                </div>
+
+                <!-- Funfair -->
+                <div
+                    class="gallery-item funfair group relative aspect-square rounded-[40px] overflow-hidden shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuD9PqrOJ5PITZq16Ca3nvX_04wM_ebzCBRhgQUDs6ej0e60d61BfWHXB53HNNnm_uKRMJ3TPkVoWKf015ws9dkJloNIwrHoEuLirENhySsOsnw3HBROGw8MglHDPhyV0Nz_n6IN2y1W32gh3D-k6n1DFWBCbJVEu6U5hWngW-lC-cHKKJ8euhCEvJU_ki-7Z1PLCr1uqotDm5ueiHw_yX7fwGesE-cPN0y_vN7cGoytw3NK9LpNAtzMQXPy85S04jQVynd6opeBC0I"
+                        target="_blank" class="block w-full h-full">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9PqrOJ5PITZq16Ca3nvX_04wM_ebzCBRhgQUDs6ej0e60d61BfWHXB53HNNnm_uKRMJ3TPkVoWKf015ws9dkJloNIwrHoEuLirENhySsOsnw3HBROGw8MglHDPhyV0Nz_n6IN2y1W32gh3D-k6n1DFWBCbJVEu6U5hWngW-lC-cHKKJ8euhCEvJU_ki-7Z1PLCr1uqotDm5ueiHw_yX7fwGesE-cPN0y_vN7cGoytw3NK9LpNAtzMQXPy85S04jQVynd6opeBC0I"
+                            alt="Funfair"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </a>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2">Funfair</span>
+                        <h3 class="text-white text-2xl font-black">Annual School Funfair</h3>
+                    </div>
+                </div>
+
+                <!-- HFS Visit Adopted Schools -->
+                <div
+                    class="gallery-item adopted-schools group relative aspect-square rounded-[40px] overflow-hidden shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuDHsY1TdY_LEqDYlwDchPy0tTakUGn-wyQQDwVst47-sydS0GM1DP9tQ6AiH24OuaS4zCZnPgdhlrY4cyiRSPEdAv5JzS6ITVvTqj2qtkUpaUuklxF_mCKsgu3RFlo7tSOBFh7IxoALTpYVqSmqM9hbn5zZ5pd3gvjCUlcR3moEWEfkx-K4-EUpFigrxD6hFMk5llsh1-lIV6QoWV2K2wGuvkjmm6leBoSButHuM4ZeJKqzk6TOmRMigW_UjCxj-QkgcyzV8ZigXE"
+                        target="_blank" class="block w-full h-full">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHsY1TdY_LEqDYlwDchPy0tTakUGn-wyQQDwVst47-sydS0GM1DP9tQ6AiH24OuaS4zCZnPgdhlrY4cyiRSPEdAv5JzS6ITVvTqj2qtkUpaUuklxF_mCKsgu3RFlo7tSOBFh7IxoALTpYVqSmqM9hbn5zZ5pd3gvjCUlcR3moEWEfkx-K4-EUpFigrxD6hFMk5llsh1-lIV6QoWV2K2wGuvkjmm6leBoSButHuM4ZeJKqzk6TOmRMigW_UjCxj-QkgcyzV8ZigXE"
+                            alt="Adopted Schools Visit"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </a>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2">Community
+                            Outreach</span>
+                        <h3 class="text-white text-2xl font-black">HFS Visit Adopted Schools</h3>
+                    </div>
+                </div>
+
+                <!-- Valentines Day -->
+                <div
+                    class="gallery-item valentines-day group relative aspect-square rounded-[40px] overflow-hidden shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuAwg3qfJ8OUqxgW9t_op7sCozHu0I9qQo1oTplhTXJIqMY6-GKiP_Q4QOAZgKqsVhoZtnbPLsQGXgwtGUIrRUEDUUUw5EWQnCl_PnSle_TjrXELuc6f7ITD4FagrLtgBoMr3NaSeVUkg6kvRm7Ye1wL04JiI6lc6MbKbeO_cVnxMo61j_NnKxNsNTxz7HpJuDHsYjDxw-Z3qWqrO9eFxfjp1qA8plVbwkR7jU9Rvd62fdp_70RpFY4eDhnE8Baeqf9VADAt8clhkIY"
+                        target="_blank" class="block w-full h-full">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwg3qfJ8OUqxgW9t_op7sCozHu0I9qQo1oTplhTXJIqMY6-GKiP_Q4QOAZgKqsVhoZtnbPLsQGXgwtGUIrRUEDUUUw5EWQnCl_PnSle_TjrXELuc6f7ITD4FagrLtgBoMr3NaSeVUkg6kvRm7Ye1wL04JiI6lc6MbKbeO_cVnxMo61j_NnKxNsNTxz7HpJuDHsYjDxw-Z3qWqrO9eFxfjp1qA8plVbwkR7jU9Rvd62fdp_70RpFY4eDhnE8Baeqf9VADAt8clhkIY"
+                            alt="Valentines Day"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </a>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2">Special
+                            Events</span>
+                        <h3 class="text-white text-2xl font-black">Valentines Day Celebration</h3>
+                    </div>
+                </div>
+
+                <!-- Science Competition -->
+                <div
+                    class="gallery-item science-comp group relative aspect-square rounded-[40px] overflow-hidden shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuCpmsoyNKF9b2xrA3x71y_gvgHZxiRHb1PUr5RVX9_UoxiGHT-5LE29lJOY9O79Km5tY4N2cVFCGiNzVG2rPRn5DuA9YIWvhLK4JeLJcHNJ_9561arNv_Y0vvlCRa5e9ma7qJ1VAaktOaL9Vpcf5RJdYiN3enjeuFu1tH03G0MaqZ4LaqLrJSttY9929ODu2bJlov5bu4GYSRhYyNvQksk80f8EF0t67TLpNJ7yFB-qhLK4TiVmJcDcHT28ZI1bBIsoyifZ_TcMowg"
+                        target="_blank" class="block w-full h-full">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpmsoyNKF9b2xrA3x71y_gvgHZxiRHb1PUr5RVX9_UoxiGHT-5LE29lJOY9O79Km5tY4N2cVFCGiNzVG2rPRn5DuA9YIWvhLK4JeLJcHNJ_9561arNv_Y0vvlCRa5e9ma7qJ1VAaktOaL9Vpcf5RJdYiN3enjeuFu1tH03G0MaqZ4LaqLrJSttY9929ODu2bJlov5bu4GYSRhYyNvQksk80f8EF0t67TLpNJ7yFB-qhLK4TiVmJcDcHT28ZI1bBIsoyifZ_TcMowg"
+                            alt="Science Competition"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </a>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2">Academic
+                            Competitions</span>
+                        <h3 class="text-white text-2xl font-black">Science Competition</h3>
+                    </div>
+                </div>
+
+                <!-- First Day -->
+                <div
+                    class="gallery-item first-day group relative aspect-square rounded-[40px] overflow-hidden shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuADcmCEov2jr_HiWKZMum6MZ0q9D38AoaHvJ6EO3YVRFvtd2MVmZSWYAx34c1Z4WN3fHmDAQfdvY-_NmWH4hHfjyuRibrMeDozeyVVdCUMP2-U-jBP8Ia-MVI-TEabIKIzUgSfenquZXDFywV99mFlnyeAqCxrgBLq5BpwN2bXTYgCyAlxlW3H_aYISy8Am2KWS-U2w971C5v0wSgo69vbZHd68s6crcfykzKVliET5TR0w0hJrzDBrd7nJlG07qOvbI6EQrpi6nkA"
+                        target="_blank" class="block w-full h-full">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuADcmCEov2jr_HiWKZMum6MZ0q9D38AoaHvJ6EO3YVRFvtd2MVmZSWYAx34c1Z4WN3fHmDAQfdvY-_NmWH4hHfjyuRibrMeDozeyVVdCUMP2-U-jBP8Ia-MVI-TEabIKIzUgSfenquZXDFywV99mFlnyeAqCxrgBLq5BpwN2bXTYgCyAlxlW3H_aYISy8Am2KWS-U2w971C5v0wSgo69vbZHd68s6crcfykzKVliET5TR0w0hJrzDBrd7nJlG07qOvbI6EQrpi6nkA"
+                            alt="First Day"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </a>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2">School Life</span>
+                        <h3 class="text-white text-2xl font-black">First Day in School</h3>
+                    </div>
+                </div>
+
+                <!-- Cooking Competition -->
+                <div
+                    class="gallery-item cooking-comp group relative aspect-square rounded-[40px] overflow-hidden shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuD9PqrOJ5PITZq16Ca3nvX_04wM_ebzCBRhgQUDs6ej0e60d61BfWHXB53HNNnm_uKRMJ3TPkVoWKf015ws9dkJloNIwrHoEuLirENhySsOsnw3HBROGw8MglHDPhyV0Nz_n6IN2y1W32gh3D-k6n1DFWBCbJVEu6U5hWngW-lC-cHKKJ8euhCEvJU_ki-7Z1PLCr1uqotDm5ueiHw_yX7fwGesE-cPN0y_vN7cGoytw3NK9LpNAtzMQXPy85S04jQVynd6opeBC0I"
+                        target="_blank" class="block w-full h-full">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9PqrOJ5PITZq16Ca3nvX_04wM_ebzCBRhgQUDs6ej0e60d61BfWHXB53HNNnm_uKRMJ3TPkVoWKf015ws9dkJloNIwrHoEuLirENhySsOsnw3HBROGw8MglHDPhyV0Nz_n6IN2y1W32gh3D-k6n1DFWBCbJVEu6U5hWngW-lC-cHKKJ8euhCEvJU_ki-7Z1PLCr1uqotDm5ueiHw_yX7fwGesE-cPN0y_vN7cGoytw3NK9LpNAtzMQXPy85S04jQVynd6opeBC0I"
+                            alt="Cooking Competition"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </a>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2">Extra-curricular
+                            Activities</span>
+                        <h3 class="text-white text-2xl font-black">Annual Cooking Competition</h3>
+                    </div>
+                </div>
+
+                <!-- French Competition -->
+                <div
+                    class="gallery-item french-comp group relative aspect-square rounded-[40px] overflow-hidden shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuCpmsoyNKF9b2xrA3x71y_gvgHZxiRHb1PUr5RVX9_UoxiGHT-5LE29lJOY9O79Km5tY4N2cVFCGiNzVG2rPRn5DuA9YIWvhLK4JeLJcHNJ_9561arNv_Y0vvlCRa5e9ma7qJ1VAaktOaL9Vpcf5RJdYiN3enjeuFu1tH03G0MaqZ4LaqLrJSttY9929ODu2bJlov5bu4GYSRhYyNvQksk80f8EF0t67TLpNJ7yFB-qhLK4TiVmJcDcHT28ZI1bBIsoyifZ_TcMowg"
+                        target="_blank" class="block w-full h-full">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpmsoyNKF9b2xrA3x71y_gvgHZxiRHb1PUr5RVX9_UoxiGHT-5LE29lJOY9O79Km5tY4N2cVFCGiNzVG2rPRn5DuA9YIWvhLK4JeLJcHNJ_9561arNv_Y0vvlCRa5e9ma7qJ1VAaktOaL9Vpcf5RJdYiN3enjeuFu1tH03G0MaqZ4LaqLrJSttY9929ODu2bJlov5bu4GYSRhYyNvQksk80f8EF0t67TLpNJ7yFB-qhLK4TiVmJcDcHT28ZI1bBIsoyifZ_TcMowg"
+                            alt="French Competition"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </a>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2">Academic
+                            Competitions</span>
+                        <h3 class="text-white text-2xl font-black">French Language Competition</h3>
+                    </div>
+                </div>
+
+                <!-- Gift of Wings -->
+                <div
+                    class="gallery-item gift-of-wings group relative aspect-square rounded-[40px] overflow-hidden shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuADcmCEov2jr_HiWKZMum6MZ0q9D38AoaHvJ6EO3YVRFvtd2MVmZSWYAx34c1Z4WN3fHmDAQfdvY-_NmWH4hHfjyuRibrMeDozeyVVdCUMP2-U-jBP8Ia-MVI-TEabIKIzUgSfenquZXDFywV99mFlnyeAqCxrgBLq5BpwN2bXTYgCyAlxlW3H_aYISy8Am2KWS-U2w971C5v0wSgo69vbZHd68s6crcfykzKVliET5TR0w0hJrzDBrd7nJlG07qOvbI6EQrpi6nkA"
+                        target="_blank" class="block w-full h-full">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuADcmCEov2jr_HiWKZMum6MZ0q9D38AoaHvJ6EO3YVRFvtd2MVmZSWYAx34c1Z4WN3fHmDAQfdvY-_NmWH4hHfjyuRibrMeDozeyVVdCUMP2-U-jBP8Ia-MVI-TEabIKIzUgSfenquZXDFywV99mFlnyeAqCxrgBLq5BpwN2bXTYgCyAlxlW3H_aYISy8Am2KWS-U2w971C5v0wSgo69vbZHd68s6crcfykzKVliET5TR0w0hJrzDBrd7nJlG07qOvbI6EQrpi6nkA"
+                            alt="Gift of Wings"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </a>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2">Special
+                            Events</span>
+                        <h3 class="text-white text-2xl font-black">Gift of Wings Program</h3>
+                    </div>
+                </div>
+
+                <!-- Down Syndrome Day -->
+                <div
+                    class="gallery-item down-syndrome group relative aspect-square rounded-[40px] overflow-hidden shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuAwg3qfJ8OUqxgW9t_op7sCozHu0I9qQo1oTplhTXJIqMY6-GKiP_Q4QOAZgKqsVhoZtnbPLsQGXgwtGUIrRUEDUUUw5EWQnCl_PnSle_TjrXELuc6f7ITD4FagrLtgBoMr3NaSeVUkg6kvRm7Ye1wL04JiI6lc6MbKbeO_cVnxMo61j_NnKxNsNTxz7HpJuDHsYjDxw-Z3qWqrO9eFxfjp1qA8plVbwkR7jU9Rvd62fdp_70RpFY4eDhnE8Baeqf9VADAt8clhkIY"
+                        target="_blank" class="block w-full h-full">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwg3qfJ8OUqxgW9t_op7sCozHu0I9qQo1oTplhTXJIqMY6-GKiP_Q4QOAZgKqsVhoZtnbPLsQGXgwtGUIrRUEDUUUw5EWQnCl_PnSle_TjrXELuc6f7ITD4FagrLtgBoMr3NaSeVUkg6kvRm7Ye1wL04JiI6lc6MbKbeO_cVnxMo61j_NnKxNsNTxz7HpJuDHsYjDxw-Z3qWqrO9eFxfjp1qA8plVbwkR7jU9Rvd62fdp_70RpFY4eDhnE8Baeqf9VADAt8clhkIY"
+                            alt="Down Syndrome Day"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </a>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2">Awareness
+                            Events</span>
+                        <h3 class="text-white text-2xl font-black">Down Syndrome Awareness Day</h3>
+                    </div>
+                </div>
+
+                <!-- Father's Day Competition -->
+                <div
+                    class="gallery-item fathers-day group relative aspect-square rounded-[40px] overflow-hidden shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuD9PqrOJ5PITZq16Ca3nvX_04wM_ebzCBRhgQUDs6ej0e60d61BfWHXB53HNNnm_uKRMJ3TPkVoWKf015ws9dkJloNIwrHoEuLirENhySsOsnw3HBROGw8MglHDPhyV0Nz_n6IN2y1W32gh3D-k6n1DFWBCbJVEu6U5hWngW-lC-cHKKJ8euhCEvJU_ki-7Z1PLCr1uqotDm5ueiHw_yX7fwGesE-cPN0y_vN7cGoytw3NK9LpNAtzMQXPy85S04jQVynd6opeBC0I"
+                        target="_blank" class="block w-full h-full">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9PqrOJ5PITZq16Ca3nvX_04wM_ebzCBRhgQUDs6ej0e60d61BfWHXB53HNNnm_uKRMJ3TPkVoWKf015ws9dkJloNIwrHoEuLirENhySsOsnw3HBROGw8MglHDPhyV0Nz_n6IN2y1W32gh3D-k6n1DFWBCbJVEu6U5hWngW-lC-cHKKJ8euhCEvJU_ki-7Z1PLCr1uqotDm5ueiHw_yX7fwGesE-cPN0y_vN7cGoytw3NK9LpNAtzMQXPy85S04jQVynd6opeBC0I"
+                            alt="Father's Day Competition"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </a>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2">Special
+                            Events</span>
+                        <h3 class="text-white text-2xl font-black">Father's Day Competition</h3>
+                    </div>
+                </div>
+
+                <!-- PTA Meeting -->
+                <div
+                    class="gallery-item pta-meeting group relative aspect-square rounded-[40px] overflow-hidden shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuBhRNaV9wyJ1Qko29-Ng56_w4sshgFBzphYhtDOcRScrEMH33Io1AO8BLuteww7Wuwx4jZlWA4KgBtkWCqVIsceMXdKGm0EPZQhnlkOkMMpUiowWZuGMqW6xDFNW5zmpC3-50ZOFEpYinRz1qUB2wwrW-tXiAlUMvnTw_6kfSrh4QQ5k54rE7xUponPR6VoyT_1w5OoP-J_ESc9M7txLbLF5RP3CqUupd3EQC23_Gp_bKVdJ8oSL8UB7hkhR840_o-HQ-rY_dJG3_Y"
+                        target="_blank" class="block w-full h-full">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhRNaV9wyJ1Qko29-Ng56_w4sshgFBzphYhtDOcRScrEMH33Io1AO8BLuteww7Wuwx4jZlWA4KgBtkWCqVIsceMXdKGm0EPZQhnlkOkMMpUiowWZuGMqW6xDFNW5zmpC3-50ZOFEpYinRz1qUB2wwrW-tXiAlUMvnTw_6kfSrh4QQ5k54rE7xUponPR6VoyT_1w5OoP-J_ESc9M7txLbLF5RP3CqUupd3EQC23_Gp_bKVdJ8oSL8UB7hkhR840_o-HQ-rY_dJG3_Y"
+                            alt="PTA Meeting"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </a>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2">Community</span>
+                        <h3 class="text-white text-2xl font-black">Quarterly PTA Meeting</h3>
+                    </div>
+                </div>
+
+                <!-- Independence Day -->
+                <div
+                    class="gallery-item independence-day group relative aspect-square rounded-[40px] overflow-hidden shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuAwg3qfJ8OUqxgW9t_op7sCozHu0I9qQo1oTplhTXJIqMY6-GKiP_Q4QOAZgKqsVhoZtnbPLsQGXgwtGUIrRUEDUUUw5EWQnCl_PnSle_TjrXELuc6f7ITD4FagrLtgBoMr3NaSeVUkg6kvRm7Ye1wL04JiI6lc6MbKbeO_cVnxMo61j_NnKxNsNTxz7HpJuDHsYjDxw-Z3qWqrO9eFxfjp1qA8plVbwkR7jU9Rvd62fdp_70RpFY4eDhnE8Baeqf9VADAt8clhkIY"
+                        target="_blank" class="block w-full h-full">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwg3qfJ8OUqxgW9t_op7sCozHu0I9qQo1oTplhTXJIqMY6-GKiP_Q4QOAZgKqsVhoZtnbPLsQGXgwtGUIrRUEDUUUw5EWQnCl_PnSle_TjrXELuc6f7ITD4FagrLtgBoMr3NaSeVUkg6kvRm7Ye1wL04JiI6lc6MbKbeO_cVnxMo61j_NnKxNsNTxz7HpJuDHsYjDxw-Z3qWqrO9eFxfjp1qA8plVbwkR7jU9Rvd62fdp_70RpFY4eDhnE8Baeqf9VADAt8clhkIY"
+                            alt="Independence Day"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </a>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2">Events</span>
+                        <h3 class="text-white text-2xl font-black">Independence Day Celebration</h3>
+                    </div>
+                </div>
+
+                <!-- Closing Day -->
+                <div
+                    class="gallery-item closing-day group relative aspect-square rounded-[40px] overflow-hidden shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuD9PqrOJ5PITZq16Ca3nvX_04wM_ebzCBRhgQUDs6ej0e60d61BfWHXB53HNNnm_uKRMJ3TPkVoWKf015ws9dkJloNIwrHoEuLirENhySsOsnw3HBROGw8MglHDPhyV0Nz_n6IN2y1W32gh3D-k6n1DFWBCbJVEu6U5hWngW-lC-cHKKJ8euhCEvJU_ki-7Z1PLCr1uqotDm5ueiHw_yX7fwGesE-cPN0y_vN7cGoytw3NK9LpNAtzMQXPy85S04jQVynd6opeBC0I"
+                        target="_blank" class="block w-full h-full">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9PqrOJ5PITZq16Ca3nvX_04wM_ebzCBRhgQUDs6ej0e60d61BfWHXB53HNNnm_uKRMJ3TPkVoWKf015ws9dkJloNIwrHoEuLirENhySsOsnw3HBROGw8MglHDPhyV0Nz_n6IN2y1W32gh3D-k6n1DFWBCbJVEu6U5hWngW-lC-cHKKJ8euhCEvJU_ki-7Z1PLCr1uqotDm5ueiHw_yX7fwGesE-cPN0y_vN7cGoytw3NK9LpNAtzMQXPy85S04jQVynd6opeBC0I"
+                            alt="Closing Day"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </a>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2">School Life</span>
+                        <h3 class="text-white text-2xl font-black">End of Term Ceremony</h3>
+                    </div>
+                </div>
+
+                <!-- Inter-Club Sport -->
+                <div
+                    class="gallery-item interclulb-sport group relative aspect-square rounded-[40px] overflow-hidden shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuAwg3qfJ8OUqxgW9t_op7sCozHu0I9qQo1oTplhTXJIqMY6-GKiP_Q4QOAZgKqsVhoZtnbPLsQGXgwtGUIrRUEDUUUw5EWQnCl_PnSle_TjrXELuc6f7ITD4FagrLtgBoMr3NaSeVUkg6kvRm7Ye1wL04JiI6lc6MbKbeO_cVnxMo61j_NnKxNsNTxz7HpJuDHsYjDxw-Z3qWqrO9eFxfjp1qA8plVbwkR7jU9Rvd62fdp_70RpFY4eDhnE8Baeqf9VADAt8clhkIY"
+                        target="_blank" class="block w-full h-full">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwg3qfJ8OUqxgW9t_op7sCozHu0I9qQo1oTplhTXJIqMY6-GKiP_Q4QOAZgKqsVhoZtnbPLsQGXgwtGUIrRUEDUUUw5EWQnCl_PnSle_TjrXELuc6f7ITD4FagrLtgBoMr3NaSeVUkg6kvRm7Ye1wL04JiI6lc6MbKbeO_cVnxMo61j_NnKxNsNTxz7HpJuDHsYjDxw-Z3qWqrO9eFxfjp1qA8plVbwkR7jU9Rvd62fdp_70RpFY4eDhnE8Baeqf9VADAt8clhkIY"
+                            alt="Inter-Club Sport"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </a>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2">Sports</span>
+                        <h3 class="text-white text-2xl font-black">Inter-Club Competition</h3>
+                    </div>
+                </div>
+
+                <!-- Creative Writing -->
+                <div
+                    class="gallery-item creative-writing group relative aspect-square rounded-[40px] overflow-hidden shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuADcmCEov2jr_HiWKZMum6MZ0q9D38AoaHvJ6EO3YVRFvtd2MVmZSWYAx34c1Z4WN3fHmDAQfdvY-_NmWH4hHfjyuRibrMeDozeyVVdCUMP2-U-jBP8Ia-MVI-TEabIKIzUgSfenquZXDFywV99mFlnyeAqCxrgBLq5BpwN2bXTYgCyAlxlW3H_aYISy8Am2KWS-U2w971C5v0wSgo69vbZHd68s6crcfykzKVliET5TR0w0hJrzDBrd7nJlG07qOvbI6EQrpi6nkA"
+                        target="_blank" class="block w-full h-full">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuADcmCEov2jr_HiWKZMum6MZ0q9D38AoaHvJ6EO3YVRFvtd2MVmZSWYAx34c1Z4WN3fHmDAQfdvY-_NmWH4hHfjyuRibrMeDozeyVVdCUMP2-U-jBP8Ia-MVI-TEabIKIzUgSfenquZXDFywV99mFlnyeAqCxrgBLq5BpwN2bXTYgCyAlxlW3H_aYISy8Am2KWS-U2w971C5v0wSgo69vbZHd68s6crcfykzKVliET5TR0w0hJrzDBrd7nJlG07qOvbI6EQrpi6nkA"
+                            alt="Creative Writing"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </a>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2">Academics</span>
+                        <h3 class="text-white text-2xl font-black">Creative Writing Competition</h3>
+                    </div>
+                </div>
+
+                <!-- Teachers' Day -->
+                <div
+                    class="gallery-item teachers-day group relative aspect-square rounded-[40px] overflow-hidden shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuAwg3qfJ8OUqxgW9t_op7sCozHu0I9qQo1oTplhTXJIqMY6-GKiP_Q4QOAZgKqsVhoZtnbPLsQGXgwtGUIrRUEDUUUw5EWQnCl_PnSle_TjrXELuc6f7ITD4FagrLtgBoMr3NaSeVUkg6kvRm7Ye1wL04JiI6lc6MbKbeO_cVnxMo61j_NnKxNsNTxz7HpJuDHsYjDxw-Z3qWqrO9eFxfjp1qA8plVbwkR7jU9Rvd62fdp_70RpFY4eDhnE8Baeqf9VADAt8clhkIY"
+                        target="_blank" class="block w-full h-full">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwg3qfJ8OUqxgW9t_op7sCozHu0I9qQo1oTplhTXJIqMY6-GKiP_Q4QOAZgKqsVhoZtnbPLsQGXgwtGUIrRUEDUUUw5EWQnCl_PnSle_TjrXELuc6f7ITD4FagrLtgBoMr3NaSeVUkg6kvRm7Ye1wL04JiI6lc6MbKbeO_cVnxMo61j_NnKxNsNTxz7HpJuDHsYjDxw-Z3qWqrO9eFxfjp1qA8plVbwkR7jU9Rvd62fdp_70RpFY4eDhnE8Baeqf9VADAt8clhkIY"
+                            alt="Teachers' Day"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </a>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2">Appreciation</span>
+                        <h3 class="text-white text-2xl font-black">Teachers' Day Celebration</h3>
+                    </div>
+                </div>
+
+                <!-- Girl Child's Day -->
+                <div
+                    class="gallery-item girl-child group relative aspect-square rounded-[40px] overflow-hidden shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <a href="https://lh3.googleusercontent.com/aida-public/AB6AXuAwg3qfJ8OUqxgW9t_op7sCozHu0I9qQo1oTplhTXJIqMY6-GKiP_Q4QOAZgKqsVhoZtnbPLsQGXgwtGUIrRUEDUUUw5EWQnCl_PnSle_TjrXELuc6f7ITD4FagrLtgBoMr3NaSeVUkg6kvRm7Ye1wL04JiI6lc6MbKbeO_cVnxMo61j_NnKxNsNTxz7HpJuDHsYjDxw-Z3qWqrO9eFxfjp1qA8plVbwkR7jU9Rvd62fdp_70RpFY4eDhnE8Baeqf9VADAt8clhkIY"
+                        target="_blank" class="block w-full h-full">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwg3qfJ8OUqxgW9t_op7sCozHu0I9qQo1oTplhTXJIqMY6-GKiP_Q4QOAZgKqsVhoZtnbPLsQGXgwtGUIrRUEDUUUw5EWQnCl_PnSle_TjrXELuc6f7ITD4FagrLtgBoMr3NaSeVUkg6kvRm7Ye1wL04JiI6lc6MbKbeO_cVnxMo61j_NnKxNsNTxz7HpJuDHsYjDxw-Z3qWqrO9eFxfjp1qA8plVbwkR7jU9Rvd62fdp_70RpFY4eDhnE8Baeqf9VADAt8clhkIY"
+                            alt="Girl Child Day"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </a>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2">Events</span>
+                        <h3 class="text-white text-2xl font-black">International Girl Child Day</h3>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Load More button -->
+            <div class="mt-16 text-center">
+                <a href="news.html"
+                    class="inline-block bg-[#181611] dark:bg-primary text-white dark:text-[#181611] px-12 py-5 rounded-[24px] font-black text-xl hover:translate-y-[-4px] transition-all shadow-2xl">
+                    View More Photos
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer
+        class="bg-white dark:bg-[#110e08] px-4 md:px-20 lg:px-40 py-16 border-t border-[#f4f3f0] dark:border-[#3a3528]">
+        <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="col-span-1 md:col-span-1">
+                <div class="flex items-center gap-3 text-[#181611] dark:text-white mb-6">
+                    <div class="size-6 text-primary">
+                        <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-lg font-bold">Hopespring Foundation</h2>
+                </div>
+                <p class="text-sm text-[#897f61] dark:text-white/60 mb-4">2 Ngara Igo Street, Mgbuoba,<br />Port
+                    Harcourt 500272, Rivers
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://facebook.com/hopespring" target="_blank"
+                        class="material-symbols-outlined text-[#897f61] hover:text-primary cursor-pointer transition-colors">social_leaderboard</a>
+                    <a href="https://instagram.com/hopespring" target="_blank"
+                        class="material-symbols-outlined text-[#897f61] hover:text-primary cursor-pointer transition-colors">public</a>
+                    <a href="mailto:office@hopespring-fs.com"
+                        class="material-symbols-outlined text-[#897f61] hover:text-primary cursor-pointer transition-colors">mail</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Explore</h4>
+                <ul class="text-sm text-[#897f61] dark:text-white/60 space-y-3">
+                    <li><a class="hover:text-primary transition-colors" href="academics.html">Curriculum</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="support_services.html">Support
+                            Services</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="calendar.html">School Calendar</a>
+                    </li>
+                    <li><a class="hover:text-primary transition-colors" href="parents.html">Parent Resources</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Admissions</h4>
+                <ul class="text-sm text-[#897f61] dark:text-white/60 space-y-3">
+                    <li><a class="hover:text-primary transition-colors" href="admission.html">How to Apply</a>
+                    </li>
+                    <li><a class="hover:text-primary transition-colors" href="book_tour.html">Book a Tour</a>
+                    </li>
+                    <li><a class="hover:text-primary transition-colors" href="virtual_tour.html">Virtual
+                            Tour</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Contact Us</h4>
+                <p class="text-sm text-[#897f61] dark:text-white/60 mb-2">Mon - Fri: 8:00 AM - 3:30 PM</p>
+                <p class="text-sm text-[#897f61] dark:text-white/60">Email: office@hopespring-fs.com</p>
+                <p class="text-sm text-[#897f61] dark:text-white/60 mt-4">Phone: 07048808844</p>
+            </div>
+        </div>
+        <div
+            class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-[#f4f3f0] dark:border-[#3a3528] text-center text-xs text-[#897f61] dark:text-white/40">
+            © 2024 Hopespring Foundation School. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="site_search.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const filter = btn.getAttribute('data-filter');
+
+                    // Update button active state
+                    filterBtns.forEach(b => {
+                        b.classList.remove('bg-primary', 'text-[#181611]', 'active');
+                        b.classList.add('bg-white', 'dark:bg-[#2d2719]', 'text-[#897f61]', 'dark:text-white/70');
+                    });
+                    btn.classList.add('bg-primary', 'text-[#181611]', 'active');
+                    btn.classList.remove('bg-white', 'dark:bg-[#2d2719]', 'text-[#897f61]', 'dark:text-white/70');
+
+                    // Filter items
+                    galleryItems.forEach(item => {
+                        if (filter === 'all' || item.classList.contains(filter)) {
+                            item.style.display = 'block';
+                            setTimeout(() => item.style.opacity = '1', 10);
+                        } else {
+                            item.style.opacity = '0';
+                            setTimeout(() => item.style.display = 'none', 300);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

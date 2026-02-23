@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Student Activities &amp; Clubs - Hope Spring Foundation</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebd2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221d10",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-[#181611] dark:text-white transition-colors duration-200">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <div
+                class="w-full flex justify-center border-b border-[#f4f3f0] dark:border-white/10 bg-white dark:bg-background-dark sticky top-0 z-50">
+                <div class="w-full max-w-[1280px] px-6 lg:px-10 py-3 flex items-center justify-between">
+                    <div class="flex items-center gap-8">
+                        <div class="flex items-center gap-3">
+                            <img src="logo.png" alt="Hopespring Foundation Logo" class="h-10 w-auto">
+
+                        </div>
+                        <nav class="hidden lg:flex items-center gap-9">
+                            <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                                href="homepage.html">Home</a>
+                            <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                                href="about.html">About</a>
+                            <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                                href="academics.html">Academics</a>
+                            <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                                href="admission.html">Enrollment</a>
+                            <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                                href="parents.html">Parents</a>
+                        </nav>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="relative hidden md:flex items-center group">
+                            <div class="bg-[#f4f3f0] dark:bg-white/10 rounded-xl flex items-center px-4 py-2">
+                                <span
+                                    class="material-symbols-outlined text-[#897f61] dark:text-white/50 text-xl">search</span>
+                                <input type="text"
+                                    class="site-search-input bg-transparent border-none focus:ring-0 text-sm w-32 placeholder:text-[#897f61] dark:placeholder:text-white/50 focus:w-48 transition-all duration-300"
+                                    placeholder="Search site..." />
+                            </div>
+                            <div
+                                class="search-results absolute top-full right-0 mt-2 w-64 bg-white dark:bg-[#221d10] rounded-xl shadow-xl border border-[#e6e3db] dark:border-[#3a3424] hidden z-50 overflow-hidden">
+                            </div>
+                        </div>
+                        <a href="contact.html"
+                            class="bg-primary text-[#181611] px-5 py-2 rounded-xl text-sm font-bold hover:opacity-90 transition-opacity">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <main class="flex flex-1 justify-center py-5">
+                <div class="layout-content-container flex flex-col max-w-[1200px] flex-1 px-4 md:px-10">
+                    <div class="flex flex-wrap gap-2 py-4">
+                        <a class="text-[#897f61] text-sm font-medium leading-normal" href="#">Home</a>
+                        <span class="text-[#897f61] text-sm font-medium leading-normal">/</span>
+                        <span class="text-[#181611] dark:text-white text-sm font-medium leading-normal">Activities &amp;
+                            Clubs</span>
+                    </div>
+                    <section
+                        class="relative min-h-[450px] flex items-center pt-8 pb-12 overflow-hidden bg-white dark:bg-background-dark">
+                        <!-- Background Accents -->
+                        <div
+                            class="absolute top-0 left-0 w-[40%] h-full bg-primary/5 rounded-r-[100px] -z-10 -translate-x-20">
+                        </div>
+
+                        <div class="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                            <div class="space-y-8">
+                                <div
+                                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-sm">
+                                    <span class="material-symbols-outlined text-lg">rocket_launch</span>
+                                    <span>Spark Your Curiosity</span>
+                                </div>
+                                <h1
+                                    class="text-5xl md:text-7xl font-black leading-tight tracking-tight text-[#181611] dark:text-white">
+                                    Student <span class="text-primary italic">Activities</span>
+                                </h1>
+                                <p
+                                    class="text-lg md:text-xl text-[#897f61] dark:text-gray-300 leading-relaxed max-w-xl">
+                                    Discover your passion, build new skills, and make friends! Our extracurricular
+                                    programs are designed to keep students active and engaged.
+                                </p>
+                                <div class="flex flex-wrap gap-4 pt-4">
+                                    <button
+                                        class="bg-primary text-[#181611] px-8 py-4 rounded-2xl font-bold text-lg hover:scale-105 transition-transform shadow-lg shadow-primary/20">
+                                        Register Now
+                                    </button>
+                                    <a href="calendar.html"
+                                        class="bg-white dark:bg-white/10 text-[#181611] dark:text-white px-8 py-4 rounded-2xl font-bold text-lg hover:scale-105 transition-transform border border-[#181611]/10">
+                                        View Calendar
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="relative hidden lg:block">
+                                <div
+                                    class="aspect-video bg-primary/10 rounded-[60px] border-[12px] border-white dark:border-[#2a2416] shadow-2xl overflow-hidden rotate-3 hover:rotate-0 transition-transform duration-700">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRSBVfw7dVdJdcLIhVkXThE0CSeSt_DLhJso5lhBgoE341_r2Y9zcNfrcJ6fTOXlYsx6g84WO9Js6YIBu0HlTHmV95b-WOnvHSK9mW8_jYbDkf5e9VqjTuYKl_GtA2q-2ajGUTqP8KzsEZbxPoLE5CDHR6E1qX5tpqc9HF3AAuTgCd_BEH7i3zlodToGTtY-iCX97wUEzxTFxL70rxiMpZje5Ta_12JLrTZED7z5g5C8cXe4vQZePjoZFGAQhJtQHnQZWhSKSIJvc"
+                                        alt="Activities Highlight" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="flex flex-col gap-2 mt-8">
+                        <h2 class="text-[#181611] dark:text-white text-2xl font-bold px-1">Explore Our Clubs</h2>
+                        <div class="flex gap-3 py-4 flex-wrap overflow-x-auto">
+                            <button
+                                class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-primary px-4">
+                                <p class="text-[#181611] text-sm font-bold">All Activities</p>
+                            </button>
+                            <button
+                                class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white dark:bg-[#3d3625] px-4 shadow-sm border border-[#f4f3f0] dark:border-[#4d4533]">
+                                <span class="material-symbols-outlined text-sm">rocket_launch</span>
+                                <p class="text-[#181611] dark:text-white text-sm font-medium">STEM</p>
+                            </button>
+                            <button
+                                class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white dark:bg-[#3d3625] px-4 shadow-sm border border-[#f4f3f0] dark:border-[#4d4533]">
+                                <span class="material-symbols-outlined text-sm">palette</span>
+                                <p class="text-[#181611] dark:text-white text-sm font-medium">Arts</p>
+                            </button>
+                            <button
+                                class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white dark:bg-[#3d3625] px-4 shadow-sm border border-[#f4f3f0] dark:border-[#4d4533]">
+                                <span class="material-symbols-outlined text-sm">sports_soccer</span>
+                                <p class="text-[#181611] dark:text-white text-sm font-medium">Sports</p>
+                            </button>
+                            <button
+                                class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white dark:bg-[#3d3625] px-4 shadow-sm border border-[#f4f3f0] dark:border-[#4d4533]">
+                                <span class="material-symbols-outlined text-sm">music_note</span>
+                                <p class="text-[#181611] dark:text-white text-sm font-medium">Music</p>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-6">
+                        <div
+                            class="flex flex-col bg-white dark:bg-[#2d2718] rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow group">
+                            <div class="h-32 bg-[#e8f5e9] flex items-center justify-center text-green-600">
+                                <span
+                                    class="material-symbols-outlined text-6xl group-hover:scale-110 transition-transform">strategy</span>
+                            </div>
+                            <div class="p-5 flex flex-col gap-3">
+                                <div>
+                                    <h3 class="text-lg font-bold">Chess Club</h3>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">Master the board. Open to Grades
+                                        3-5.</p>
+                                </div>
+                                <div class="flex flex-col gap-1 text-xs font-medium">
+                                    <div class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined text-base">schedule</span> Mon, 3:30 - 4:30
+                                        PM</div>
+                                    <div class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined text-base">payments</span> $45 / Semester
+                                    </div>
+                                </div>
+                                <button
+                                    class="mt-2 w-full bg-primary/20 hover:bg-primary text-[#181611] py-2 rounded-lg font-bold text-sm transition-colors">Learn
+                                    More</button>
+                            </div>
+                        </div>
+                        <div
+                            class="flex flex-col bg-white dark:bg-[#2d2718] rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow group">
+                            <div class="h-32 bg-[#fff3e0] flex items-center justify-center text-orange-600">
+                                <span
+                                    class="material-symbols-outlined text-6xl group-hover:scale-110 transition-transform">sports_soccer</span>
+                            </div>
+                            <div class="p-5 flex flex-col gap-3">
+                                <div>
+                                    <h3 class="text-lg font-bold">Soccer Stars</h3>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">Teamwork and fitness on the
+                                        field.</p>
+                                </div>
+                                <div class="flex flex-col gap-1 text-xs font-medium">
+                                    <div class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined text-base">schedule</span> Tue &amp; Thu,
+                                        3:30 PM</div>
+                                    <div class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined text-base">payments</span> $60 / Semester
+                                    </div>
+                                </div>
+                                <button
+                                    class="mt-2 w-full bg-primary/20 hover:bg-primary text-[#181611] py-2 rounded-lg font-bold text-sm transition-colors">Learn
+                                    More</button>
+                            </div>
+                        </div>
+                        <div
+                            class="flex flex-col bg-white dark:bg-[#2d2718] rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow group">
+                            <div class="h-32 bg-[#e3f2fd] flex items-center justify-center text-blue-600">
+                                <span
+                                    class="material-symbols-outlined text-6xl group-hover:scale-110 transition-transform">smart_toy</span>
+                            </div>
+                            <div class="p-5 flex flex-col gap-3">
+                                <div>
+                                    <h3 class="text-lg font-bold">Robotics Guild</h3>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">Build the future with coding and
+                                        LEGO.</p>
+                                </div>
+                                <div class="flex flex-col gap-1 text-xs font-medium">
+                                    <div class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined text-base">schedule</span> Wed, 3:45 - 5:00
+                                        PM</div>
+                                    <div class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined text-base">payments</span> $75 / Semester
+                                    </div>
+                                </div>
+                                <button
+                                    class="mt-2 w-full bg-primary/20 hover:bg-primary text-[#181611] py-2 rounded-lg font-bold text-sm transition-colors">Learn
+                                    More</button>
+                            </div>
+                        </div>
+                        <div
+                            class="flex flex-col bg-white dark:bg-[#2d2718] rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow group">
+                            <div class="h-32 bg-[#f3e5f5] flex items-center justify-center text-purple-600">
+                                <span
+                                    class="material-symbols-outlined text-6xl group-hover:scale-110 transition-transform">music_note</span>
+                            </div>
+                            <div class="p-5 flex flex-col gap-3">
+                                <div>
+                                    <h3 class="text-lg font-bold">Music Makers</h3>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">Explore instruments and rhythm.
+                                    </p>
+                                </div>
+                                <div class="flex flex-col gap-1 text-xs font-medium">
+                                    <div class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined text-base">schedule</span> Fri, 3:30 - 4:30
+                                        PM</div>
+                                    <div class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined text-base">payments</span> $50 / Semester
+                                    </div>
+                                </div>
+                                <button
+                                    class="mt-2 w-full bg-primary/20 hover:bg-primary text-[#181611] py-2 rounded-lg font-bold text-sm transition-colors">Learn
+                                    More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="mt-12 mb-20 bg-white dark:bg-[#2d2718] rounded-xl shadow-lg border border-[#f4f3f0] dark:border-[#3d3625] overflow-hidden">
+                        <div
+                            class="p-6 border-b border-[#f4f3f0] dark:border-[#3d3625] flex justify-between items-center bg-primary/5">
+                            <h2 class="text-xl font-bold">Weekly Club Schedule</h2>
+                            <button class="text-sm font-bold text-primary flex items-center gap-1 hover:underline">
+                                <span class="material-symbols-outlined text-sm">download</span>
+                                Download PDF
+                            </button>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr
+                                        class="bg-gray-50 dark:bg-[#3d3625] text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                                        <th class="px-6 py-4 font-bold">Time Slot</th>
+                                        <th class="px-6 py-4 font-bold">Monday</th>
+                                        <th class="px-6 py-4 font-bold">Tuesday</th>
+                                        <th class="px-6 py-4 font-bold">Wednesday</th>
+                                        <th class="px-6 py-4 font-bold">Thursday</th>
+                                        <th class="px-6 py-4 font-bold">Friday</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-100 dark:divide-[#3d3625]">
+                                    <tr class="hover:bg-gray-50 dark:hover:bg-[#3d3625]/30">
+                                        <td class="px-6 py-6 text-sm font-bold text-gray-400">3:30 PM</td>
+                                        <td class="px-6 py-6">
+                                            <div
+                                                class="bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 px-3 py-2 rounded-lg text-xs font-bold shadow-sm">
+                                                Chess Club (Library)
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-6">
+                                            <div
+                                                class="bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 px-3 py-2 rounded-lg text-xs font-bold shadow-sm">
+                                                Soccer Stars (Field)
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-6">
+                                            <div class="text-xs text-gray-400 italic">No Activity</div>
+                                        </td>
+                                        <td class="px-6 py-6">
+                                            <div
+                                                class="bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 px-3 py-2 rounded-lg text-xs font-bold shadow-sm">
+                                                Soccer Stars (Field)
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-6">
+                                            <div
+                                                class="bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 px-3 py-2 rounded-lg text-xs font-bold shadow-sm">
+                                                Music Makers (Hall)
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50 dark:hover:bg-[#3d3625]/30">
+                                        <td class="px-6 py-6 text-sm font-bold text-gray-400">3:45 PM</td>
+                                        <td class="px-6 py-6">
+                                            <div class="text-xs text-gray-400 italic">-</div>
+                                        </td>
+                                        <td class="px-6 py-6">
+                                            <div class="text-xs text-gray-400 italic">-</div>
+                                        </td>
+                                        <td class="px-6 py-6">
+                                            <div
+                                                class="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 px-3 py-2 rounded-lg text-xs font-bold shadow-sm">
+                                                Robotics Guild (Lab A)
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-6">
+                                            <div class="text-xs text-gray-400 italic">-</div>
+                                        </td>
+                                        <td class="px-6 py-6">
+                                            <div class="text-xs text-gray-400 italic">-</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="mb-20 rounded-2xl bg-primary p-8 md:p-12 text-center relative overflow-hidden">
+                        <div class="relative z-10">
+                            <h2 class="text-3xl font-black text-[#181611] mb-4">Don't see what you're looking for?</h2>
+                            <p class="text-[#181611]/80 max-w-xl mx-auto mb-8 font-medium">
+                                We're always adding new clubs! Suggest a new activity or contact our Activities
+                                Coordinator for more information.
+                            </p>
+                            <button
+                                class="bg-white text-[#181611] px-8 py-3 rounded-xl font-bold shadow-lg hover:shadow-xl transition-shadow">
+                                Contact Coordinator
+                            </button>
+                        </div>
+                        <div class="absolute -top-10 -left-10 w-40 h-40 bg-white/20 rounded-full blur-3xl"></div>
+                        <div class="absolute -bottom-10 -right-10 w-60 h-60 bg-white/10 rounded-full blur-2xl"></div>
+                    </div>
+                </div>
+            </main>
+            <footer
+                class="bg-white dark:bg-[#110e08] px-4 md:px-20 lg:px-40 py-16 border-t border-[#f4f3f0] dark:border-[#3a3528]">
+                <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+                    <div class="col-span-1 md:col-span-1">
+                        <div class="flex items-center gap-3 text-[#181611] dark:text-white mb-6">
+                            <div class="size-6 text-primary">
+                                <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
+                                        fill="currentColor"></path>
+                                </svg>
+                            </div>
+                            <h2 class="text-lg font-bold">Hopespring Foundation</h2>
+                        </div>
+                        <p class="text-sm text-[#897f61] dark:text-white/60 mb-4">2 Ngara Igo Street, Mgbuoba,<br />Port
+                            Harcourt 500272, Rivers
+                        </p>
+                        <div class="flex gap-4">
+                            <span
+                                class="material-symbols-outlined text-[#897f61] hover:text-primary cursor-pointer transition-colors">social_leaderboard</span>
+                            <span
+                                class="material-symbols-outlined text-[#897f61] hover:text-primary cursor-pointer transition-colors">public</span>
+                            <span
+                                class="material-symbols-outlined text-[#897f61] hover:text-primary cursor-pointer transition-colors">mail</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-6">Explore</h4>
+                        <ul class="text-sm text-[#897f61] dark:text-white/60 space-y-3">
+                            <li><a class="hover:text-primary transition-colors" href="academics.html">Curriculum</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="support_services.html">Support
+                                    Services</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="calendar.html">School Calendar</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="parents.html">Parent Resources</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-6">Admissions</h4>
+                        <ul class="text-sm text-[#897f61] dark:text-white/60 space-y-3">
+                            <li><a class="hover:text-primary transition-colors" href="admission.html">How to Apply</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="book_tour.html">Book a Tour</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="virtual_tour.html">Virtual
+                                    Tour</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-6">Contact Us</h4>
+                        <p class="text-sm text-[#897f61] dark:text-white/60 mb-2">Mon - Fri: 8:00 AM - 3:30 PM</p>
+                        <p class="text-sm text-[#897f61] dark:text-white/60">Email: office@hopespring-fs.com</p>
+                        <p class="text-sm text-[#897f61] dark:text-white/60 mt-4">Phone: 07048808844</p>
+                    </div>
+                </div>
+                <div
+                    class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-[#f4f3f0] dark:border-[#3a3528] text-center text-xs text-[#897f61] dark:text-white/40">
+                    © 2024 Hopespring Foundation School. All rights reserved.
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <script src="site_search.js"></script>
+</body>
+
+</html>

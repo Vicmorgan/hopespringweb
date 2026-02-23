@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Parents &amp; Families | Hope Spring Foundation</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebd2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221d10",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-[#181611] dark:text-white transition-colors duration-200">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div
+            class="w-full flex justify-center border-b border-[#f4f3f0] dark:border-white/10 bg-white dark:bg-background-dark sticky top-0 z-50">
+            <div class="w-full max-w-[1280px] px-6 lg:px-10 py-3 flex items-center justify-between">
+                <div class="flex items-center gap-8">
+                    <div class="flex items-center gap-3">
+                        <img src="logo.png" alt="Hopespring Foundation Logo" class="h-10 w-auto">
+
+                    </div>
+                    <nav class="hidden lg:flex items-center gap-9">
+                        <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                            href="homepage.html">Home</a>
+                        <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                            href="about.html">About</a>
+                        <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                            href="academics.html">Academics</a>
+                        <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                            href="admission.html">Enrollment</a>
+                        <a class="text-primary text-sm font-bold" href="parents.html">Parents</a>
+                        <a class="text-[#181611] dark:text-white/80 text-sm font-medium hover:text-primary transition-colors"
+                            href="gallery.html">Gallery</a>
+                    </nav>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="relative hidden md:flex items-center group">
+                        <div class="bg-[#f4f3f0] dark:bg-white/10 rounded-xl flex items-center px-4 py-2">
+                            <span
+                                class="material-symbols-outlined text-[#897f61] dark:text-white/50 text-xl">search</span>
+                            <input type="text"
+                                class="site-search-input bg-transparent border-none focus:ring-0 text-sm w-32 placeholder:text-[#897f61] dark:placeholder:text-white/50 focus:w-48 transition-all duration-300"
+                                placeholder="Search site..." />
+                        </div>
+                        <div
+                            class="search-results absolute top-full right-0 mt-2 w-64 bg-white dark:bg-[#221d10] rounded-xl shadow-xl border border-[#e6e3db] dark:border-[#3a3424] hidden z-50 overflow-hidden">
+                        </div>
+                    </div>
+                    <a href="contact.html"
+                        class="bg-primary text-[#181611] px-5 py-2 rounded-xl text-sm font-bold hover:opacity-90 transition-opacity">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <main class="flex flex-1 flex-col items-center">
+            <div class="max-w-[1200px] w-full flex flex-col gap-12 py-10 px-4 md:px-10 lg:px-20">
+                <!-- Dynamic Hero Section -->
+                <div
+                    class="relative min-h-[500px] flex items-center pt-12 pb-20 overflow-hidden bg-white dark:bg-background-dark">
+                    <!-- Background Accents -->
+                    <div
+                        class="absolute top-0 right-0 w-[45%] h-full bg-primary/5 rounded-l-[100px] -z-10 translate-x-20">
+                    </div>
+
+                    <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div class="space-y-8">
+                            <div
+                                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-sm">
+                                <span class="material-symbols-outlined text-lg">favorite</span>
+                                <span>Stronger Together</span>
+                            </div>
+                            <h1
+                                class="text-5xl md:text-7xl font-black leading-tight tracking-tight text-[#181611] dark:text-white">
+                                Welcome, <span class="text-primary italic">Families</span>
+                            </h1>
+                            <p class="text-lg md:text-xl text-[#897f61] dark:text-gray-300 leading-relaxed max-w-xl">
+                                Your central hub for all school-related resources, news, and the parent portal. Stay
+                                connected with your child's journey at Hopespring.
+                            </p>
+                            <div class="flex flex-wrap gap-4 pt-4">
+                                <a href="portal_login.html"
+                                    class="bg-primary text-[#181611] px-8 py-4 rounded-2xl font-bold text-lg hover:scale-105 transition-transform shadow-lg shadow-primary/20">
+                                    Login to Parent Portal
+                                </a>
+                                <a href="volunteer.html"
+                                    class="bg-[#f4f3f0] dark:bg-[#2a2416] text-[#181611] dark:text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-[#e6e3db] transition-colors border border-transparent hover:border-primary/20">
+                                    Volunteer Opportunities
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="relative">
+                            <!-- High-Impact Image -->
+                            <div
+                                class="relative z-10 rounded-[40px] overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-700 border-[12px] border-white dark:border-[#2a2416]">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhRNaV9wyJ1Qko29-Ng56_w4sshgFBzphYhtDOcRScrEMH33Io1AO8BLuteww7Wuwx4jZlWA4KgBtkWCqVIsceMXdKGm0EPZQhnlkOkMMpUiowWZuGMqW6xDFNW5zmpC3-50ZOFEpYinRz1qUB2wwrW-tXiAlUMvnTw_6kfSrh4QQ5k54rE7xUponPR6VoyT_1w5OoP-J_ESc9M7txLbLF5RP3CqUupd3EQC23_Gp_bKVdJ8oSL8UB7hkhR840_o-HQ-rY_dJG3_Y"
+                                    alt="Parents and Teachers" class="w-full h-[450px] object-cover">
+                            </div>
+                            <!-- Floating element -->
+                            <div
+                                class="absolute -top-6 -right-6 bg-white dark:bg-[#2d2719] p-6 rounded-3xl shadow-2xl z-20 border border-[#e6e3db] dark:border-[#3a3528] hidden md:block">
+                                <div class="flex items-center gap-3">
+                                    <div
+                                        class="size-12 bg-primary rounded-full flex items-center justify-center text-white">
+                                        <span class="material-symbols-outlined">groups</span>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm font-black dark:text-white">Active PTA</div>
+                                        <div class="text-[10px] text-[#897f61]">150+ Members</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <a href="calendar.html"
+                        class="bg-white dark:bg-[#1a160d] rounded-[48px] p-8 shadow-sm border border-[#f4f3f0] dark:border-transparent hover:shadow-2xl transition-all duration-500 group relative overflow-hidden">
+                        <div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <div
+                            class="size-20 bg-primary/10 rounded-[32px] flex items-center justify-center text-primary mb-6 group-hover:rotate-6 transition-transform">
+                            <span class="material-symbols-outlined text-4xl font-black">calendar_month</span>
+                        </div>
+                        <h3 class="text-2xl font-black dark:text-white mb-2">School Calendar</h3>
+                        <p class="text-[#897f61] dark:text-white/60 leading-relaxed">Stay up to date with term dates,
+                            holidays, and school events.</p>
+                        <div class="mt-6 flex items-center gap-2 text-primary font-bold text-sm">
+                            View Calendar <span class="material-symbols-outlined text-sm">arrow_forward_ios</span>
+                        </div>
+                    </a>
+
+                    <a href="menu.html"
+                        class="bg-custom-yellow/10 dark:bg-[#1a160d] rounded-[48px] p-8 shadow-sm border border-[#f4f3f0] dark:border-transparent hover:shadow-2xl transition-all duration-500 group relative overflow-hidden md:translate-y-8">
+                        <div
+                            class="size-20 bg-secondary/20 rounded-[32px] flex items-center justify-center text-green-700 mb-6 group-hover:-rotate-6 transition-transform">
+                            <span class="material-symbols-outlined text-4xl font-black">restaurant_menu</span>
+                        </div>
+                        <h3 class="text-2xl font-black dark:text-white mb-2">Lunch Menu</h3>
+                        <p class="text-[#897f61] dark:text-white/60 leading-relaxed">Weekly nutritious meal plans
+                            designed for growing minds and bodies.</p>
+                        <div class="mt-6 flex items-center gap-2 text-primary font-bold text-sm">
+                            View Weekly Menu <span class="material-symbols-outlined text-sm">arrow_forward_ios</span>
+                        </div>
+                    </a>
+
+                    <a href="handbook.pdf"
+                        class="bg-white dark:bg-[#1a160d] rounded-[48px] p-8 shadow-sm border border-[#f4f3f0] dark:border-transparent hover:shadow-2xl transition-all duration-500 group relative overflow-hidden">
+                        <div
+                            class="size-20 bg-accent-blue/20 rounded-[32px] flex items-center justify-center text-blue-700 mb-6 group-hover:rotate-6 transition-transform">
+                            <span class="material-symbols-outlined text-4xl font-black">menu_book</span>
+                        </div>
+                        <h3 class="text-2xl font-black dark:text-white mb-2">Handbook</h3>
+                        <p class="text-[#897f61] dark:text-white/60 leading-relaxed">Everything you need to know about
+                            school policies and community standards.</p>
+                        <div class="mt-6 flex items-center gap-2 text-primary font-bold text-sm">
+                            Download PDF <span class="material-symbols-outlined text-sm">download</span>
+                        </div>
+                    </a>
+                </section>
+
+
+                <section
+                    class="bg-white dark:bg-[#2c2618] rounded-3xl p-8 md:p-12 shadow-sm border border-[#e6e3db] dark:border-[#3a3424] text-center">
+                    <h2 class="text-2xl font-bold dark:text-white mb-4">Need Assistance?</h2>
+                    <p class="text-[#897f61] dark:text-[#b5af9a] mb-8 max-w-2xl mx-auto">
+                        If you're having trouble accessing the portal or have any questions, our administration team is
+                        here to help.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-6">
+                        <a href="mailto:office@hopespring-fs.com"
+                            class="flex items-center gap-2 text-[#181611] dark:text-white hover:text-primary transition-colors">
+                            <span class="material-symbols-outlined">mail</span>
+                            <span>office@hopespring-fs.com</span>
+                        </a>
+                        <a href="tel:07048808844"
+                            class="flex items-center gap-3 p-4 rounded-xl bg-[#f4f3f0] dark:bg-[#3d3621] border border-[#e6e3db] dark:border-none hover:border-primary transition-colors">
+                            <span
+                                class="material-symbols-outlined text-primary bg-white dark:bg-[#2a2416] p-2 rounded-lg">call</span>
+                            <span>07048808844</span>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer
+            class="bg-white dark:bg-[#110e08] px-4 md:px-20 lg:px-40 py-16 border-t border-[#f4f3f0] dark:border-[#3a3528]">
+            <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-3 text-[#181611] dark:text-white mb-6">
+                        <div class="size-6 text-primary">
+                            <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-lg font-bold">Hopespring Foundation</h2>
+                    </div>
+                    <p class="text-sm text-[#897f61] dark:text-white/60 mb-4">2 Ngara Igo Street, Mgbuoba,<br />Port
+                        Harcourt 500272, Rivers
+                    </p>
+                    <div class="flex gap-4">
+                        <span
+                            class="material-symbols-outlined text-[#897f61] hover:text-primary cursor-pointer transition-colors">social_leaderboard</span>
+                        <span
+                            class="material-symbols-outlined text-[#897f61] hover:text-primary cursor-pointer transition-colors">public</span>
+                        <span
+                            class="material-symbols-outlined text-[#897f61] hover:text-primary cursor-pointer transition-colors">mail</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Explore</h4>
+                    <ul class="text-sm text-[#897f61] dark:text-white/60 space-y-3">
+                        <li><a class="hover:text-primary transition-colors" href="academics.html">Curriculum</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="support_services.html">Support
+                                Services</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="calendar.html">School Calendar</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="parents.html">Parent Resources</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Admissions</h4>
+                    <ul class="text-sm text-[#897f61] dark:text-white/60 space-y-3">
+                        <li><a class="hover:text-primary transition-colors" href="admission.html">How to Apply</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="book_tour.html">Book a Tour</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="virtual_tour.html">Virtual
+                                Tour</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Contact Us</h4>
+                    <p class="text-sm text-[#897f61] dark:text-white/60 mb-2">Mon - Fri: 8:00 AM - 3:30 PM</p>
+                    <p class="text-sm text-[#897f61] dark:text-white/60">Email: office@hopespring-fs.com</p>
+                    <p class="text-sm text-[#897f61] dark:text-white/60 mt-4">Phone: 07048808844</p>
+                </div>
+            </div>
+            <div
+                class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-[#f4f3f0] dark:border-[#3a3528] text-center text-xs text-[#897f61] dark:text-white/40">
+                © 2024 Hopespring Foundation School. All rights reserved.
+            </div>
+        </footer>
+
+    </div>
+    <script src="site_search.js"></script>
+</body>
+
+</html>

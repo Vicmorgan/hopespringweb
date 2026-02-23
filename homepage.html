@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Hopespring Foundation | Homepage</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebd2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221d10",
+                        "secondary": "#a8d5ba", "accent-blue": "#add8e6",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+
+        .hero-slider-image {
+            transition: opacity 1.5s ease-in-out;
+            filter: blur(2px) brightness(0.85);
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        .animate-delayed {
+            animation-delay: 0.3s;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-[#181611] dark:text-white transition-colors duration-300">
+
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <div
+                class="px-4 md:px-20 lg:px-40 flex justify-center py-2 fixed top-0 left-0 w-full z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-solid border-[#f4f3f0] dark:border-[#3a3528]">
+                <div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+                    <header class="flex items-center justify-between whitespace-nowrap px-4 py-3">
+                        <div class="flex items-center gap-3">
+                            <img src="logo.png" alt="Hopespring Foundation Logo" class="h-10 w-auto">
+                        </div>
+                        <div class="flex flex-1 justify-end gap-4 md:gap-8">
+                            <div class="hidden md:flex items-center gap-9">
+                                <a class="text-primary text-sm font-bold leading-normal" href="homepage.html">Home</a>
+                                <a class="text-sm font-medium leading-normal hover:text-primary transition-colors"
+                                    href="about.html">About</a>
+                                <a class="text-sm font-medium leading-normal hover:text-primary transition-colors"
+                                    href="academics.html">Academics</a>
+                                <a class="text-sm font-medium leading-normal hover:text-primary transition-colors"
+                                    href="parents.html">Parents</a>
+                                <a class="text-sm font-medium leading-normal hover:text-primary transition-colors"
+                                    href="admission.html">Admissions</a>
+                                <a class="text-sm font-medium leading-normal hover:text-primary transition-colors"
+                                    href="gallery.html">Gallery</a>
+                            </div>
+                            <div class="relative hidden md:flex items-center group">
+                                <div class="bg-[#f4f3f0] dark:bg-white/10 rounded-xl flex items-center px-4 py-2">
+                                    <span
+                                        class="material-symbols-outlined text-[#897f61] dark:text-white/50 text-xl">search</span>
+                                    <input type="text"
+                                        class="site-search-input bg-transparent border-none focus:ring-0 text-sm w-32 placeholder:text-[#897f61] dark:placeholder:text-white/50 focus:w-48 transition-all duration-300"
+                                        placeholder="Search site..." />
+                                </div>
+                                <div
+                                    class="search-results absolute top-full right-0 mt-2 w-64 bg-white dark:bg-[#221d10] rounded-xl shadow-xl border border-[#e6e3db] dark:border-[#3a3424] hidden z-50 overflow-hidden">
+                                </div>
+                            </div>
+                            <a href="start_application.html"
+                                class="flex min-w-[100px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-primary text-[#181611] text-sm font-bold leading-normal tracking-[0.015em] shadow-sm hover:brightness-105 transition-all">
+                                <span class="truncate">Enroll Now</span>
+                            </a>
+                        </div>
+                    </header>
+                </div>
+            </div>
+            <main class="flex flex-col flex-1">
+                <!-- Enhanced Hero Section with Background Slider -->
+                <div class="relative min-h-[700px] flex items-center pt-32 pb-20 overflow-hidden">
+                    <!-- Background Slider -->
+                    <div id="hero-slider" class="absolute inset-0 z-0">
+                        <div class="hero-slider-image absolute inset-0 bg-cover bg-center opacity-100"
+                            style="background-image: url('home_hero.png');"></div>
+                        <div class="hero-slider-image absolute inset-0 bg-cover bg-center opacity-0"
+                            style="background-image: url('support_hero.png');"></div>
+                        <div class="hero-slider-image absolute inset-0 bg-cover bg-center opacity-0"
+                            style="background-image: url('gifted.png');"></div>
+                        <!-- Overlay for readability and elegant color grading -->
+                        <div class="absolute inset-0 bg-black/30 backdrop-blur-[1px]"></div>
+                    </div>
+
+                    <div
+                        class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+                        <div class="space-y-8 text-left">
+                            <div
+                                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-sm">
+                                <span class="material-symbols-outlined text-lg">celebration</span>
+                                <span>Join the Fun at Hopespring!</span>
+                            </div>
+                            <h2
+                                class="text-4xl md:text-6xl font-black leading-tight tracking-tight text-white animate-fade-in-up">
+                                Nurturing <span class="text-primary">Curious
+                                    Minds</span> <br /> for a Brighter Future
+                            </h2>
+                            <p class="text-lg md:text-xl text-white leading-relaxed max-w-xl">
+                                Empowering every child to reach their full potential in a safe, diverse, and creative
+                                learning environment where every day is a new adventure.
+                            </p>
+                            <div class="flex flex-wrap gap-4 pt-4">
+                                <a href="start_application.html"
+                                    class="bg-primary text-[#181611] px-8 py-4 rounded-2xl font-bold text-lg hover:scale-105 transition-transform shadow-lg shadow-primary/20">
+                                    Start Application
+                                </a>
+                                <a href="book_tour.html"
+                                    class="bg-white dark:bg-white/10 text-[#181611] dark:text-white border-2 border-[#e6e3db] dark:border-white/20 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-gray-50 dark:hover:bg-white/20 transition-all">
+                                    Book a Tour
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="relative hidden lg:block">
+                            <!-- Floating Image Container for "Fun" Look (Synchronized with Background) -->
+                            <div
+                                class="relative z-10 rounded-[40px] overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-700 border-[12px] border-white dark:border-[#2a2416] aspect-[4/3]">
+                                <img id="hero-frame-img" src="home_hero.png" alt="Happy students learning"
+                                    class="w-full h-full object-cover transition-opacity duration-1000">
+                            </div>
+                            <!-- Decorative elements -->
+                            <div
+                                class="absolute -top-6 -right-6 w-24 h-24 bg-primary/20 rounded-full blur-2xl animate-pulse">
+                            </div>
+                            <div
+                                class="absolute -bottom-10 -left-10 w-40 h-40 bg-secondary/20 rounded-full blur-3xl animate-pulse delay-700">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Welcome Section Repositioned for Flow -->
+                <div class="max-w-[1200px] mx-auto px-6 py-20 text-center">
+                    <div
+                        class="inline-block px-4 py-1.5 bg-secondary/20 text-green-800 dark:text-secondary text-sm font-bold uppercase tracking-widest rounded-full mb-6">
+                        Welcome to Hopespring Foundation
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-black mb-8">A Second Home for Your Child</h2>
+                    <p class="text-lg text-[#897f61] dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                        At Hopespring Foundation School, education is a journey of discovery. We spark curiosity, foster
+                        empathy, and build the foundation for a lifetime of success in a supportive, vibrant atmosphere.
+                    </p>
+                </div>
+
+                <div class="bg-white dark:bg-[#1f1a10] py-24">
+                    <div class="max-w-[1200px] mx-auto px-6">
+                        <div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
+                            <div class="space-y-4">
+                                <h2 class="text-4xl font-black tracking-tight">Why Families Choose <span
+                                        class="text-primary italic">Hopespring</span></h2>
+                                <div class="w-32 h-2 bg-primary rounded-full"></div>
+                            </div>
+                            <p class="text-[#897f61] dark:text-gray-400 max-w-md">
+                                We combine high academic standards with a nurturing environment that celebrates
+                                individuality.
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <!-- Feature 1 -->
+                            <div
+                                class="group bg-[#fcfbf9] dark:bg-[#2d2719] rounded-[32px] overflow-hidden border border-[#e6e3db] dark:border-[#3a3528] hover:shadow-2xl transition-all duration-500">
+                                <div class="h-48 overflow-hidden relative">
+                                    <img src="inclusive.png" alt="Expert Educators"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-[#fcfbf9] dark:from-[#2d2719] to-transparent opacity-60">
+                                    </div>
+                                    <div
+                                        class="absolute bottom-4 left-6 bg-primary text-[#181611] p-3 rounded-2xl shadow-lg">
+                                        <span class="material-symbols-outlined text-2xl">school</span>
+                                    </div>
+                                </div>
+                                <div class="p-8 space-y-4">
+                                    <h3 class="text-2xl font-bold">Expert Educators</h3>
+                                    <p class="text-[#897f61] dark:text-gray-400 leading-relaxed">
+                                        Our teachers are more than instructors; they are mentors dedicated to student
+                                        success with an average of 10+ years of experience.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Feature 2 -->
+                            <div
+                                class="group bg-[#fcfbf9] dark:bg-[#2d2719] rounded-[32px] overflow-hidden border border-[#e6e3db] dark:border-[#3a3528] hover:shadow-2xl transition-all duration-500">
+                                <div class="h-48 overflow-hidden relative">
+                                    <img src="gifted.png" alt="Holistic Curriculum"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-[#fcfbf9] dark:from-[#2d2719] to-transparent opacity-60">
+                                    </div>
+                                    <div
+                                        class="absolute bottom-4 left-6 bg-secondary text-green-800 p-3 rounded-2xl shadow-lg">
+                                        <span class="material-symbols-outlined text-2xl">palette</span>
+                                    </div>
+                                </div>
+                                <div class="p-8 space-y-4">
+                                    <h3 class="text-2xl font-bold">Holistic Curriculum</h3>
+                                    <p class="text-[#897f61] dark:text-gray-400 leading-relaxed">
+                                        Balancing rigorous academics with immersive art, music, coding, and physical
+                                        education programs.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Feature 3 -->
+                            <div
+                                class="group bg-[#fcfbf9] dark:bg-[#2d2719] rounded-[32px] overflow-hidden border border-[#e6e3db] dark:border-[#3a3528] hover:shadow-2xl transition-all duration-500">
+                                <div class="h-48 overflow-hidden relative">
+                                    <img src="esl.png" alt="Strong Community"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-[#fcfbf9] dark:from-[#2d2719] to-transparent opacity-60">
+                                    </div>
+                                    <div
+                                        class="absolute bottom-4 left-6 bg-accent-blue text-blue-800 p-3 rounded-2xl shadow-lg">
+                                        <span class="material-symbols-outlined text-2xl">groups</span>
+                                    </div>
+                                </div>
+                                <div class="p-8 space-y-4">
+                                    <h3 class="text-2xl font-bold">Strong Community</h3>
+                                    <p class="text-[#897f61] dark:text-gray-400 leading-relaxed">
+                                        A supportive, active network for students and their families to grow together
+                                        through regular events.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="max-w-[1200px] mx-auto px-6 py-10">
+                    <div class="flex flex-col sm:flex-row justify-between items-end gap-4 mb-10">
+                        <div class="space-y-2">
+                            <h2 class="text-4xl font-black tracking-tight">Upcoming <span
+                                    class="text-primary italic">Events</span></h2>
+                            <p class="text-[#897f61] dark:text-gray-400">Join us for these exciting moments at
+                                Hopespring.</p>
+                        </div>
+                        <a class="text-primary font-bold hover:underline flex items-center gap-2"
+                            href="calendar.html">View Full Calendar <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Event 1 -->
+                        <div
+                            class="group bg-white dark:bg-[#2d2719] rounded-[32px] overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-[#f0eee9] dark:border-[#3a3528]">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwg3qfJ8OUqxgW9t_op7sCozHu0I9qQo1oTplhTXJIqMY6-GKiP_Q4QOAZgKqsVhoZtnbPLsQGXgwtGUIrRUEDUUUw5EWQnCl_PnSle_TjrXELuc6f7ITD4FagrLtgBoMr3NaSeVUkg6kvRm7Ye1wL04JiI6lc6MbKbeO_cVnxMo61j_NnKxNsNTxz7HpJuDHsYjDxw-Z3qWqrO9eFxfjp1qA8plVbwkR7jU9Rvd62fdp_70RpFY4eDhnE8Baeqf9VADAt8clhkIY"
+                                    alt="Spring Concert"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                <div
+                                    class="absolute top-4 left-4 bg-primary text-[#181611] px-4 py-2 rounded-2xl font-black text-center shadow-lg">
+                                    <div class="text-xs uppercase leading-none">Mar</div>
+                                    <div class="text-xl">15</div>
+                                </div>
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <h3 class="text-lg font-bold group-hover:text-primary transition-colors">Spring Concert
+                                </h3>
+                                <p class="text-xs text-[#897f61] dark:text-gray-400 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-lg">schedule</span> 6:00 PM
+                                </p>
+                                <a href="calendar.html#spring-concert"
+                                    class="block w-full text-center py-2.5 bg-[#f4f3f0] dark:bg-[#3a3528] rounded-2xl font-bold text-sm hover:bg-primary hover:text-[#181611] transition-all">
+                                    Details
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Event 2 -->
+                        <div
+                            class="group bg-white dark:bg-[#2d2719] rounded-[32px] overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-[#f0eee9] dark:border-[#3a3528]">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhRNaV9wyJ1Qko29-Ng56_w4sshgFBzphYhtDOcRScrEMH33Io1AO8BLuteww7Wuwx4jZlWA4KgBtkWCqVIsceMXdKGm0EPZQhnlkOkMMpUiowWZuGMqW6xDFNW5zmpC3-50ZOFEpYinRz1qUB2wwrW-tXiAlUMvnTw_6kfSrh4QQ5k54rE7xUponPR6VoyT_1w5OoP-J_ESc9M7txLbLF5RP3CqUupd3EQC23_Gp_bKVdJ8oSL8UB7hkhR840_o-HQ-rY_dJG3_Y"
+                                    alt="Conferences"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                <div
+                                    class="absolute top-4 left-4 bg-secondary text-green-800 px-4 py-2 rounded-2xl font-black text-center shadow-lg">
+                                    <div class="text-xs uppercase leading-none">Mar</div>
+                                    <div class="text-xl">22</div>
+                                </div>
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <h3 class="text-lg font-bold group-hover:text-primary transition-colors">PTA Conferences
+                                </h3>
+                                <p class="text-xs text-[#897f61] dark:text-gray-400 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-lg">event</span> All Day
+                                </p>
+                                <a href="calendar.html#parent-teacher"
+                                    class="block w-full text-center py-2.5 bg-[#f4f3f0] dark:bg-[#3a3528] rounded-2xl font-bold text-sm hover:bg-primary hover:text-[#181611] transition-all">
+                                    Details
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Event 3 -->
+                        <div
+                            class="group bg-white dark:bg-[#2d2719] rounded-[32px] overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-[#f0eee9] dark:border-[#3a3528]">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpmsoyNKF9b2xrA3x71y_gvgHZxiRHb1PUr5RVX9_UoxiGHT-5LE29lJOY9O79Km5tY4N2cVFCGiNzVG2rPRn5DuA9YIWvhLK4JeLJcHNJ_9561arNv_Y0vvlCRa5e9ma7qJ1VAaktOaL9Vpcf5RJdYiN3enjeuFu1tH03G0MaqZ4LaqLrJSttY9929ODu2bJlov5bu4GYSRhYyNvQksk80f8EF0t67TLpNJ7yFB-qhLK4TiVmJcDcHT28ZI1bBIsoyifZ_TcMowg"
+                                    alt="Science Fair"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                <div
+                                    class="absolute top-4 left-4 bg-accent-blue text-blue-800 px-4 py-2 rounded-2xl font-black text-center shadow-lg">
+                                    <div class="text-xs uppercase leading-none">Apr</div>
+                                    <div class="text-xl">05</div>
+                                </div>
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <h3 class="text-lg font-bold group-hover:text-primary transition-colors">Annual Science
+                                    Fair</h3>
+                                <p class="text-xs text-[#897f61] dark:text-gray-400 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-lg">schedule</span> 10:00
+                                    AM
+                                </p>
+                                <a href="calendar.html#science-fair"
+                                    class="block w-full text-center py-2.5 bg-[#f4f3f0] dark:bg-[#3a3528] rounded-2xl font-bold text-sm hover:bg-primary hover:text-[#181611] transition-all">
+                                    Details
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Event 4 -->
+                        <div
+                            class="group bg-white dark:bg-[#2d2719] rounded-[32px] overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-[#f0eee9] dark:border-[#3a3528]">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9PqrOJ5PITZq16Ca3nvX_04wM_ebzCBRhgQUDs6ej0e60d61BfWHXB53HNNnm_uKRMJ3TPkVoWKf015ws9dkJloNIwrHoEuLirENhySsOsnw3HBROGw8MglHDPhyV0Nz_n6IN2y1W32gh3D-k6n1DFWBCbJVEu6U5hWngW-lC-cHKKJ8euhCEvJU_ki-7Z1PLCr1uqotDm5ueiHw_yX7fwGesE-cPN0y_vN7cGoytw3NK9LpNAtzMQXPy85S04jQVynd6opeBC0I"
+                                    alt="Inter-House Sports"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                <div
+                                    class="absolute top-4 left-4 bg-orange-500 text-white px-4 py-2 rounded-2xl font-black text-center shadow-lg">
+                                    <div class="text-xs uppercase leading-none">May</div>
+                                    <div class="text-xl">12</div>
+                                </div>
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <h3 class="text-lg font-bold group-hover:text-primary transition-colors">Inter-House
+                                    Sports
+                                </h3>
+                                <p class="text-xs text-[#897f61] dark:text-gray-400 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-lg">sports_soccer</span>
+                                    9:00 AM
+                                </p>
+                                <a href="calendar.html#sports-day"
+                                    class="block w-full text-center py-2.5 bg-[#f4f3f0] dark:bg-[#3a3528] rounded-2xl font-bold text-sm hover:bg-primary hover:text-[#181611] transition-all">
+                                    Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-b from-white to-[#fcfbf9] dark:from-[#1f1a10] dark:to-[#181611] py-24">
+                    <div class="max-w-[1200px] mx-auto px-6">
+                        <div class="text-center mb-16 space-y-4">
+                            <h2 class="text-4xl font-black">Voices from our <span
+                                    class="text-primary italic">Community</span></h2>
+                            <p class="text-[#897f61] dark:text-gray-400">Hear why parents love Hopespring Foundation
+                                School.</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <!-- Testimonial 1 -->
+                            <div
+                                class="bg-white dark:bg-[#2d2719] p-10 rounded-[40px] shadow-xl border border-[#e6e3db] dark:border-transparent relative group">
+                                <span
+                                    class="material-symbols-outlined text-primary text-6xl opacity-10 absolute top-6 right-8 group-hover:opacity-20 transition-opacity">format_quote</span>
+                                <p class="text-lg italic leading-relaxed mb-8 relative z-10">
+                                    "Our daughter has grown so much in her confidence and social skills. The teachers
+                                    here don't just teach subjects; they teach children how to love learning."
+                                </p>
+                                <div
+                                    class="flex items-center gap-4 pt-6 border-t border-[#f4f3f0] dark:border-[#3a3528]">
+                                    <div
+                                        class="size-14 rounded-2xl bg-primary/20 flex items-center justify-center text-primary font-black text-xl">
+                                        SM</div>
+                                    <div>
+                                        <p class="font-bold">Sarah Mitchell</p>
+                                        <p class="text-xs text-[#897f61] font-medium">Parent of 2nd Grader</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Testimonial 2 -->
+                            <div
+                                class="bg-white dark:bg-[#2d2719] p-10 rounded-[40px] shadow-xl border border-[#e6e3db] dark:border-transparent relative group transform md:-translate-y-4">
+                                <span
+                                    class="material-symbols-outlined text-primary text-6xl opacity-10 absolute top-6 right-8 group-hover:opacity-20 transition-opacity">format_quote</span>
+                                <p class="text-lg italic leading-relaxed mb-8 relative z-10">
+                                    "The STEAM program at Hopespring is incredible. My son is always coming home excited
+                                    about a new science experiment or a coding project he worked on."
+                                </p>
+                                <div
+                                    class="flex items-center gap-4 pt-6 border-t border-[#f4f3f0] dark:border-[#3a3528]">
+                                    <div
+                                        class="size-14 rounded-2xl bg-secondary/20 flex items-center justify-center text-green-700 font-black text-xl">
+                                        JR</div>
+                                    <div>
+                                        <p class="font-bold">James Rodriguez</p>
+                                        <p class="text-xs text-[#897f61] font-medium">Parent of 4th Grader</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Testimonial 3 -->
+                            <div
+                                class="bg-white dark:bg-[#2d2719] p-10 rounded-[40px] shadow-xl border border-[#e6e3db] dark:border-transparent relative group">
+                                <span
+                                    class="material-symbols-outlined text-primary text-6xl opacity-10 absolute top-6 right-8 group-hover:opacity-20 transition-opacity">format_quote</span>
+                                <p class="text-lg italic leading-relaxed mb-8 relative z-10">
+                                    "Hopespring Foundation School feels like a family. The communication between staff
+                                    and parents is excellent, we always feel involved."
+                                </p>
+                                <div
+                                    class="flex items-center gap-4 pt-6 border-t border-[#f4f3f0] dark:border-[#3a3528]">
+                                    <div
+                                        class="size-14 rounded-2xl bg-accent-blue/20 flex items-center justify-center text-blue-700 font-black text-xl">
+                                        EL</div>
+                                    <div>
+                                        <p class="font-bold">Emily Lau</p>
+                                        <p class="text-xs text-[#897f61] font-medium">Parent of Kindergartener</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="px-6 py-24 max-w-[1200px] mx-auto">
+                    <div class="relative rounded-[60px] overflow-hidden group">
+                        <!-- Image Background for CTA -->
+                        <img src="inclusive.png" alt="Happy school community"
+                            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-primary/90 backdrop-blur-sm mix-blend-multiply"></div>
+
+                        <div class="relative z-10 p-12 md:p-24 text-center space-y-8">
+                            <h2 class="text-[#181611] text-4xl md:text-6xl font-black tracking-tight">Ready to Join the
+                                <br /> <span class="bg-white/30 px-4 rounded-2xl">Hopespring Family?</span>
+                            </h2>
+                            <p class="text-[#181611] text-lg md:text-xl max-w-2xl mx-auto font-medium">
+                                Applications for the upcoming academic year are now open. Spaces are limited, so book
+                                your tour today!
+                            </p>
+                            <div class="flex flex-wrap justify-center gap-6 pt-4">
+                                <a href="start_application.html"
+                                    class="bg-[#181611] text-white px-12 py-5 rounded-[24px] font-black text-xl hover:translate-y-[-4px] transition-all shadow-2xl">
+                                    Enroll Now
+                                </a>
+                                <a href="book_tour.html"
+                                    class="bg-white text-[#181611] px-12 py-5 rounded-[24px] font-black text-xl border-2 border-[#181611]/10 hover:bg-gray-50 transition-all shadow-lg">
+                                    Book a School Tour
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+            <footer
+                class="bg-white dark:bg-[#110e08] px-4 md:px-20 lg:px-40 py-16 border-t border-[#f4f3f0] dark:border-[#3a3528]">
+                <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+                    <div class="col-span-1 md:col-span-1">
+                        <div class="flex items-center gap-3 text-[#181611] dark:text-white mb-6">
+                            <div class="size-6 text-primary">
+                                <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
+                                        fill="currentColor"></path>
+                                </svg>
+                            </div>
+                            <h3 class="font-bold text-lg">Hopespring Foundation</h3>
+                        </div>
+                        <p class="text-[#897f61] dark:text-gray-400 text-sm leading-relaxed">
+                            Nurturing curious minds for a brighter future. Our mission is to inspire, challenge, and
+                            empower
+                            students to become lifelong learners.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-primary">Quick Links</h4>
+                        <ul class="space-y-4 text-sm font-medium">
+                            <li><a class="hover:text-primary transition-colors" href="academics.html">Our Curriculum</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="staff_directory.html">Faculty
+                                    &amp; Staff</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="calendar.html">School Calendar</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="contact.html">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-primary">Resources</h4>
+                        <ul class="space-y-4 text-sm font-medium">
+                            <li><a class="hover:text-primary transition-colors" href="parents.html">Parent Portal</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="about.html">School Ethos</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="admission.html">Enrollment FAQ</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="parents.html">Daily Life</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-primary">Contact Us</h4>
+                        <div class="space-y-4 text-sm text-[#897f61] dark:text-gray-400">
+                            <p class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+                                2 Ngara Igo Street, Mgbuoba<br />Port Harcourt 500272, Rivers
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-lg">phone</span>
+                                07048808844
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-lg">mail</span>
+                                office@hopespring-fs.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="max-w-[1200px] mx-auto mt-16 pt-8 border-t border-[#f4f3f0] dark:border-[#3a3528] flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-xs text-[#897f61]">© 2024 Hopespring Foundation School. All rights reserved.</p>
+                    <div class="flex gap-6">
+                        <a class="text-[#897f61] hover:text-primary" href="#"><span
+                                class="material-symbols-outlined text-xl">social_leaderboard</span></a>
+                        <a class="text-[#897f61] hover:text-primary" href="#"><span
+                                class="material-symbols-outlined text-xl">camera_alt</span></a>
+                        <a class="text-[#897f61] hover:text-primary" href="#"><span
+                                class="material-symbols-outlined text-xl">alternate_email</span></a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="site_search.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.hero-slider-image');
+            const frameImg = document.getElementById('hero-frame-img');
+            const images = ['home_hero.png', 'support_hero.png', 'gifted.png'];
+            let currentSlide = 0;
+
+            function nextSlide() {
+                // Background slider
+                slides[currentSlide].classList.replace('opacity-100', 'opacity-0');
+
+                // Frame image fade
+                if (frameImg) frameImg.style.opacity = '0';
+
+                currentSlide = (currentSlide + 1) % slides.length;
+
+                setTimeout(() => {
+                    slides[currentSlide].classList.replace('opacity-0', 'opacity-100');
+                    if (frameImg) {
+                        frameImg.src = images[currentSlide];
+                        frameImg.style.opacity = '1';
+                    }
+                }, 100);
+            }
+
+            setInterval(nextSlide, 5000); // Change every 5 seconds
+        });
+    </script>
+</body>
+
+</html>
