@@ -78,21 +78,23 @@
 <body class="bg-background-light dark:bg-background-dark text-[#181611] dark:text-white transition-colors duration-300">
     <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
         <div class="layout-container flex h-full grow flex-col">
-            <div class="px-4 md:px-20 lg:px-40 flex justify-center py-2 fixed top-0 left-0 w-full z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-solid border-[#f4f3f0] dark:border-[#3a3528]">
-    <div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+            <div class="px-4 md:px-10 lg:px-16 flex justify-center py-2 fixed top-0 left-0 w-full z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-solid border-[#f4f3f0] dark:border-[#3a3528]">
+    <div class="layout-content-container flex flex-col w-full max-w-[1536px] flex-1">
         <header class="flex items-center justify-between whitespace-nowrap px-4 py-3">
             <a href="/" class="flex items-center gap-3">
                 <img src="/assets/images/logo.png" alt="Hopespring Foundation Logo" class="h-10 w-auto">
             </a>
-            <div class="flex flex-1 justify-end gap-4 md:gap-8">
-                <div class="hidden md:flex items-center gap-9">
+            
+            <!-- Desktop Nav -->
+            <div class="flex flex-1 justify-end gap-4 md:gap-8 items-center">
+                <nav class="hidden md:flex items-center gap-9">
                     <a class="text-sm leading-normal transition-colors font-medium hover:text-primary" href="/">Home</a>
                     <a class="text-sm leading-normal transition-colors font-medium hover:text-primary" href="/about/">About</a>
                     <a class="text-sm leading-normal transition-colors font-medium hover:text-primary" href="/academics/">Academics</a>
                     <a class="text-sm leading-normal transition-colors font-medium hover:text-primary" href="/parents/">Parents</a>
                     <a class="text-sm leading-normal transition-colors font-medium hover:text-primary" href="/admission/">Admissions</a>
                     <a class="text-sm leading-normal transition-colors font-medium hover:text-primary" href="/gallery/">Gallery</a>
-                </div>
+                </nav>
                 <div class="relative hidden md:flex items-center group">
                     <div class="bg-[#f4f3f0] dark:bg-white/10 rounded-xl flex items-center px-4 py-2">
                         <span class="material-symbols-outlined text-[#897f61] dark:text-white/50 text-xl">search</span>
@@ -101,13 +103,62 @@
                     <div class="search-results absolute top-full right-0 mt-2 w-64 bg-white dark:bg-[#221d10] rounded-xl shadow-xl border border-[#e6e3db] dark:border-[#3a3424] hidden z-50 overflow-hidden">
                     </div>
                 </div>
-                <a href="/start_application/" class="flex min-w-[100px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-primary text-[#181611] text-sm font-bold leading-normal tracking-[0.015em] shadow-sm hover:brightness-105 transition-all">
+                <a href="/start_application/" class="hidden md:flex min-w-[100px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-primary text-[#181611] text-sm font-bold leading-normal tracking-[0.015em] shadow-sm hover:brightness-105 transition-all">
                     <span class="truncate">Enroll Now</span>
                 </a>
+                
+                <!-- Hamburger Button -->
+                <button id="mobile-menu-btn" class="md:hidden flex items-center p-2 text-[#181611] dark:text-white hover:text-primary transition-colors focus:outline-none">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
             </div>
         </header>
     </div>
 </div>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 z-[60] bg-white dark:bg-background-dark transform translate-x-full transition-transform duration-300 md:hidden flex flex-col">
+    <div class="flex items-center justify-between p-6 border-b border-[#f4f3f0] dark:border-[#3a3528]">
+        <a href="/" class="flex items-center gap-3">
+            <img src="/assets/images/logo.png" alt="Hopespring Foundation Logo" class="h-10 w-auto">
+        </a>
+        <button id="close-menu-btn" class="p-2 text-[#181611] dark:text-white hover:text-primary transition-colors focus:outline-none">
+            <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+    </div>
+    <div class="flex flex-col p-6 gap-6 overflow-y-auto">
+        <a class="text-xl transition-colors font-medium hover:text-primary" href="/">Home</a>
+        <a class="text-xl transition-colors font-medium hover:text-primary" href="/about/">About</a>
+        <a class="text-xl transition-colors font-medium hover:text-primary" href="/academics/">Academics</a>
+        <a class="text-xl transition-colors font-medium hover:text-primary" href="/parents/">Parents</a>
+        <a class="text-xl transition-colors font-medium hover:text-primary" href="/admission/">Admissions</a>
+        <a class="text-xl transition-colors font-medium hover:text-primary" href="/gallery/">Gallery</a>
+        
+        <div class="mt-4 pt-4 border-t border-[#f4f3f0] dark:border-[#3a3528] flex flex-col gap-4">
+            <a href="/start_application/" class="flex w-full items-center justify-center rounded-xl h-12 bg-primary text-[#181611] text-lg font-bold shadow-sm hover:brightness-105 transition-all">
+                Enroll Now
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const btn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('close-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        if (btn && closeBtn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.remove('translate-x-full');
+            });
+
+            closeBtn.addEventListener('click', () => {
+                menu.classList.add('translate-x-full');
+            });
+        }
+    });
+</script>
 
             <main class="flex flex-col flex-1">
                 <style>
@@ -128,7 +179,7 @@
                     <div
                         class="absolute top-0 left-0 w-[40%] h-full bg-primary/5 rounded-r-[100px] -z-10 -translate-x-20">
                     </div>
-                    <div class="max-w-[1200px] mx-auto px-6 text-center">
+                    <div class="w-full max-w-[1536px] mx-auto px-6 text-center">
                         <div
                             class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-sm mb-6">
                             <span class="material-symbols-outlined text-lg">groups</span>
@@ -145,7 +196,7 @@
                 </section>
 
                 <!-- Directory Grid -->
-                <section class="max-w-[1200px] mx-auto px-6 py-24 space-y-24">
+                <section class="w-full max-w-[1536px] mx-auto px-6 py-24 space-y-24">
 
                     <!-- Leadership Section -->
                     <div class="space-y-12">
@@ -254,7 +305,7 @@
                 </section>
 
                 <!-- Final CTA -->
-                <div class="px-6 py-24 max-w-[1200px] mx-auto">
+                <div class="px-6 py-24 w-full max-w-[1536px] mx-auto">
                     <div class="relative rounded-[60px] overflow-hidden group">
                         <img src="/assets/images/inclusive.png" alt="Happy school community"
                             class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
@@ -282,8 +333,8 @@
                 </div>
             </main>
             </main>
-            <footer class="bg-white dark:bg-[#110e08] px-4 md:px-20 lg:px-40 py-16 border-t border-[#f4f3f0] dark:border-[#3a3528]">
-    <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+            <footer class="bg-white dark:bg-[#110e08] px-4 md:px-20 lg:px-16 py-16 border-t border-[#f4f3f0] dark:border-[#3a3528]">
+    <div class="w-full max-w-[1536px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         <div class="col-span-1 md:col-span-1">
             <div class="flex items-center gap-3 text-[#181611] dark:text-white mb-6">
                 <div class="size-6 text-primary">
@@ -333,7 +384,7 @@
             </div>
         </div>
     </div>
-    <div class="max-w-[1200px] mx-auto mt-16 pt-8 border-t border-[#f4f3f0] dark:border-[#3a3528] flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="w-full max-w-[1536px] mx-auto mt-16 pt-8 border-t border-[#f4f3f0] dark:border-[#3a3528] flex flex-col md:flex-row justify-between items-center gap-4">
         <p class="text-xs text-[#897f61]">© 2024 Hopespring Foundation School. All rights reserved.</p>
         <div class="flex gap-6">
             <a class="text-[#897f61] hover:text-primary" href="#"><span class="material-symbols-outlined text-xl">social_leaderboard</span></a>
