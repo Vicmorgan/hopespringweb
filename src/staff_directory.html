@@ -1,0 +1,176 @@
+---
+layout: base.njk
+title: "Our Team - Staff Directory | Hopespring Foundation"
+description: "Meet the dedicated educators and support staff at Hopespring Foundation School — a passionate team committed to inspiring and empowering every student."
+---
+<style>
+    .staff-card-img {
+        filter: grayscale(20%);
+        transition: all 0.5s ease;
+    }
+
+    .staff-card:hover .staff-card-img {
+        filter: grayscale(0%);
+        transform: scale(1.05);
+    }
+</style>
+            <main class="flex flex-col flex-1">
+                <!-- Hero Section -->
+                <section
+                    class="relative min-h-[400px] flex items-center pt-32 pb-20 overflow-hidden bg-white dark:bg-background-dark">
+                    <div
+                        class="absolute top-0 left-0 w-[40%] h-full bg-primary/5 rounded-r-[100px] -z-10 -translate-x-20">
+                    </div>
+                    <div class="max-w-[1200px] mx-auto px-6 text-center">
+                        <div
+                            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-sm mb-6">
+                            <span class="material-symbols-outlined text-lg">groups</span>
+                            <span>Meet Our Team</span>
+                        </div>
+                        <h1 class="text-5xl md:text-7xl font-black tracking-tight mb-6">
+                            Our Dedicated <span class="text-primary italic">Educators</span>
+                        </h1>
+                        <p class="text-xl text-[#897f61] dark:text-gray-400 max-w-2xl mx-auto">
+                            Passion, expertise, and a heart for children. Meet the people who make Hopespring a world of
+                            discovery.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Directory Grid -->
+                <section class="max-w-[1200px] mx-auto px-6 py-24 space-y-24">
+
+                    <!-- Leadership Section -->
+                    <div class="space-y-12">
+                        <div class="border-l-4 border-primary pl-6">
+                            <h2 class="text-3xl font-black">School <span class="text-primary italic">Leadership</span>
+                            </h2>
+                            <p class="text-[#897f61] dark:text-gray-400">Guiding our vision and excellence.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            <!-- Staff 1 -->
+                            <div
+                                class="staff-card group bg-white dark:bg-[#2d2719] p-6 rounded-[32px] shadow-lg hover:shadow-2xl transition-all border border-[#f0eee9] dark:border-transparent">
+                                <div class="relative size-40 mx-auto mb-6 rounded-3xl overflow-hidden shadow-inner">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwg3qfJ8OUqxgW9t_op7sCozHu0I9qQo1oTplhTXJIqMY6-GKiP_Q4QOAZgKqsVhoZtnbPLsQGXgwtGUIrRUEDUUUw5EWQnCl_PnSle_TjrXELuc6f7ITD4FagrLtgBoMr3NaSeVUkg6kvRm7Ye1wL04JiI6lc6MbKbeO_cVnxMo61j_NnKxNsNTxz7HpJuDHsYjDxw-Z3qWqrO9eFxfjp1qA8plVbwkR7jU9Rvd62fdp_70RpFY4eDhnE8Baeqf9VADAt8clhkIY"
+                                        alt="Dr. Sarah Jenkins" class="staff-card-img w-full h-full object-cover">
+                                </div>
+                                <div class="text-center">
+                                    <h3 class="font-black text-xl mb-1">Dr. Sarah Jenkins</h3>
+                                    <p class="text-primary font-bold text-sm">School Principal</p>
+                                    <p class="text-xs text-[#897f61] dark:text-gray-400 mt-3 italic">"Leading with love
+                                        and learning."</p>
+                                </div>
+                            </div>
+
+                            <!-- Staff 2 -->
+                            <div
+                                class="staff-card group bg-white dark:bg-[#2d2719] p-6 rounded-[32px] shadow-lg hover:shadow-2xl transition-all border border-[#f0eee9] dark:border-transparent">
+                                <div class="relative size-40 mx-auto mb-6 rounded-3xl overflow-hidden shadow-inner">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuADcmCEov2jr_HiWKZMum6MZ0q9D38AoaHvJ6EO3YVRFvtd2MVmZSWYAx34c1Z4WN3fHmDAQfdvY-_NmWH4hHfjyuRibrMeDozeyVVdCUMP2-U-jBP8Ia-MVI-TEabIKIzUgSfenquZXDFywV99mFlnyeAqCxrgBLq5BpwN2bXTYgCyAlxlW3H_aYISy8Am2KWS-U2w971C5v0wSgo69vbZHd68s6crcfykzKVliET5TR0w0hJrzDBrd7nJlG07qOvbI6EQrpi6nkA"
+                                        alt="Mr. David Chen" class="staff-card-img w-full h-full object-cover">
+                                </div>
+                                <div class="text-center">
+                                    <h3 class="font-black text-xl mb-1">Mr. David Chen</h3>
+                                    <p class="text-primary font-bold text-sm">Vice-Principal</p>
+                                    <p class="text-xs text-[#897f61] dark:text-gray-400 mt-3 italic">"Excellence in
+                                        every detail."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Academic Staff Section -->
+                    <div class="space-y-12">
+                        <div class="border-l-4 border-secondary pl-6">
+                            <h2 class="text-3xl font-black">Academic <span class="text-secondary italic">Faculty</span>
+                            </h2>
+                            <p class="text-[#897f61] dark:text-gray-400">The heart of our classroom discovery.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            <!-- Staff 3 -->
+                            <div
+                                class="staff-card group bg-white dark:bg-[#2d2719] p-6 rounded-[32px] shadow-lg hover:shadow-2xl transition-all border border-[#f0eee9] dark:border-transparent">
+                                <div class="relative size-40 mx-auto mb-6 rounded-3xl overflow-hidden shadow-inner">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhRNaV9wyJ1Qko29-Ng56_w4sshgFBzphYhtDOcRScrEMH33Io1AO8BLuteww7Wuwx4jZlWA4KgBtkWCqVIsceMXdKGm0EPZQhnlkOkMMpUiowWZuGMqW6xDFNW5zmpC3-50ZOFEpYinRz1qUB2wwrW-tXiAlUMvnTw_6kfSrh4QQ5k54rE7xUponPR6VoyT_1w5OoP-J_ESc9M7txLbLF5RP3CqUupd3EQC23_Gp_bKVdJ8oSL8UB7hkhR840_o-HQ-rY_dJG3_Y"
+                                        alt="Ms. Linda Osei" class="staff-card-img w-full h-full object-cover">
+                                </div>
+                                <div class="text-center">
+                                    <h3 class="font-black text-xl mb-1">Ms. Linda Osei</h3>
+                                    <p class="text-primary font-bold text-sm">Head of Early Years</p>
+                                    <p class="text-xs text-[#897f61] dark:text-gray-400 mt-3 italic">"Nurturing the
+                                        first steps."</p>
+                                </div>
+                            </div>
+
+                            <!-- Staff 4 -->
+                            <div
+                                class="staff-card group bg-white dark:bg-[#2d2719] p-6 rounded-[32px] shadow-lg hover:shadow-2xl transition-all border border-[#f0eee9] dark:border-transparent">
+                                <div class="relative size-40 mx-auto mb-6 rounded-3xl overflow-hidden shadow-inner">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpmsoyNKF9b2xrA3x71y_gvgHZxiRHb1PUr5RVX9_UoxiGHT-5LE29lJOY9O79Km5tY4N2cVFCGiNzVG2rPRn5DuA9YIWvhLK4JeLJcHNJ_9561arNv_Y0vvlCRa5e9ma7qJ1VAaktOaL9Vpcf5RJdYiN3enjeuFu1tH03G0MaqZ4LaqLrJSttY9929ODu2bJlov5bu4GYSRhYyNvQksk80f8EF0t67TLpNJ7yFB-qhLK4TiVmJcDcHT28ZI1bBIsoyifZ_TcMowg"
+                                        alt="Mr. Simon Ade" class="staff-card-img w-full h-full object-cover">
+                                </div>
+                                <div class="text-center">
+                                    <h3 class="font-black text-xl mb-1">Mr. Simon Ade</h3>
+                                    <p class="text-primary font-bold text-sm">Lead Science Educator</p>
+                                    <p class="text-xs text-[#897f61] dark:text-gray-400 mt-3 italic">"Unlocking the
+                                        wonders of nature."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Support Staff Section -->
+                    <div class="space-y-12">
+                        <div class="border-l-4 border-accent-blue pl-6">
+                            <h2 class="text-3xl font-black">Support <span class="text-accent-blue italic">Team</span>
+                            </h2>
+                            <p class="text-[#897f61] dark:text-gray-400">The strength behind our daily operations.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            <!-- Staff 5 -->
+                            <div
+                                class="staff-card group bg-white dark:bg-[#2d2719] p-6 rounded-[32px] shadow-lg hover:shadow-2xl transition-all border border-[#f0eee9] dark:border-transparent">
+                                <div class="relative size-40 mx-auto mb-6 rounded-3xl overflow-hidden shadow-inner">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHsY1TdY_LEqDYlwDchPy0tTakUGn-wyQQDwVst47-sydS0GM1DP9tQ6AiH24OuaS4zCZnPgdhlrY4cyiRSPEdAv5JzS6ITVvTqj2qtkUpaUuklxF_mCKsgu3RFlo7tSOBFh7IxoALTpYVqSmqM9hbn5zZ5pd3gvjCUlcR3wmoEWEfkx-K4-EUpFigrxD6hFMk5llsh1-lIV6QoWV2K2wGuvkjmm6leBoSButHuM4ZeJKqzk6TOmRMigW_UjCxj-QkgcyzV8ZigXE"
+                                        alt="Mrs. Rose Peters" class="staff-card-img w-full h-full object-cover">
+                                </div>
+                                <div class="text-center">
+                                    <h3 class="font-black text-xl mb-1">Mrs. Rose Peters</h3>
+                                    <p class="text-primary font-bold text-sm">School Registrar</p>
+                                    <p class="text-xs text-[#897f61] dark:text-gray-400 mt-3 italic">"Welcome to the
+                                        family."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Final CTA -->
+                <div class="px-6 py-24 max-w-[1200px] mx-auto">
+                    <div class="relative rounded-[60px] overflow-hidden group">
+                        <img src="/assets/images/inclusive.png" alt="Happy school community"
+                            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-[#110e08]/90 to-black/60 backdrop-blur-[2px]">
+                        </div>
+                        <div
+                            class="relative z-10 p-12 md:p-24 text-center md:text-left space-y-8 flex flex-col md:row items-center justify-between gap-12">
+                            <div class="space-y-4">
+                                <h2 class="text-white text-4xl md:text-5xl font-black tracking-tight leading-tight">
+                                    Join our <br /> <span class="bg-white/30 px-4 rounded-2xl">Mission?</span></h2>
+                                <p class="text-gray-200 text-lg font-medium max-w-md">
+                                    We're always looking for passionate educators to join our vibrant academic
+                                    community.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-6">
+                                <a href="/contact/"
+                                    class="bg-primary text-[#181611] px-10 py-5 rounded-[24px] font-black text-xl hover:translate-y-[-4px] transition-all shadow-2xl">
+                                    Career Opportunities
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>

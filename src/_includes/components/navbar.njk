@@ -1,0 +1,30 @@
+<div class="px-4 md:px-20 lg:px-40 flex justify-center py-2 fixed top-0 left-0 w-full z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-solid border-[#f4f3f0] dark:border-[#3a3528]">
+    <div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+        <header class="flex items-center justify-between whitespace-nowrap px-4 py-3">
+            <a href="/" class="flex items-center gap-3">
+                <img src="/assets/images/logo.png" alt="Hopespring Foundation Logo" class="h-10 w-auto">
+            </a>
+            <div class="flex flex-1 justify-end gap-4 md:gap-8">
+                <div class="hidden md:flex items-center gap-9">
+                    <a class="text-sm leading-normal transition-colors {% if page.fileSlug == '' %}text-primary font-bold{% else %}font-medium hover:text-primary{% endif %}" href="/">Home</a>
+                    <a class="text-sm leading-normal transition-colors {% if page.fileSlug == 'about' %}text-primary font-bold{% else %}font-medium hover:text-primary{% endif %}" href="/about/">About</a>
+                    <a class="text-sm leading-normal transition-colors {% if page.fileSlug == 'academics' %}text-primary font-bold{% else %}font-medium hover:text-primary{% endif %}" href="/academics/">Academics</a>
+                    <a class="text-sm leading-normal transition-colors {% if page.fileSlug == 'parents' %}text-primary font-bold{% else %}font-medium hover:text-primary{% endif %}" href="/parents/">Parents</a>
+                    <a class="text-sm leading-normal transition-colors {% if page.fileSlug == 'admission' %}text-primary font-bold{% else %}font-medium hover:text-primary{% endif %}" href="/admission/">Admissions</a>
+                    <a class="text-sm leading-normal transition-colors {% if page.fileSlug == 'gallery' %}text-primary font-bold{% else %}font-medium hover:text-primary{% endif %}" href="/gallery/">Gallery</a>
+                </div>
+                <div class="relative hidden md:flex items-center group">
+                    <div class="bg-[#f4f3f0] dark:bg-white/10 rounded-xl flex items-center px-4 py-2">
+                        <span class="material-symbols-outlined text-[#897f61] dark:text-white/50 text-xl">search</span>
+                        <input type="text" class="site-search-input bg-transparent border-none focus:ring-0 text-sm w-32 placeholder:text-[#897f61] dark:placeholder:text-white/50 focus:w-48 transition-all duration-300" placeholder="Search site..." />
+                    </div>
+                    <div class="search-results absolute top-full right-0 mt-2 w-64 bg-white dark:bg-[#221d10] rounded-xl shadow-xl border border-[#e6e3db] dark:border-[#3a3424] hidden z-50 overflow-hidden">
+                    </div>
+                </div>
+                <a href="/start_application/" class="flex min-w-[100px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-primary text-[#181611] text-sm font-bold leading-normal tracking-[0.015em] shadow-sm hover:brightness-105 transition-all">
+                    <span class="truncate">Enroll Now</span>
+                </a>
+            </div>
+        </header>
+    </div>
+</div>

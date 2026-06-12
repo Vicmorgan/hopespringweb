@@ -1,0 +1,33 @@
+{
+  "name": "hopespringweb",
+  "version": "1.0.0",
+  "description": "Official website for **Hopespring Foundation School**, a leading private school in Nigeria dedicated to academic excellence, character development, and holistic education.",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/assets/css/input.css -o ./_site/assets/css/style.css --minify",
+    "build:eleventy": "eleventy",
+    "build": "npm run build:css && npm run build:eleventy",
+    "dev:css": "tailwindcss -i ./src/assets/css/input.css -o ./_site/assets/css/style.css --watch",
+    "dev:eleventy": "eleventy --serve",
+    "dev": "npm run build:css && concurrently \"npm run dev:css\" \"npm run dev:eleventy\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vicmorgan/hopespringweb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Vicmorgan/hopespringweb/issues"
+  },
+  "homepage": "https://github.com/Vicmorgan/hopespringweb#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.5",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/forms": "^0.5.11",
+    "concurrently": "^9.2.1",
+    "tailwindcss": "^3.4.19"
+  }
+}
