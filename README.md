@@ -4,45 +4,89 @@ Official website for **Hopespring Foundation School**, a leading private school 
 
 ---
 
+## Tech Stack
+
+- **[Eleventy (11ty)](https://www.11ty.dev/)** — static site generator, Nunjucks templates
+- **Tailwind CSS** — compiled via the Tailwind CLI (not the CDN build)
+- **Vanilla JavaScript** — site search, hero slider, mobile menu
+- **Netlify** — hosting and form handling (`netlify.toml`)
+
+---
+
 ## Project Structure
 
 ```
 hopespringweb/
-├── assets/
-│   ├── images/         # All site images (logo, hero shots, etc.)
-│   ├── js/             # JavaScript files (site_search.js)
-│   └── videos/         # Video assets (virtual tour, etc.)
-├── index.html          # Homepage
-├── about.html
-├── academics.html
-├── activities.html
-├── admission.html
-├── book_tour.html
-├── calendar.html
-├── character_counts.html
-├── contact.html
-├── curriculum.html
-├── gallery.html
-├── news.html
-├── parents.html
-├── staff_directory.html
-├── start_application.html
-├── support_services.html
-├── virtual_tour.html
-├── favicon.ico
-├── robots.txt
-├── sitemap.xml
-└── README.md
+├── src/
+│   ├── _includes/
+│   │   ├── base.njk              # Shared page layout
+│   │   └── components/           # head, navbar, footer partials
+│   ├── assets/
+│   │   ├── css/input.css         # Tailwind entry point
+│   │   ├── images/               # Site images, organized by page
+│   │   ├── js/site_search.js
+│   │   └── videos/
+│   ├── index.html                # Homepage
+│   ├── about.html
+│   ├── academics.html
+│   ├── activities.html
+│   ├── admission.html
+│   ├── book_tour.html
+│   ├── calendar.html
+│   ├── character_counts.html
+│   ├── contact.html
+│   ├── curriculum.html
+│   ├── gallery.html
+│   ├── news.html
+│   ├── parents.html
+│   ├── staff_directory.html
+│   ├── start_application.html
+│   ├── support_services.html
+│   ├── virtual_tour.html
+│   ├── robots.txt
+│   └── sitemap.xml
+├── _site/                        # Build output (generated, gitignored)
+├── eleventy.config.js
+├── tailwind.config.js
+└── netlify.toml
 ```
+
+Every page is an Eleventy template using the `base.njk` layout, which pulls in the shared navbar and footer. Pages build to clean URLs (e.g. `src/about.html` → `/about/`).
 
 ---
 
-## Tech Stack
+## Development
 
-- **HTML5** — semantic, accessible markup
-- **Tailwind CSS** — loaded via CDN (`cdn.tailwindcss.com`)
-- **Vanilla JavaScript** — site search, sliders, interactive UI
-- **Google Fonts** — Lexend, Material Symbols Outlined
+Requires Node.js and npm.
+
+```bash
+npm install
+npm run dev
+```
+
+This builds the Tailwind stylesheet once, then runs the Tailwind watcher and the Eleventy dev server concurrently at `http://localhost:8080`.
+
+### Other scripts
+
+| Script | What it does |
+|---|---|
+| `npm run build` | Full production build (CSS + Eleventy) into `_site/` |
+| `npm run build:css` | Compile `src/assets/css/input.css` → `_site/assets/css/style.css` |
+| `npm run build:eleventy` | Build pages only (expects CSS already built) |
+| `npm run dev:css` | Watch and rebuild CSS only |
+| `npm run dev:eleventy` | Run the Eleventy dev server only |
+
+---
+
+## Forms
+
+Contact, Book a Tour, and Start Application forms are wired up for [Netlify Forms](https://docs.netlify.com/manage/forms/setup/) (`data-netlify="true"`, honeypot field). Submissions appear in the Netlify dashboard for the deployed site — no server code needed.
+
+---
+
+## Deployment
+
+Deployed via Netlify (see `netlify.toml`): build command `npm run build`, publish directory `_site`.
 
 ---
 
@@ -67,29 +111,3 @@ hopespringweb/
 | Support Services | `support_services.html` | Gifted, Inclusive, Counseling |
 | Staff Directory | `staff_directory.html` | Meet the team |
 | Contact | `contact.html` | Contact form and map |
-
----
-
-## Deployment
-
-This is a **static site** — deploy to any static hosting provider:
-
-- **GitHub Pages** — push to `gh-pages` branch
-- **Netlify** — drag and drop the project folder
-- **Vercel** — connect your GitHub repo
-
-> **Before deploying:** Update the domain in `sitemap.xml` and `robots.txt` to match your live URL.
-
----
-
-## Development
-
-No build step required. Open any `.html` file directly in your browser, or use a local server:
-
-```bash
-# Python 3
-python3 -m http.server 8000
-
-# Node.js (if installed)
-npx serve .
-```

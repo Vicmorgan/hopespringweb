@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: "Book a Campus Tour | Hope Spring Foundation"
+title: "Book a Campus Tour | Hopespring Foundation"
 description: "Book a guided campus tour at Hopespring Foundation School and experience our world-class facilities, vibrant community, and nurturing learning environment firsthand."
 ---
             <div class="max-w-[800px] w-full flex flex-col gap-12 py-10 px-4 md:px-10 lg:px-20 mx-auto">
@@ -11,7 +11,7 @@ description: "Book a guided campus tour at Hopespring Foundation School and expe
                             Book a Campus Tour
                         </h1>
                         <p class="text-[#5b5443] dark:text-[#b5af9a] text-base md:text-lg">
-                            Experience the magic of Hope Spring Foundation firsthand. Schedule a visit to meet our
+                            Experience the magic of Hopespring Foundation firsthand. Schedule a visit to meet our
                             teachers, explore our classrooms, and see our students in action.
                         </p>
                     </div>
@@ -19,31 +19,35 @@ description: "Book a guided campus tour at Hopespring Foundation School and expe
 
                 <section
                     class="bg-white dark:bg-[#2c2618] rounded-3xl p-8 md:p-12 shadow-sm border border-[#e6e3db] dark:border-[#3a3424]">
-                    <form class="flex flex-col gap-6">
+                    <form class="flex flex-col gap-6" name="book-tour" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/book_tour/?submitted=true">
+                        <input type="hidden" name="form-name" value="book-tour" />
+                        <p class="hidden">
+                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                        </p>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="flex flex-col gap-2">
                                 <label for="visitorName" class="text-sm font-bold dark:text-white">Your Name</label>
-                                <input type="text" id="visitorName" placeholder="Full Name"
+                                <input type="text" id="visitorName" name="visitor_name" placeholder="Full Name" required
                                     class="rounded-xl border border-[#e6e3db] dark:border-[#3a3424] bg-[#f8f7f6] dark:bg-[#221d10] px-4 py-3 text-sm focus:ring-primary focus:border-primary" />
                             </div>
                             <div class="flex flex-col gap-2">
                                 <label for="email" class="text-sm font-bold dark:text-white">Email Address</label>
-                                <input type="email" id="email" placeholder="email@example.com"
+                                <input type="email" id="email" name="email" placeholder="email@example.com" required
                                     class="rounded-xl border border-[#e6e3db] dark:border-[#3a3424] bg-[#f8f7f6] dark:bg-[#221d10] px-4 py-3 text-sm focus:ring-primary focus:border-primary" />
                             </div>
                             <div class="flex flex-col gap-2">
                                 <label for="phone" class="text-sm font-bold dark:text-white">Phone Number</label>
-                                <input type="tel" id="phone" placeholder="07048808844"
+                                <input type="tel" id="phone" name="phone" placeholder="07048808844"
                                     class="rounded-xl border border-[#e6e3db] dark:border-[#3a3424] bg-[#f8f7f6] dark:bg-[#221d10] px-4 py-3 text-sm focus:ring-primary focus:border-primary" />
                             </div>
                             <div class="flex flex-col gap-2">
                                 <label for="date" class="text-sm font-bold dark:text-white">Preferred Date</label>
-                                <input type="date" id="date"
+                                <input type="date" id="date" name="preferred_date"
                                     class="rounded-xl border border-[#e6e3db] dark:border-[#3a3424] bg-[#f8f7f6] dark:bg-[#221d10] px-4 py-3 text-sm focus:ring-primary focus:border-primary" />
                             </div>
                             <div class="flex flex-col gap-2">
                                 <label for="grade" class="text-sm font-bold dark:text-white">Interested Grade(s)</label>
-                                <select id="grade"
+                                <select id="grade" name="grade_interest"
                                     class="rounded-xl border border-[#e6e3db] dark:border-[#3a3424] bg-[#f8f7f6] dark:bg-[#221d10] px-4 py-3 text-sm focus:ring-primary focus:border-primary">
                                     <option>Select Grade Interest</option>
                                     <option>Kindergarten</option>
@@ -54,7 +58,7 @@ description: "Book a guided campus tour at Hopespring Foundation School and expe
                             </div>
                             <div class="flex flex-col gap-2">
                                 <label for="time" class="text-sm font-bold dark:text-white">Preferred Time</label>
-                                <select id="time"
+                                <select id="time" name="preferred_time"
                                     class="rounded-xl border border-[#e6e3db] dark:border-[#3a3424] bg-[#f8f7f6] dark:bg-[#221d10] px-4 py-3 text-sm focus:ring-primary focus:border-primary">
                                     <option>Morning (9:00 AM - 11:00 AM)</option>
                                     <option>Afternoon (1:00 PM - 3:00 PM)</option>
@@ -63,7 +67,7 @@ description: "Book a guided campus tour at Hopespring Foundation School and expe
                         </div>
                         <div class="flex flex-col gap-2">
                             <label for="notes" class="text-sm font-bold dark:text-white">Additional Notes</label>
-                            <textarea id="notes" rows="4" placeholder="Any specific requirements or questions?"
+                            <textarea id="notes" name="notes" rows="4" placeholder="Any specific requirements or questions?"
                                 class="rounded-xl border border-[#e6e3db] dark:border-[#3a3424] bg-[#f8f7f6] dark:bg-[#221d10] px-4 py-3 text-sm focus:ring-primary focus:border-primary"></textarea>
                         </div>
                         <button type="submit"

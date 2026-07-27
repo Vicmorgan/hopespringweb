@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: "Virtual Tour | Hope Spring Foundation"
+title: "Virtual Tour | Hopespring Foundation"
 description: "Take a virtual tour of Hopespring Foundation School and explore our state-of-the-art classrooms, labs, sports facilities, and vibrant campus from anywhere in the world."
 ---
         <main class="flex flex-1 flex-col">
@@ -9,7 +9,7 @@ description: "Take a virtual tour of Hopespring Foundation School and explore ou
                 style='background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuD5A5zXg7wK_PzXjRj8tL8mN9oP2qR4sT5uV6wW7xY8zZ9aB0cC1dE2fF3gH4iJ5kL6mN7oP8qR9sT0uV1wX2yZ3aB4cC5dE6fG7hI8jK9lL0mN1oP2qR3sT4uV5wX6yZ7aB8cC9dE0fG1hI2jK3lL4mN5oP6qR7sT8uV9wX0yZ1aB2HC3dE4fG5hI6jK7lL8mN9oP0qR1sT2uV3wX4yZ5aB6cC7dE8fG9hI0jK1lL2");'>
                 <div class="z-10 flex flex-col gap-6 max-w-[800px]">
                     <h1 class="text-white text-4xl md:text-6xl font-black leading-tight tracking-[-0.033em]">
-                        Explore Hope Spring <br /><span class="text-primary">From Anywhere</span>
+                        Explore Hopespring <br /><span class="text-primary">From Anywhere</span>
                     </h1>
                     <p class="text-white/90 text-lg md:text-xl max-w-2xl mx-auto">
                         Take a guided virtual walk through our campus, classrooms, and facilities. See where your child
@@ -21,19 +21,16 @@ description: "Take a virtual tour of Hopespring Foundation School and explore ou
             <div class="px-4 md:px-20 lg:px-16 flex justify-center py-16 bg-white dark:bg-[#1a160d]">
                 <div class="layout-content-container flex flex-col max-w-[1000px] flex-1 gap-12">
 
-                    <!-- Video Placeholder -->
+                    <!-- Campus Tour Video -->
                     <section class="flex flex-col gap-6 text-center items-center">
-                        <div
-                            class="relative w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl group cursor-pointer">
-                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwg3qfJ8OUqxgW9t_op7sCozHu0I9qQo1oTplhTXJIqMY6-GKiP_Q4QOAZgKqsVhoZtnbPLsQGXgwtGUIrRUEDUUUw5EWQnCl_PnSle_TjrXELuc6f7ITD4FagrLtgBoMr3NaSeVUkg6kvRm7Ye1wL04JiI6lc6MbKbeO_cVnxMo61j_NnKxNsNTxz7HpJuDHsYjDxw-Z3qWqrO9eFxfjp1qA8plVbwkR7jU9Rvd62fdp_70RpFY4eDhnE8Baeqf9VADAt8clhkIY"
-                                alt="Video Thumbnail"
-                                class="w-full h-full object-cover opacity-70 group-hover:opacity-60 transition-opacity">
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <div
-                                    class="w-20 h-20 bg-primary rounded-full flex items-center justify-center pl-2 group-hover:scale-110 transition-transform shadow-lg">
-                                    <span class="material-symbols-outlined text-[#181611] text-5xl">play_arrow</span>
-                                </div>
-                            </div>
+                        <div class="relative w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl">
+                            <video controls preload="metadata"
+                                poster="/assets/images/virtual-tour/outdoor/school-building.jpg"
+                                class="w-full h-full object-cover">
+                                <source src="/assets/videos/virtual_tour.MOV" type="video/quicktime">
+                                Your browser does not support playing this video directly.
+                                <a href="/assets/videos/virtual_tour.MOV">Download the campus tour video</a> instead.
+                            </video>
                         </div>
                         <h2 class="text-2xl font-bold text-[#181611] dark:text-white">Watch Our Campus Tour Highlights
                         </h2>
@@ -45,7 +42,7 @@ description: "Take a virtual tour of Hopespring Foundation School and explore ou
                         </h2>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer">
-                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhRNaV9wyJ1Qko29-Ng56_w4sshgFBzphYhtDOcRScrEMH33Io1AO8BLuteww7Wuwx4jZlWA4KgBtkWCqVIsceMXdKGm0EPZQhnlkOkMMpUiowWZuGMqW6xDFNW5zmpC3-50ZOFEpYinRz1qUB2wwrW-tXiAlUMvnTw_6kfSrh4QQ5k54rE7xUponPR6VoyT_1w5OoP-J_ESc9M7txLbLF5RP3CqUupd3EQC23_Gp_bKVdJ8oSL8UB7hkhR840_o-HQ-rY_dJG3_Y"
+                                <img src="/assets/images/virtual-tour/classrooms/computer-lab.jpg"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                     alt="Classroom">
                                 <div
@@ -63,7 +60,7 @@ description: "Take a virtual tour of Hopespring Foundation School and explore ou
                                 </div>
                             </div>
                             <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer">
-                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9PqrOJ5PITZq16Ca3nvX_04wM_ebzCBRhgQUDs6ej0e60d61BfWHXB53HNNnm_uKRMJ3TPkVoWKf015ws9dkJloNIwrHoEuLirENhySsOsnw3HBROGw8MglHDPhyV0Nz_n6IN2y1W32gh3D-k6n1DFWBCbJVEu6U5hWngW-lC-cHKKJ8euhCEvJU_ki-7Z1PLCr1uqotDm5ueiHw_yX7fwGesE-cPN0y_vN7cGoytw3NK9LpNAtzMQXPy85S04jQVynd6opeBC0I"
+                                <img src="/assets/images/virtual-tour/library/library-1.jpg"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                     alt="Library">
                                 <div
@@ -72,7 +69,7 @@ description: "Take a virtual tour of Hopespring Foundation School and explore ou
                                 </div>
                             </div>
                             <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer">
-                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdzb5wWDXxbXr-vsn0Clis8KJw-Vcg5lEX03HHhjCbJpcUktVmwhYl1lblNJpAfnVcM6a04IS3wDUn7lDdzHmpOTKwGx0vkbW0ONZ5P5EieQTNV-79rGzFoZqijUxz7UbHemWw11z1CiUme7345r_xUjyAu4bOtAvffv75mr0nzQxrgwn6qDPrylgqt0H-5lzZtco6HZJ6CGecf4FTO1F2uTBsSxhq2vW3iB2AOX0MdRLjwfCHotSuwz03ofLH1ISzvCJUegcyA6Y"
+                                <img src="/assets/images/virtual-tour/outdoor/playing-out.jpg"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                     alt="Playground">
                                 <div

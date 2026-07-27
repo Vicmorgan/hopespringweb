@@ -15,6 +15,9 @@ node_modules/
 dist/
 .cache/
 
+# Eleventy / Tailwind build output (regenerated via `npm run build`)
+_site/
+
 # Environment
 .env
 .env.local

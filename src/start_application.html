@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: "Start Your Application | Hope Spring Foundation"
+title: "Start Your Application | Hopespring Foundation"
 description: "Begin your child's journey at Hopespring Foundation School. Start your application online today and take the first step towards an exceptional education."
 ---
         <main class="flex-1">
@@ -35,7 +35,11 @@ description: "Begin your child's journey at Hopespring Foundation School. Start 
                     <!-- Inner Accent -->
                     <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16"></div>
 
-                    <form class="space-y-10 relative z-10">
+                    <form class="space-y-10 relative z-10" name="application" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/start_application/?submitted=true">
+                        <input type="hidden" name="form-name" value="application" />
+                        <p class="hidden">
+                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                        </p>
                         <div class="space-y-8">
                             <h3 class="text-xl font-black flex items-center gap-3">
                                 <span
@@ -46,19 +50,19 @@ description: "Begin your child's journey at Hopespring Foundation School. Start 
                                 <div class="space-y-2">
                                     <label class="text-sm font-bold text-[#181611] dark:text-white/80 ml-1">Full
                                         Name</label>
-                                    <input type="text" placeholder="John Doe"
+                                    <input type="text" name="guardian_name" placeholder="John Doe" required
                                         class="w-full bg-[#f8f7f6] dark:bg-[#221d10] border-none rounded-2xl px-6 py-4 text-sm focus:ring-2 focus:ring-primary transition-all" />
                                 </div>
                                 <div class="space-y-2">
                                     <label class="text-sm font-bold text-[#181611] dark:text-white/80 ml-1">Email
                                         Address</label>
-                                    <input type="email" placeholder="john@example.com"
+                                    <input type="email" name="guardian_email" placeholder="john@example.com" required
                                         class="w-full bg-[#f8f7f6] dark:bg-[#221d10] border-none rounded-2xl px-6 py-4 text-sm focus:ring-2 focus:ring-primary transition-all" />
                                 </div>
                                 <div class="space-y-2 md:col-span-2">
                                     <label class="text-sm font-bold text-[#181611] dark:text-white/80 ml-1">Phone
                                         Number</label>
-                                    <input type="tel" placeholder="+234 ..."
+                                    <input type="tel" name="guardian_phone" placeholder="+234 ..."
                                         class="w-full bg-[#f8f7f6] dark:bg-[#221d10] border-none rounded-2xl px-6 py-4 text-sm focus:ring-2 focus:ring-primary transition-all" />
                                 </div>
                             </div>
@@ -75,13 +79,13 @@ description: "Begin your child's journey at Hopespring Foundation School. Start 
                                     <label class="text-sm font-bold text-[#181611] dark:text-white/80 ml-1">Student's
                                         Full
                                         Name</label>
-                                    <input type="text" placeholder="Jane Doe"
+                                    <input type="text" name="student_name" placeholder="Jane Doe" required
                                         class="w-full bg-[#f8f7f6] dark:bg-[#221d10] border-none rounded-2xl px-6 py-4 text-sm focus:ring-2 focus:ring-primary transition-all" />
                                 </div>
                                 <div class="space-y-2">
                                     <label class="text-sm font-bold text-[#181611] dark:text-white/80 ml-1">Applying for
                                         Grade</label>
-                                    <select
+                                    <select name="applying_grade"
                                         class="w-full bg-[#f8f7f6] dark:bg-[#221d10] border-none rounded-2xl px-6 py-4 text-sm focus:ring-2 focus:ring-primary transition-all appearance-none">
                                         <option>Select Grade</option>
                                         <option>Kindergarten</option>
@@ -92,13 +96,13 @@ description: "Begin your child's journey at Hopespring Foundation School. Start 
                                 <div class="space-y-2 md:col-span-2">
                                     <label class="text-sm font-bold text-[#181611] dark:text-white/80 ml-1">Additional
                                         Notes</label>
-                                    <textarea rows="4" placeholder="Tell us about your child's interests or needs..."
+                                    <textarea name="notes" rows="4" placeholder="Tell us about your child's interests or needs..."
                                         class="w-full bg-[#f8f7f6] dark:bg-[#221d10] border-none rounded-2xl px-6 py-4 text-sm focus:ring-2 focus:ring-primary transition-all"></textarea>
                                 </div>
                             </div>
                         </div>
 
-                        <button
+                        <button type="submit"
                             class="w-full py-5 bg-primary text-[#181611] font-black text-lg rounded-2xl shadow-xl shadow-primary/20 hover:-translate-y-1 transition-all active:scale-95">
                             Submit Inquiry
                         </button>
