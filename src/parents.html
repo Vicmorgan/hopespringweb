@@ -3,7 +3,7 @@ layout: base.njk
 title: "Parents & Families | Hopespring Foundation"
 description: "Resources and information for Hopespring Foundation School parents — from the parent portal and school handbook to volunteering opportunities and family engagement events."
 ---
-        <main class="flex flex-1 flex-col items-center">
+        <div class="flex flex-1 flex-col items-center">
             <div class="w-full max-w-[1536px] w-full flex flex-col gap-12 py-10 px-4 md:px-10 lg:px-20">
                 <!-- Dynamic Hero Section -->
                 <div
@@ -40,8 +40,8 @@ description: "Resources and information for Hopespring Foundation School parents
                             <!-- High-Impact Image -->
                             <div
                                 class="relative z-10 rounded-[40px] overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-700 border-[12px] border-white dark:border-[#2a2416]">
-                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhRNaV9wyJ1Qko29-Ng56_w4sshgFBzphYhtDOcRScrEMH33Io1AO8BLuteww7Wuwx4jZlWA4KgBtkWCqVIsceMXdKGm0EPZQhnlkOkMMpUiowWZuGMqW6xDFNW5zmpC3-50ZOFEpYinRz1qUB2wwrW-tXiAlUMvnTw_6kfSrh4QQ5k54rE7xUponPR6VoyT_1w5OoP-J_ESc9M7txLbLF5RP3CqUupd3EQC23_Gp_bKVdJ8oSL8UB7hkhR840_o-HQ-rY_dJG3_Y"
-                                    alt="Parents and Teachers" class="w-full h-[450px] object-cover">
+                                <img src="/assets/images/parents/parents-hero.jpg"
+                                    alt="Parents and Teachers" class="w-full h-[450px] object-cover" width="1920" height="1280">
                             </div>
                             <!-- Floating element -->
                             <div
@@ -97,7 +97,10 @@ description: "Resources and information for Hopespring Foundation School parents
                         </div>
                     </a>
 
-                    <a href="handbook.pdf"
+                    <!--
+                    Commented out until a real Handbook PDF exists to link to (handbook.pdf was a 404).
+
+                    <a href="/assets/handbook.pdf"
                         class="bg-white dark:bg-[#1a160d] rounded-[48px] p-8 shadow-sm border border-[#f4f3f0] dark:border-transparent hover:shadow-2xl transition-all duration-500 group relative overflow-hidden">
                         <div
                             class="size-20 bg-accent-blue/20 rounded-[32px] flex items-center justify-center text-blue-700 mb-6 group-hover:rotate-6 transition-transform">
@@ -110,6 +113,7 @@ description: "Resources and information for Hopespring Foundation School parents
                             Download PDF <span class="material-symbols-outlined text-sm">download</span>
                         </div>
                     </a>
+                    -->
                     -->
                 </section>
 
@@ -136,4 +140,4 @@ description: "Resources and information for Hopespring Foundation School parents
                     </div>
                 </section>
             </div>
-        </main>
+        </div>

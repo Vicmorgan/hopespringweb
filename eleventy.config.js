@@ -7,7 +7,6 @@ module.exports = function(eleventyConfig) {
   // Copy standard static files
   eleventyConfig.addPassthroughCopy("src/favicon.ico");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
-  eleventyConfig.addPassthroughCopy("src/sitemap.xml");
 
   return {
     dir: {
