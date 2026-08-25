@@ -1,0 +1,60 @@
+---
+layout: base.njk
+pagination:
+  data: galleryCategories
+  size: 1
+  alias: category
+  addAllPagesToCollections: true
+permalink: "gallery/{{ category.slug }}/"
+eleventyComputed:
+  title: "{{ category.title }} | Gallery | Hopespring Foundation"
+  description: "{{ category.description }}"
+  changefreq: "monthly"
+  priority: "0.5"
+---
+    <div class="min-h-screen">
+        <div class="relative bg-white dark:bg-background-dark pt-20 pb-16 overflow-hidden">
+            <div class="absolute top-0 left-0 w-[40%] h-full bg-primary/5 rounded-r-[100px] -z-10 -translate-x-20"></div>
+            <div class="w-full max-w-[1536px] mx-auto px-6 text-center">
+                <a href="/gallery/" class="inline-flex items-center gap-2 text-primary font-bold text-sm mb-6 hover:underline">
+                    <span class="material-symbols-outlined text-lg" aria-hidden="true">arrow_back</span>
+                    Back to Gallery
+                </a>
+                <div class="inline-flex items-center gap-2 text-primary font-bold text-sm mb-2 justify-center w-full">
+                    <span>{{ category.tagline }}</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black tracking-tight mb-6">
+                    {{ category.title }}
+                </h1>
+                <p class="text-xl text-[#897f61] dark:text-gray-400 max-w-2xl mx-auto mb-4">
+                    {{ category.description }}
+                </p>
+            </div>
+        </div>
+
+        <div class="w-full max-w-[1536px] mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {%- for photo in category.photos %}
+                <div class="gallery-item group relative aspect-square rounded-[40px] overflow-hidden shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <a href="{{ photo.src }}" target="_blank" class="block w-full h-full">
+                        <img src="{{ photo.src }}" alt="{{ photo.alt }}"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            width="{{ photo.width }}" height="{{ photo.height }}"
+                            {% if not loop.first %}loading="lazy" decoding="async"{% endif %}>
+                    </a>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2">{{ category.tagline }}</span>
+                        <h3 class="text-white text-2xl font-black">{{ photo.alt }}</h3>
+                    </div>
+                </div>
+                {%- endfor %}
+            </div>
+
+            <div class="mt-16 text-center">
+                <a href="/gallery/"
+                    class="inline-block bg-[#181611] dark:bg-primary text-white dark:text-[#181611] px-12 py-5 rounded-[24px] font-black text-xl hover:translate-y-[-4px] transition-all shadow-2xl">
+                    Back to Full Gallery
+                </a>
+            </div>
+        </div>
+    </div>

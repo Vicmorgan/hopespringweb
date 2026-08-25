@@ -11,5 +11,9 @@
             {% include "components/footer.njk" %}
         </div>
     </div>
+
+    {% if page.fileSlug != 'start_application' and page.fileSlug != 'admission' %}
+    {% include "components/admission-popup.njk" %}
+    {% endif %}
 </body>
 </html>

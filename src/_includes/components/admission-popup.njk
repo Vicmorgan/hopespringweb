@@ -1,0 +1,89 @@
+<div id="admission-popup-overlay" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="admission-popup-title">
+    <div id="admission-popup-card" class="relative w-full max-w-lg bg-white dark:bg-[#2d2719] rounded-[32px] shadow-2xl border border-[#e6e3db] dark:border-[#3a3528] overflow-hidden opacity-0 scale-95 transition-all duration-300">
+        <!-- Decorative header -->
+        <div class="relative bg-gradient-to-br from-primary to-secondary/60 px-8 pt-10 pb-16 text-center overflow-hidden">
+            <div class="absolute -top-8 -right-8 w-32 h-32 bg-white/20 rounded-full blur-2xl"></div>
+            <div class="absolute -bottom-10 -left-6 w-28 h-28 bg-white/20 rounded-full blur-2xl"></div>
+            <span class="relative inline-flex items-center gap-2 bg-white/90 text-[#181611] text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full shadow-sm">
+                <span class="material-symbols-outlined text-base leading-none">celebration</span>
+                Admissions Open
+            </span>
+        </div>
+
+        <button id="admission-popup-close" type="button" aria-label="Close admission announcement" class="absolute top-4 right-4 size-9 flex items-center justify-center rounded-full bg-white/90 dark:bg-[#181611]/80 text-[#181611] dark:text-white hover:bg-white transition-colors shadow-md">
+            <span class="material-symbols-outlined text-xl" aria-hidden="true">close</span>
+        </button>
+
+        <div class="px-8 pb-8 -mt-8 relative text-center space-y-5">
+            <div class="mx-auto size-16 rounded-2xl bg-primary text-[#181611] flex items-center justify-center shadow-lg -rotate-3">
+                <span class="material-symbols-outlined text-3xl">school</span>
+            </div>
+            <h2 id="admission-popup-title" class="text-2xl md:text-3xl font-black leading-tight text-[#181611] dark:text-white">
+                Admission is now open at Hopespring!
+            </h2>
+            <p class="text-[#897f61] dark:text-gray-300 leading-relaxed">
+                We're currently accepting applications for the new academic year. Spaces are limited, so start your child's application today and join the Hopespring family.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                <a href="/start_application/" id="admission-popup-cta" class="flex-1 bg-primary text-[#181611] px-6 py-3.5 rounded-2xl font-bold text-base hover:scale-[1.03] transition-transform shadow-lg shadow-primary/30">
+                    Start Application
+                </a>
+                <button id="admission-popup-dismiss" type="button" class="flex-1 bg-[#f4f3f0] dark:bg-[#3a3528] text-[#181611] dark:text-white px-6 py-3.5 rounded-2xl font-bold text-base hover:bg-[#e6e3db] dark:hover:bg-[#4a4432] transition-colors">
+                    Maybe Later
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        var STORAGE_KEY = 'hopespring-admission-popup-dismissed';
+        var overlay = document.getElementById('admission-popup-overlay');
+        var card = document.getElementById('admission-popup-card');
+        if (!overlay || !card) return;
+
+        var alreadyDismissed = false;
+        try {
+            alreadyDismissed = sessionStorage.getItem(STORAGE_KEY) === '1';
+        } catch (e) {
+            alreadyDismissed = false;
+        }
+        if (alreadyDismissed) return;
+
+        function openPopup() {
+            overlay.classList.remove('hidden');
+            overlay.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+            requestAnimationFrame(() => {
+                card.classList.remove('opacity-0', 'scale-95');
+                card.classList.add('opacity-100', 'scale-100');
+            });
+        }
+
+        function closePopup() {
+            card.classList.add('opacity-0', 'scale-95');
+            card.classList.remove('opacity-100', 'scale-100');
+            document.body.classList.remove('overflow-hidden');
+            setTimeout(() => {
+                overlay.classList.add('hidden');
+                overlay.classList.remove('flex');
+            }, 300);
+            try {
+                sessionStorage.setItem(STORAGE_KEY, '1');
+            } catch (e) { /* storage unavailable, ignore */ }
+        }
+
+        document.getElementById('admission-popup-close').addEventListener('click', closePopup);
+        document.getElementById('admission-popup-dismiss').addEventListener('click', closePopup);
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) closePopup();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !overlay.classList.contains('hidden')) closePopup();
+        });
+
+        var timer = setTimeout(openPopup, 1200);
+        window.addEventListener('pagehide', () => clearTimeout(timer));
+    });
+</script>
