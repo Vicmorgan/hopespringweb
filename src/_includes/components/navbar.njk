@@ -4,18 +4,33 @@
             <a href="/" class="flex items-center gap-3">
                 <img src="/assets/images/logo.png" alt="Hopespring Foundation Logo" class="h-10 w-auto" width="190" height="42">
             </a>
-            
+
             <!-- Desktop Nav -->
             <div class="flex flex-1 justify-end gap-4 md:gap-8 items-center">
-                <nav class="hidden lg:flex items-center gap-9">
-                    <a class="text-sm leading-normal transition-colors {% if page.fileSlug == '' %}text-primary font-bold{% else %}font-medium hover:text-primary{% endif %}" href="/">Home</a>
-                    <a class="text-sm leading-normal transition-colors {% if page.fileSlug == 'about' %}text-primary font-bold{% else %}font-medium hover:text-primary{% endif %}" href="/about/">About</a>
-                    <a class="text-sm leading-normal transition-colors {% if page.fileSlug == 'academics' %}text-primary font-bold{% else %}font-medium hover:text-primary{% endif %}" href="/academics/">Academics</a>
-                    <a class="text-sm leading-normal transition-colors {% if page.fileSlug == 'activities' %}text-primary font-bold{% else %}font-medium hover:text-primary{% endif %}" href="/activities/">Activities</a>
-                    <a class="text-sm leading-normal transition-colors {% if page.fileSlug == 'parents' %}text-primary font-bold{% else %}font-medium hover:text-primary{% endif %}" href="/parents/">Parents</a>
-                    <a class="text-sm leading-normal transition-colors {% if page.fileSlug == 'admission' %}text-primary font-bold{% else %}font-medium hover:text-primary{% endif %}" href="/admission/">Admissions</a>
-                    <a class="text-sm leading-normal transition-colors {% if page.fileSlug == 'gallery' %}text-primary font-bold{% else %}font-medium hover:text-primary{% endif %}" href="/gallery/">Gallery</a>
-                    <a class="text-sm leading-normal transition-colors {% if page.fileSlug == 'yearbook' %}text-primary font-bold{% else %}font-medium hover:text-primary{% endif %}" href="/yearbook/">Yearbook</a>
+                <nav class="hidden lg:flex items-center gap-7">
+                    {%- for item in navigation %}
+                    {%- if item.children %}
+                    {%- set isActive = (page.fileSlug == item.slug) or (page.fileSlug in item.childSlugs) %}
+                    <div class="relative nav-dropdown">
+                        <button type="button"
+                            class="nav-dropdown-trigger flex items-center gap-1 text-sm leading-normal transition-colors {% if isActive %}text-primary font-bold{% else %}font-medium hover:text-primary{% endif %}"
+                            aria-haspopup="true" aria-expanded="false">
+                            <span>{{ item.label }}</span>
+                            <span class="material-symbols-outlined text-lg nav-dropdown-chevron transition-transform" aria-hidden="true">expand_more</span>
+                        </button>
+                        <div class="nav-dropdown-panel absolute left-1/2 -translate-x-1/2 top-full pt-3 hidden z-50">
+                            <div class="min-w-[220px] bg-white dark:bg-[#2d2719] rounded-2xl shadow-xl border border-[#f0eee9] dark:border-[#3a3528] p-2">
+                                {%- for child in item.children %}
+                                <a href="{{ child.url }}"
+                                    class="block px-4 py-2.5 rounded-xl text-sm whitespace-nowrap transition-colors {% if page.fileSlug == child.slug %}text-primary font-bold bg-primary/10{% else %}font-medium hover:bg-[#f4f3f0] dark:hover:bg-[#3a3528] hover:text-primary{% endif %}">{{ child.label }}</a>
+                                {%- endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    {%- else %}
+                    <a class="text-sm leading-normal transition-colors {% if page.fileSlug == item.slug %}text-primary font-bold{% else %}font-medium hover:text-primary{% endif %}" href="{{ item.url }}">{{ item.label }}</a>
+                    {%- endif %}
+                    {%- endfor %}
                 </nav>
                 <button id="theme-toggle-btn" type="button" aria-label="Switch to dark theme" class="hidden lg:flex items-center justify-center size-10 rounded-xl text-[#181611] dark:text-white hover:text-primary transition-colors focus:outline-none">
                     <span id="theme-toggle-icon" class="material-symbols-outlined text-xl" aria-hidden="true">dark_mode</span>
@@ -43,17 +58,29 @@
             <span class="material-symbols-outlined text-3xl" aria-hidden="true">close</span>
         </button>
     </div>
-    <div class="flex flex-col p-6 gap-6 overflow-y-auto">
-        <a class="text-xl transition-colors {% if page.fileSlug == '' %}text-primary font-bold{% else %}font-medium hover:text-primary{% endif %}" href="/">Home</a>
-        <a class="text-xl transition-colors {% if page.fileSlug == 'about' %}text-primary font-bold{% else %}font-medium hover:text-primary{% endif %}" href="/about/">About</a>
-        <a class="text-xl transition-colors {% if page.fileSlug == 'academics' %}text-primary font-bold{% else %}font-medium hover:text-primary{% endif %}" href="/academics/">Academics</a>
-        <a class="text-xl transition-colors {% if page.fileSlug == 'activities' %}text-primary font-bold{% else %}font-medium hover:text-primary{% endif %}" href="/activities/">Activities</a>
-        <a class="text-xl transition-colors {% if page.fileSlug == 'parents' %}text-primary font-bold{% else %}font-medium hover:text-primary{% endif %}" href="/parents/">Parents</a>
-        <a class="text-xl transition-colors {% if page.fileSlug == 'admission' %}text-primary font-bold{% else %}font-medium hover:text-primary{% endif %}" href="/admission/">Admissions</a>
-        <a class="text-xl transition-colors {% if page.fileSlug == 'gallery' %}text-primary font-bold{% else %}font-medium hover:text-primary{% endif %}" href="/gallery/">Gallery</a>
-        <a class="text-xl transition-colors {% if page.fileSlug == 'yearbook' %}text-primary font-bold{% else %}font-medium hover:text-primary{% endif %}" href="/yearbook/">Yearbook</a>
+    <div class="flex flex-col p-6 gap-1 overflow-y-auto">
+        {%- for item in navigation %}
+        {%- if item.children %}
+        {%- set isActive = (page.fileSlug == item.slug) or (page.fileSlug in item.childSlugs) %}
+        <div class="mobile-accordion border-b border-[#f4f3f0] dark:border-[#3a3528]">
+            <button type="button"
+                class="mobile-accordion-trigger w-full flex items-center justify-between py-3 text-xl transition-colors {% if isActive %}text-primary font-bold{% else %}font-medium{% endif %}"
+                aria-expanded="false">
+                <span>{{ item.label }}</span>
+                <span class="material-symbols-outlined mobile-accordion-chevron transition-transform" aria-hidden="true">expand_more</span>
+            </button>
+            <div class="mobile-accordion-panel hidden flex flex-col gap-1 pb-4 pl-4">
+                {%- for child in item.children %}
+                <a class="py-2 text-base transition-colors {% if page.fileSlug == child.slug %}text-primary font-bold{% else %}font-medium text-[#5b5443] dark:text-gray-400{% endif %}" href="{{ child.url }}">{{ child.label }}</a>
+                {%- endfor %}
+            </div>
+        </div>
+        {%- else %}
+        <a class="text-xl py-3 border-b border-[#f4f3f0] dark:border-[#3a3528] transition-colors {% if page.fileSlug == item.slug %}text-primary font-bold{% else %}font-medium{% endif %}" href="{{ item.url }}">{{ item.label }}</a>
+        {%- endif %}
+        {%- endfor %}
 
-        <div class="mt-4 pt-4 border-t border-[#f4f3f0] dark:border-[#3a3528] flex flex-col gap-4">
+        <div class="mt-4 pt-4 flex flex-col gap-4">
             <a href="/start_application/" class="flex w-full items-center justify-center rounded-xl h-12 bg-primary text-[#181611] text-lg font-bold shadow-sm hover:brightness-105 transition-all">
                 Enroll Now
             </a>
@@ -117,5 +144,71 @@
 
         toggleBtns.forEach((b) => b.addEventListener('click', toggleTheme));
         syncThemeUI();
+
+        // Desktop dropdown menus
+        const dropdowns = Array.from(document.querySelectorAll('.nav-dropdown'));
+
+        function closeDropdown(dropdown) {
+            dropdown.querySelector('.nav-dropdown-panel').classList.add('hidden');
+            dropdown.querySelector('.nav-dropdown-trigger').setAttribute('aria-expanded', 'false');
+            dropdown.querySelector('.nav-dropdown-chevron').classList.remove('rotate-180');
+        }
+
+        function openDropdown(dropdown) {
+            dropdown.querySelector('.nav-dropdown-panel').classList.remove('hidden');
+            dropdown.querySelector('.nav-dropdown-trigger').setAttribute('aria-expanded', 'true');
+            dropdown.querySelector('.nav-dropdown-chevron').classList.add('rotate-180');
+        }
+
+        function closeAllDropdowns(except) {
+            dropdowns.forEach((d) => { if (d !== except) closeDropdown(d); });
+        }
+
+        dropdowns.forEach((dropdown) => {
+            const trigger = dropdown.querySelector('.nav-dropdown-trigger');
+
+            trigger.addEventListener('click', () => {
+                const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+                closeAllDropdowns(dropdown);
+                if (isOpen) {
+                    closeDropdown(dropdown);
+                } else {
+                    openDropdown(dropdown);
+                }
+            });
+
+            dropdown.addEventListener('mouseenter', () => {
+                closeAllDropdowns(dropdown);
+                openDropdown(dropdown);
+            });
+
+            dropdown.addEventListener('mouseleave', () => {
+                closeDropdown(dropdown);
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            dropdowns.forEach((dropdown) => {
+                if (!dropdown.contains(e.target)) closeDropdown(dropdown);
+            });
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeAllDropdowns();
+        });
+
+        // Mobile accordions
+        document.querySelectorAll('.mobile-accordion').forEach((accordion) => {
+            const trigger = accordion.querySelector('.mobile-accordion-trigger');
+            const panel = accordion.querySelector('.mobile-accordion-panel');
+            const chevron = accordion.querySelector('.mobile-accordion-chevron');
+
+            trigger.addEventListener('click', () => {
+                const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+                trigger.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+                panel.classList.toggle('hidden');
+                chevron.classList.toggle('rotate-180');
+            });
+        });
     });
 </script>
