@@ -84,6 +84,42 @@ Contact, Book a Tour, and Start Application forms are wired up for [Netlify Form
 
 ---
 
+## Media assets
+
+Everything under `src/assets/` is committed to git and shipped on every Netlify
+deploy, so only **web-optimized** files belong there. Full-resolution originals
+(camera JPEGs, raw video, print PDFs) stay out of the repo — keep them in a
+folder that matches a `.gitignore` rule (e.g. `staffs_hsfs/`) or in shared drive
+storage.
+
+Rough budgets before committing:
+
+| Asset | Target |
+|---|---|
+| Photos | ≤ ~200 KB, longest edge ≤ ~1600 px, EXIF stripped, auto-oriented |
+| Video | 720p, H.264, `+faststart`, CRF ~28 (aim for single-digit MB) |
+| PDF | Ghostscript `-dPDFSETTINGS=/ebook` (image DPI ~120) |
+
+Handy commands:
+
+```bash
+# Photo → square headshot (as used for src/assets/images/staff/management-*.jpg)
+magick in.jpg -auto-orient -strip -resize 900x900^ -gravity north -extent 900x900 -quality 82 out.jpg
+
+# Video → 720p web-ready
+ffmpeg -i in.mp4 -vf "scale=-2:720" -c:v libx264 -preset slow -crf 28 -c:a aac -b:a 96k -movflags +faststart out.mp4
+
+# PDF → compressed
+gs -sDEVICE=pdfwrite -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=out.pdf in.pdf
+```
+
+History note: the campus-tour video and yearbook PDF were originally committed at
+full size (a 71 MB `.MOV`, a 27 MB MP4, an 18 MB PDF ≈ 116 MB). They were replaced
+in the working tree with optimized versions (~15 MB total). The oversized blobs
+still live in git history — if clone size becomes a problem, do a one-time
+`git filter-repo --strip-blobs-bigger-than 5M` and force-push (coordinate with
+anyone else who has a clone first).
+
 ## Deployment
 
 Deployed via Netlify (see `netlify.toml`): build command `npm run build`, publish directory `_site`.

@@ -4,6 +4,17 @@ title: "Virtual Tour | Hopespring Foundation"
 description: "Take a virtual tour of Hopespring Foundation School and explore our state-of-the-art classrooms, labs, sports facilities, and vibrant campus from anywhere in the world."
 ---
         <div class="flex flex-1 flex-col">
+            <!-- Campus Tour Video -->
+            <section class="bg-black">
+                <video controls autoplay muted loop playsinline preload="auto"
+                    poster="/assets/images/virtual-tour/outdoor/school-building.jpg"
+                    class="w-full max-h-[85vh] object-contain">
+                    <source src="/assets/videos/virtual_tour.mp4" type="video/mp4">
+                    Your browser does not support playing this video directly.
+                    <a href="/assets/videos/virtual_tour.mp4">Download the campus tour video</a> instead.
+                </video>
+            </section>
+
             <!-- Hero Section -->
             <div class="relative min-h-[50vh] flex flex-col items-center justify-center text-center p-8 bg-cover bg-center"
                 style='background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url("/assets/images/virtual-tour/outdoor/school-building.jpg");'>
@@ -20,22 +31,6 @@ description: "Take a virtual tour of Hopespring Foundation School and explore ou
 
             <div class="px-4 md:px-20 lg:px-16 flex justify-center py-16 bg-white dark:bg-[#1a160d]">
                 <div class="layout-content-container flex flex-col max-w-[1000px] flex-1 gap-12">
-
-                    <!-- Campus Tour Video -->
-                    <section class="flex flex-col gap-6 text-center items-center">
-                        <div class="relative w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl">
-                            <video controls autoplay muted loop playsinline preload="metadata"
-                                poster="/assets/images/virtual-tour/outdoor/school-building.jpg"
-                                class="w-full h-full object-cover">
-                                <source src="/assets/videos/virtual_tour.mp4" type="video/mp4">
-                                <source src="/assets/videos/virtual_tour.MOV" type="video/quicktime">
-                                Your browser does not support playing this video directly.
-                                <a href="/assets/videos/virtual_tour.mp4">Download the campus tour video</a> instead.
-                            </video>
-                        </div>
-                        <h2 class="text-2xl font-bold text-[#181611] dark:text-white">Watch Our Campus Tour Highlights
-                        </h2>
-                    </section>
 
                     <!-- Gallery Grid -->
                     <section>
