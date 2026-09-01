@@ -29,3 +29,8 @@ _site/
 *.tmp
 *.bak
 reorganize.sh
+
+# Source/original media (full-res camera files, raw exports) — optimize and
+# commit only the web-ready versions under src/assets/. See README "Media assets".
+staffs_hsfs/
+*.orig.*
