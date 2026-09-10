@@ -1,0 +1,51 @@
+---
+layout: base.njk
+title: "Thank You | Hopespring Foundation"
+description: "Thank you for reaching out to Hopespring Foundation School. We've received your submission and will be in touch soon."
+permalink: /thank-you/
+excludeFromSitemap: true
+---
+<div class="min-h-[70vh] flex flex-col items-center justify-center text-center px-6 py-32">
+    <div class="size-20 bg-primary/20 text-primary rounded-full flex items-center justify-center mb-6">
+        <span class="material-symbols-outlined text-5xl font-black">check_circle</span>
+    </div>
+    <h1 id="thank-you-heading" class="text-3xl md:text-5xl font-black tracking-tight mb-4">Thank You!</h1>
+    <p id="thank-you-message" class="text-lg text-[#897f61] dark:text-gray-400 max-w-xl mb-10">
+        We've received your submission. Our team will review it and get back to you shortly.
+    </p>
+    <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/"
+            class="bg-primary text-[#181611] px-8 py-4 rounded-2xl font-bold text-lg hover:scale-105 transition-transform shadow-lg shadow-primary/20">
+            Back to Homepage
+        </a>
+        <a href="/contact/"
+            class="bg-white dark:bg-white/10 text-[#181611] dark:text-white border-2 border-[#e6e3db] dark:border-white/20 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-gray-50 dark:hover:bg-white/20 transition-all">
+            Contact Us
+        </a>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const from = new URLSearchParams(window.location.search).get('from');
+        const messages = {
+            application: {
+                heading: "Application Received!",
+                message: "Thank you for starting your child's application. Our admissions team will review your inquiry and reach out within 2 business days.",
+            },
+            contact: {
+                heading: "Message Sent!",
+                message: "Thanks for reaching out. Our team will review your message and get back to you as soon as possible.",
+            },
+            'book-tour': {
+                heading: "Tour Request Received!",
+                message: "Thank you for booking a campus tour. We'll confirm your preferred date and time by email or phone shortly.",
+            },
+        };
+        const copy = messages[from];
+        if (copy) {
+            document.getElementById('thank-you-heading').textContent = copy.heading;
+            document.getElementById('thank-you-message').textContent = copy.message;
+        }
+    });
+</script>
