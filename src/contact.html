@@ -47,7 +47,7 @@ description: "Contact Hopespring Foundation School. Reach our team for enquiries
                 <div
                     class="bg-white dark:bg-[#1a160d] p-10 rounded-[48px] border border-[#f4f3f0] dark:border-transparent shadow-sm">
                     <h2 class="text-3xl font-black mb-8">Send Us a <span class="text-primary italic">Message</span></h2>
-                    <form class="space-y-8" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact/?submitted=true">
+                    <form class="space-y-8" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/?from=contact">
                         <input type="hidden" name="form-name" value="contact" />
                         <p class="hidden">
                             <label>Don't fill this out if you're human: <input name="bot-field" /></label>
@@ -75,10 +75,11 @@ description: "Contact Hopespring Foundation School. Reach our team for enquiries
                         <div class="space-y-2">
                             <label class="text-sm font-bold text-[#181611] dark:text-white/80">Subject</label>
                             <select name="subject"
-                                class="w-full rounded-2xl border-none bg-[#f4f3f0] dark:bg-white/5 p-4 focus:ring-2 focus:ring-primary outline-none transition-all appearance-none">
+                                class="w-full rounded-2xl border-none bg-[#f4f3f0] dark:bg-background-dark p-4 focus:ring-2 focus:ring-primary outline-none transition-all appearance-none">
                                 <option>General Inquiry</option>
                                 <option>Enrollment & Admissions</option>
                                 <option>Reporting an Absence</option>
+                                <option>Counseling</option>
                                 <option>Other</option>
                             </select>
                         </div>
