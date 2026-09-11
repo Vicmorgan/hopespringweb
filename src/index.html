@@ -137,7 +137,8 @@ changefreq: "weekly"
     <div class="grid grid-cols-1 lg:grid-cols-2 lg:items-center">
       <!-- Video Container (Poster) -->
       <div
-        class="relative aspect-video lg:aspect-square overflow-hidden cursor-pointer group/video"
+        class="js-yt-poster relative aspect-video lg:aspect-square overflow-hidden cursor-pointer group/video"
+        data-youtube-id="pvB5k244tOY"
       >
         <img
           src="/assets/images/about/proprietress-mrs-musa.jpg"
@@ -833,5 +834,25 @@ changefreq: "weekly"
     }
 
     setInterval(nextSlide, 5000); // Change every 5 seconds
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".js-yt-poster").forEach((el) => {
+      el.addEventListener("click", () => {
+        const videoId = el.dataset.youtubeId;
+        const iframe = document.createElement("iframe");
+        iframe.className = "absolute inset-0 w-full h-full";
+        iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
+        iframe.title = "A Message from our Proprietress";
+        iframe.frameBorder = "0";
+        iframe.allow =
+          "autoplay; encrypted-media; picture-in-picture; fullscreen";
+        iframe.allowFullscreen = true;
+        el.replaceChildren(iframe);
+        el.classList.remove("cursor-pointer", "group/video");
+      });
+    });
   });
 </script>
